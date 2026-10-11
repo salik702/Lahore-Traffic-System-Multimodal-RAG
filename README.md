@@ -1,247 +1,217 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=220&section=header&text=LAHORE%20TRAFFIC%20AI&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Multimodal%20RAG%20Intelligence%20System%20%E2%80%A2%20Vision%20%2B%20Text%20%2B%20Knowledge%20Graphs&descAlignY=55&descSize=18&descColor=93c5fd" width="100%"/>
+# 🚦 Lahore Traffic Intelligence AI
+### Multimodal RAG & Vision-Language Intelligence System
 
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=2600&pause=700&color=818CF8&center=true&vCenter=true&repeat=true&width=750&height=50&lines=Intelligent%20Traffic%20Analysis;Vision-Language%20RAG%20Pipeline;Accident%20Report%20Intelligence;Knowledge-Graph%20Grounded%20Insights" alt="Typing SVG" />
-</a>
+[![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.116+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![Groq](https://img.shields.io/badge/Groq-LPU-F55036?style=for-the-badge&logo=groq&logoColor=white)](https://groq.com/)
+[![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-00FFFF?style=for-the-badge&logo=ultralytics&logoColor=black)](https://ultralytics.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
-<br/>
+**A production-grade AI system bridging the gap between raw traffic sensor data, accident reports, and actionable urban intelligence.**
 
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/Groq-F55036?style=for-the-badge&logo=groq&logoColor=white" />
-  <img src="https://img.shields.io/badge/YOLOv8-00FFFF?style=for-the-badge&logo=ultralytics&logoColor=black" />
-  <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-</p>
+[Explore the Architecture](#-system-architecture) • [Installation Guide](#-installation-and-setup) • [Core Features](#-core-features)
 
 </div>
 
-<br/>
+---
 
 ## 📌 Overview
 
-**Lahore Traffic Intelligence AI** is a sophisticated multimodal RAG (Retrieval-Augmented Generation) system designed to analyze and synthesize traffic data, accident reports, and visual evidence. Unlike standard text-based chatbots, this system integrates **Computer Vision (YOLOv8)**, **CLIP embeddings**, and **Knowledge Graphs** to provide grounded, intelligent insights into urban traffic patterns and incident reporting.
+**Lahore Traffic Intelligence AI** is a sophisticated multimodal Retrieval-Augmented Generation (RAG) system designed to analyze, synthesize, and query complex urban traffic datasets. Unlike traditional text-based RAG, this system implements a **Vision-Language pipeline** that integrates Computer Vision (YOLOv8), semantic image embeddings (CLIP), and structured Knowledge Graphs to provide grounded insights into traffic patterns and incident reporting.
 
-> Built to bridge the gap between raw sensor/image data and actionable intelligence, utilizing a high-performance pipeline of Vision-Language Models (VLMs) and Graph-based retrieval.
+The system transforms unstructured data—including accident PDFs, traffic sign imagery, and official penalty schedules—into a searchable, high-fidelity knowledge base.
 
-<br/>
+## ✨ Core Features
 
-## ✨ Features
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 👁️ Multimodal Perception
-- **Visual Analysis**: YOLOv8 integration for traffic sign and object detection.
-- **Semantic Image Search**: CLIP-based embeddings for retrieving visually similar accident evidence.
-- **OCR Integration**: RapidOCR for extracting text from traffic signs and official reports.
-- **Vision-RAG**: Querying image data alongside text for comprehensive evidence analysis.
-
-</td>
-<td width="50%" valign="top">
+### 👁️ Multimodal Perception Pipeline
+- **Object Detection**: Integration of **YOLOv8** for high-precision detection of vehicles, motorcycles, and riders.
+- **Specialized Vision Modules**: Dedicated detectors for **Helmet Compliance** and **License Plate Localization**.
+- **OCR Intelligence**: Integration of **RapidOCR (PP-OCRv4)** for extracting text from license plates and traffic signage.
+- **Semantic Image Search**: CLIP-based embeddings allowing users to retrieve visually similar accident evidence via natural language.
 
 ### 🧠 Intelligence Engine
-- **RAG-Anything**: Flexible retrieval across text, images, and structured data.
-- **Knowledge Graphs**: Exporting RAG relations to GraphML for structural traffic analysis.
-- **Groq Acceleration**: Ultra-fast LLM inference for real-time traffic querying.
-- **Grounded Generation**: Strict adherence to sourced accident reports and data.
+- **Hybrid RAG-Anything**: A dual-retrieval strategy combining **Naive Vector Search** (semantic chunks) with **Graph-based Retrieval** (relational entities).
+- **Knowledge Graph Integration**: Automatic extraction of entities and relationships, exportable via **GraphML** for structural analysis in tools like Gephi.
+- **Groq-Accelerated Inference**: Leveraging LPU technology for ultra-low latency LLM responses, ensuring real-time query performance.
+- **Strict Grounding**: A rigorous evidence-boundary system that prevents model hallucination by strictly adhering to sourced accident reports and official regulations.
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+### 🛠️ Evidence & Legal Pipeline
+- **Violation Analysis**: Deterministic rules engine that maps visual detections (e.g., "no helmet") to official Punjab traffic fines.
+- **Automated Report Generation**: Synthesis of visual evidence, detected violations, and legal citations into a professional report format.
+- **Provenance Tracking**: Every insight is linked back to a specific source ID, page number, or image URL.
 
-### 🛠️ Data Pipeline
-- **Automated Acquisition**: Custom scripts for acquiring accident imagery and reports.
-- **Knowledge Ingestion**: Processing raw PDFs and images into a searchable vector store.
-- **Evaluation Suite**: Dedicated scripts to verify vision accuracy and chat groundedness.
-- **Synthetic Augmentation**: Tools to improve and refresh vision assets.
-
-</td>
-<td width="50%" valign="top">
-
-### 🎨 Modern Interface
-- **Next.js 16 Architecture**: Cutting-edge frontend with React 19 and TypeScript.
-- **Motion-Enhanced UI**: Glassmorphism and fluid animations via `motion`.
-- **Dark Theme**: Professional, high-contrast interface for intelligence monitoring.
-- **Responsive Design**: Optimized for both desktop dashboards and field devices.
-
-</td>
-</tr>
-</table>
-
-<br/>
+---
 
 ## 🧱 System Architecture
 
 ```mermaid
-flowchart LR
-    A["Raw Data (PDF/Images)"] --> B["Ingestion Pipeline"]
-    B --> C["YOLOv8 / CLIP / OCR"]
-    C --> D["Multimodal Vector Store"]
-    D --> E["Knowledge Graph"]
-    F["User Query"] --> G["Hybrid Retriever"]
-    E --> G
-    D --> G
-    G --> H["Contextual Prompt"]
-    H --> I["Groq LLM"]
-    I --> J["Traffic Intelligence Insight"]
+flowchart TD
+    subgraph Data_Layer [Data Layer]
+        A1[Accident PDFs] --> B
+        A2[Traffic Sign Images] --> B
+        A3[Official Fine JSONs] --> B
+        A4[Accident Reports] --> B
+    end
+
+    subgraph Pipeline [Multimodal Ingestion Pipeline]
+        B[Ingestion Engine] --> C1[YOLOv8 / RapidOCR]
+        B --> C2[CLIP Embeddings]
+        B --> C3[LightRAG Parser]
+        C1 & C2 & C3 --> D[Multimodal Vector Store]
+        D --> E[Knowledge Graph]
+    end
+
+    subgraph Retrieval [Intelligence Interface]
+        F[User Query] --> G[Hybrid Retriever]
+        E --> G
+        D --> G
+        G --> H[Contextual Prompt]
+        H --> I[Groq LLM]
+        I --> J[Grounded Intelligence Insight]
+    end
+
+    style Data_Layer fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style Pipeline fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style Retrieval fill:#fff3e0,stroke:#e65100,stroke-width:2px
 ```
-
-<br/>
-
-## 🛠️ Tech Stack
-
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/Groq-F55036?style=flat-square&logo=groq&logoColor=white" />
-  <img src="https://img.shields.io/badge/Ultralytics-00FFFF?style=flat-square" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
-</p>
-
-**Core techniques applied:** Multimodal Embeddings · Vision-Language Models · RAG-Anything · GraphML Export · Object Detection · OCR
-
-<br/>
-
-## 📁 Project Structure
-
-```
-Lahore-Traffic-AI/
-├── backend/               # FastAPI server, RAG logic, and Model workers
-│   ├── app/               # Core application logic
-│   ├── models/            # ML model weights and configs
-│   └── rag_storage/       # Vector and Knowledge store
-├── frontend/              # Next.js 16 dashboard
-│   ├── app/               # Pages and Routing
-│   └── components/        # UI components
-├── scripts/               # Data acquisition and evaluation tools
-├── data/                  # Raw and processed traffic datasets
-└── graphs/                # Exported Knowledge Graphs (.graphml, .svg)
-```
-
-<br/>
-
-## 🔧 Installation
-
-### Backend Setup
-```bash
-cd backend
-python -m venv venv
-# Windows
-venv\Scripts\activate
-# macOS/Linux
-source venv/bin/activate
-
-pip install -r pyproject.toml # Or use uv sync
-```
-
-Create a `.env` file in `backend/`:
-```
-GROQ_API_KEY=your_groq_key_here
-# Add other required environment variables
-```
-
-### Frontend Setup
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-<br/>
-
-## 📖 Usage
-
-| Action | Component | Description |
-|---|---|---|
-| **Ingest Data** | `scripts/` | Run `acquire_data.py` to gather traffic and accident reports |
-| **Index Vision** | `scripts/` | Use `index_images.py` to create CLIP embeddings |
-| **Query System** | `Frontend` | Use the chat interface to ask about specific traffic zones |
-| **Analyze Graph** | `graphs/` | Open `.graphml` files in Gephi to visualize accident relations |
-| **Verify AI** | `scripts/` | Run `verify_assistant.py` to test groundedness |
-
-<br/>
-
-## 📊 Core Components
-
-| Component | Responsibility |
-|---|---|
-| `embedding_worker.py` | Background process for generating multimodal embeddings |
-| `rag_storage` | Manages the persistence of text and image vectors |
-| `Vision Pipeline` | Combines YOLOv8 and OCR to turn images into searchable text |
-| `FastAPI App` | Orchestrates retrieval and generation for the frontend |
-
-<br/>
-
-## 🗺️ Roadmap
-
-- [x] Multimodal RAG (Text + Image) pipeline
-- [x] YOLOv8 Traffic Sign detection
-- [x] Knowledge Graph export functionality
-- [x] Next.js 16 high-performance dashboard
-- [ ] Real-time traffic camera stream integration
-- [ ] Predictive accident hotspot mapping
-- [ ] Automated report generation for authorities
-- [ ] Multi-agent collaboration for urban planning
-
-<br/>
-
-## 🤝 Contributing
-
-Contributions are welcome to improve the Vision-RAG accuracy and the knowledge graph depth.
-
-```bash
-git checkout -b feature/your-improvement
-git commit -m "feat: describe your change"
-git push origin feature/your-improvement
-```
-
-<br/>
-
-## 📄 License
-
-This project is **free and open source**.
-
-- ✅ Free to use, modify, and distribute
-- ✅ Free for research and public safety use
-- ⚠️ Provided "as-is" without warranty
 
 ---
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%"/>
+## 🚀 Technology Stack
 
-## 📧 Let's Connect
+| Layer | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Frontend** | `Next.js 16`, `React 19`, `Tailwind CSS 4` | High-performance, motion-enhanced monitoring dashboard |
+| **Backend** | `FastAPI`, `Pydantic` | Asynchronous API orchestration and state management |
+| **RAG Framework** | `RAG-Anything`, `LightRAG` | Multimodal retrieval and Graph-based knowledge management |
+| **LLM Engine** | `Groq` (LPU) | Ultra-fast inference for grounded text generation |
+| **Vision** | `YOLOv8`, `ONNX Runtime` | Real-time object detection and violation analysis |
+| **OCR** | `RapidOCR` | Text extraction from plates and signage |
+| **Embeddings** | `Sentence-Transformers` | Local semantic vectorization (`all-MiniLM-L6-v2`) |
+| **Storage** | `SQLite`, `NumPy (.npz)` | Conversation history and image embedding storage |
+
+---
+
+## 🔧 Installation and Setup
+
+### 📋 Prerequisites
+- **Python**: $\ge 3.12, < 3.14$
+- **Node.js**: $\ge 18.0.0$
+- **Hardware**: GPU recommended for YOLOv8 inference (CPU fallback supported via ONNX)
+
+### 🛠️ Backend Setup
+```bash
+# Navigate to backend
+cd backend
+
+# Create and activate virtual environment
+python -m venv venv
+# Windows:
+venv\Scripts\activate
+# macOS/Linux:
+source venv/bin/activate
+
+# Install dependencies
+pip install -r pyproject.toml
+```
+
+**Environment Configuration**
+Create a `.env` file in the `backend/` directory:
+```env
+GROQ_API_KEY=your_groq_api_key_here
+RAG_ENABLED=True
+RAG_QUERY_MODE=hybrid
+BACKEND_CORS_ORIGINS=http://localhost:3000
+```
+
+### 💻 Frontend Setup
+```bash
+# Navigate to frontend
+cd frontend
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+---
+
+## 📖 Usage Examples
+
+### 1. Incident Intelligence Query
+**User**: *"What are the common causes of accidents in the Gulberg area of Lahore?"*  
+**System**: Retrieves accident reports from the vector store $\to$ Extracts patterns from the Knowledge Graph $\to$ Synthesizes a response grounded in official reports.
+
+### 2. Visual Evidence Analysis
+**User**: (Uploads image of a motorcycle rider)  
+**System**: 
+1. **Detection**: Identifies `motorcycle` and `person`.
+2. **Analysis**: Checks for `helmet` $\to$ Result: `Negative`.
+3. **Legal Mapping**: Maps "No Helmet" to `Punjab Traffic Fine Schedule` $\to$ Identifies PKR amount.
+4. **Output**: Generates a report with visual crops as evidence.
+
+---
+
+## 📁 Project Directory Structure
+
+```text
+Lahore-Traffic-AI/
+├── backend/               # FastAPI Core
+│   ├── app/
+│   │   ├── api/           # REST Endpoints
+│   │   ├── core/          # Global Config & Settings
+│   │   ├── ingestion/     # Multimodal Data Pipeline
+│   │   ├── rag/           # RAG-Anything / LightRAG Engine
+│   │   └── services/      # Vision, Evidence, & Database Logic
+│   ├── models/            # YOLOv8 & OCR Weights
+│   └── rag_storage/       # Vector & Graph Indices
+├── frontend/              # Next.js 16 Dashboard
+│   ├── app/               # App Router & Pages
+│   └── components/        # UI Components (Tailwind/Motion)
+├── scripts/               # Data Acquisition & Eval Tools
+├── data/                  # Raw & Processed Datasets
+└── graphs/                # Exported .graphml Visualizations
+```
+
+---
+
+## ⚠️ Technical Limitations & Considerations
+
+<details>
+<summary><b>Click to view Model Constraints</b></summary>
+
+- **Temporal Data**: Single images do not establish movement; findings are static and require manual review for behavioral violations.
+- **Class Granularity**: The current COCO-based weights do not reliably distinguish between vans and rickshaws.
+- **OCR Accuracy**: Plate text is unverified and must be cross-checked against the provided image crop.
+- **Context**: Punjab fine amounts are based on the most recently available structured registry; local jurisdictional variations may exist.
+</details>
+
+---
+
+## 🤝 Contributing
+
+Contributions to improve the **Vision-RAG** accuracy or expand the **Knowledge Graph** depth are welcome.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'feat: Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is open-source and provided "as-is" for research and public safety enhancement.
 
 <div align="center">
 
-<h3>Built with obsession by <b>Salik Ahmad</b> 🤖</h3>
-
-<p>
-  <a href="https://salikahmad.vercel.app/" target="_blank">
-    <img src="https://img.shields.io/badge/Website-salikahmad.vercel.app-818CF8?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0d0d0d" />
-  </a>
-  <a href="https://www.linkedin.com/in/salik-ahmad-programmer/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Salik%20Ahmad-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d0d0d" />
-  </a>
-  <a href="https://github.com/SalikAhmad702" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-SalikAhmad702-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0d0d0d" />
-  </a>
-</p>
-
-<br/>
-
-<a href="https://salikahmad.vercel.app/">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=14&duration=4000&pause=1000&color=818CF8&center=true&vCenter=true&width=700&lines=AI%2FML+Engineer;Traffic+Intelligence+Specialist;Copyright+©+2026+Salik+Ahmad." alt="Footer Typing" />
-</a>
-
-<br/><br/>
-
-<img src="https://capsule-render.vercel.app/api?type=shark&color=0:0f0c29,50:302b63,100:24243e&height=140&section=footer" width="100%"/>
+### Built with obsession by **Salik Ahmad** 🤖
+[Website](https://salikahmad.vercel.app/) • [LinkedIn](https://www.linkedin.com/in/salik-ahmad-programmer/) • [GitHub](https://github.com/SalikAhmad702)
 
 </div>
