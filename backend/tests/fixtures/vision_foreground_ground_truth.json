@@ -1,0 +1,20 @@
+{
+  "scope": "Six selected photographs with manually reviewed image-level and primary-vehicle helmet labels. Includes one existing private user upload. Investigation smoke checks, not held-out production evaluation.",
+  "reviewed_on": "2026-10-11",
+  "images": [
+    {"path":"backend/storage/verification/bus.jpg","vehicle_types":["bus"],"helmet_violation":false,"primary_helmet_violation":false},
+    {"path":"backend/storage/verification/helmeted-couple.jpg","vehicle_types":["car","motorcycle"],"helmet_violation":false,"primary_helmet_violation":false},
+    {"path":"backend/storage/verification/pakistan-motorcycle.jpg","vehicle_types":["motorcycle"],"helmet_violation":true,"primary_helmet_violation":true},
+    {"path":"backend/storage/verification/motorcycle-riders.jpg","vehicle_types":["motorcycle"],"helmet_violation":true,"primary_helmet_violation":true},
+    {"path":"data/raw/accidents/images/islamabad-truck-accident-2011.jpg","vehicle_types":["truck"],"helmet_violation":false,"primary_helmet_violation":false},
+    {"path":"backend/storage/uploads/bdd82670bec54f0eaab14c8ea13e7736.jpg","vehicle_types":["car","motorcycle"],"helmet_violation":true,"primary_helmet_violation":true,"primary_plate_text":"SGK3695"}
+  ],
+  "limitations": [
+    "These six photos were inspected during implementation; metrics are smoke results, not held-out generalization estimates.",
+    "Primary-vehicle labels refer to the visually prominent foreground subject, not measured camera distance.",
+    "The private saved rider upload remains local; its external redistribution rights are not verified.",
+    "One real readable plate was manually transcribed during this fix. Its OCR result is a regression smoke check, not held-out Pakistan OCR accuracy.",
+    "No real labeled positive occupancy ground truth; occupancy metrics remain unavailable.",
+    "No per-object localization, per-rider recall, legal guilt, or vehicle movement ground truth."
+  ]
+}

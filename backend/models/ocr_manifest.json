@@ -1,0 +1,15 @@
+{
+  "name": "RapidOCR ONNX Runtime / PP-OCRv4",
+  "package": "rapidocr-onnxruntime",
+  "package_version": "1.4.4",
+  "source": "https://github.com/RapidAI/RapidOCR",
+  "weights_source": "Bundled in the pinned PyPI package; no inference-time downloads",
+  "license": "Apache-2.0 (RapidOCR and PaddleOCR)",
+  "upstream_weights": "https://github.com/PaddlePaddle/PaddleOCR",
+  "models": [
+    {"filename":"ch_PP-OCRv4_det_infer.onnx","sha256":"d2a7720d45a54257208b1e13e36a8479894cb74155a5efe29462512d42f49da9"},
+    {"filename":"ch_PP-OCRv4_rec_infer.onnx","sha256":"48fc40f24f6d2a207a2b1091d3437eb3cc3eb6b676dc3ef9c37384005483683b"},
+    {"filename":"ch_ppocr_mobile_v2.0_cls_infer.onnx","sha256":"e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c"}
+  ],
+  "limitations": "General OCR weights support Latin text/digits but are not trained/evaluated for Pakistan plates. Urdu plate text is unsupported. The angle-classification model is bundled but not used."
+}

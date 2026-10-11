@@ -1,0 +1,19 @@
+{
+  "scope": "Manually reviewed image-level smoke labels of visible conditions, not enforcement decisions or a representative Pakistan benchmark.",
+  "reviewed_on": "2026-10-11",
+  "label_definition": "helmet_violation means clear visible bare-head evidence on a motorcycle; false does not certify every occupant or full compliance. Images with no motorcycle are negative controls.",
+  "images": [
+    {"path": "backend/storage/verification/bus.jpg", "vehicle_types": ["bus"], "helmet_violation": false, "motorcycle_overloading": null, "plate_text": null},
+    {"path": "backend/storage/verification/helmeted-couple.jpg", "vehicle_types": ["car", "motorcycle"], "helmet_violation": false, "motorcycle_overloading": null, "plate_text": null},
+    {"path": "backend/storage/verification/pakistan-motorcycle.jpg", "vehicle_types": ["motorcycle"], "helmet_violation": true, "motorcycle_overloading": null, "plate_text": null},
+    {"path": "backend/storage/verification/motorcycle-riders.jpg", "vehicle_types": ["motorcycle"], "helmet_violation": true, "motorcycle_overloading": null, "plate_text": null},
+    {"path": "data/raw/accidents/images/islamabad-truck-accident-2011.jpg", "vehicle_types": ["truck"], "helmet_violation": false, "motorcycle_overloading": null, "plate_text": null}
+  ],
+  "limitations": [
+    "Only five selected images; one image contains both cars and a motorcycle.",
+    "Ground truth is image-level. It does not measure object-level mAP, rider-level recall or per-vehicle localization accuracy.",
+    "No independently labeled readable Pakistan plates, car-interior seatbelts, or positive overload images are available here.",
+    "These images were already used during manual investigation; this is a smoke evaluation, not a held-out test set.",
+    "Foreign images test visual conditions only; Punjab jurisdiction is an explicit application setting, not an inferred location."
+  ]
+}

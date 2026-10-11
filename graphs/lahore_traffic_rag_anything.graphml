@@ -1,0 +1,2325 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d13" for="edge" attr.name="truncate" attr.type="string"/>
+<key id="d12" for="edge" attr.name="created_at" attr.type="long"/>
+<key id="d11" for="edge" attr.name="file_path" attr.type="string"/>
+<key id="d10" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d9" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d8" for="edge" attr.name="keywords" attr.type="string"/>
+<key id="d7" for="edge" attr.name="description" attr.type="string"/>
+<key id="d6" for="node" attr.name="truncate" attr.type="string"/>
+<key id="d5" for="node" attr.name="created_at" attr.type="long"/>
+<key id="d4" for="node" attr.name="file_path" attr.type="string"/>
+<key id="d3" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d2" for="node" attr.name="description" attr.type="string"/>
+<key id="d1" for="node" attr.name="entity_type" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_id" attr.type="string"/>
+<graph edgedefault="undirected"><node id="verified_accident_image_2f9e582c00a5 (image)">
+  <data key="d0">verified_accident_image_2f9e582c00a5 (image)</data>
+  <data key="d1">image</data>
+  <data key="d2">['Image ID: pk-acc-img-001. Fog crash near Ravi Toll Plaza on the M2. Photograph of a fog-related road crash on the M2 Lahore-Islamabad Motorway near Ravi Toll Plaza. Location: Lahore. Geography basis: source-supported location. Photograph date (not independently verified incident date): 2008-12-29.</data>
+  <data key="d3">chunk-3305d06ae4267b5b3298d00298ea9607</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791545840</data>
+</node>
+<node id="verified_accident_image_f5280759c537 (image)">
+  <data key="d0">verified_accident_image_f5280759c537 (image)</data>
+  <data key="d1">image</data>
+  <data key="d2">['Image ID: pk-acc-img-002. Bus fell into a stream on the road to Gilgit. Photograph of a bus that fell into a stream while travelling toward Gilgit. Location: Gilgit-Baltistan. Geography basis: source-supported location. Photograph date (not independently verified incident date): 2004-08-08. Accide</data>
+  <data key="d3">chunk-d67a456f9b5571ec3167efb8a9969d09</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791545840</data>
+</node>
+<node id="verified_accident_image_cf8fa83c56e6 (image)">
+  <data key="d0">verified_accident_image_cf8fa83c56e6 (image)</data>
+  <data key="d1">image</data>
+  <data key="d2">['Image ID: pk-acc-img-003. Truck accident in Islamabad. Photograph titled and geotagged by its author as a truck accident in Islamabad. Location: Islamabad. Geography basis: source-supported location. Photograph date (not independently verified incident date): 2011-06-22. Accident type: truck accid</data>
+  <data key="d3">chunk-11cade7201363af448092a83574157e1</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791545840</data>
+</node>
+<node id="verified_accident_image_26b4f970de35 (image)">
+  <data key="d0">verified_accident_image_26b4f970de35 (image)</data>
+  <data key="d1">image</data>
+  <data key="d2">['Image ID: pk-acc-img-004. Truck accident in Westridge, Rawalpindi. First of three source-associated photographs of the same truck accident in Westridge, Rawalpindi. Location: Rawalpindi. Geography basis: source-supported location. Photograph date (not independently verified incident date): 2011-04</data>
+  <data key="d3">chunk-22083724321e4ae8387ce45828c6505b</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791545840</data>
+</node>
+<node id="verified_accident_image_67fb2da4bcca (image)">
+  <data key="d0">verified_accident_image_67fb2da4bcca (image)</data>
+  <data key="d1">image</data>
+  <data key="d2">['Image ID: pk-acc-img-005. Truck accident in Westridge, Rawalpindi — view 2. Second source-associated photograph of the same truck accident in Westridge, Rawalpindi. Location: Rawalpindi. Geography basis: source-supported location. Photograph date (not independently verified incident date): 2011-04</data>
+  <data key="d3">chunk-4abdcfbb5b4eb041e42304c2fe353c22</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791545840</data>
+</node>
+<node id="verified_accident_image_b89135723051 (image)">
+  <data key="d0">verified_accident_image_b89135723051 (image)</data>
+  <data key="d1">image</data>
+  <data key="d2">['Image ID: pk-acc-img-006. Truck accident in Westridge, Rawalpindi — view 3. Third source-associated photograph of the same truck accident in Westridge, Rawalpindi. Location: Rawalpindi. Geography basis: source-supported location. Photograph date (not independently verified incident date): 2011-04-</data>
+  <data key="d3">chunk-1579b44f5176d3546fe65f5dc454e7b5</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791545840</data>
+</node>
+<node id="verified_accident_image_e94234bb5a80 (image)">
+  <data key="d0">verified_accident_image_e94234bb5a80 (image)</data>
+  <data key="d1">image</data>
+  <data key="d2">['Image ID: pk-acc-img-007. Car fell into a river in Malakand. Source photograph titled as a non-custom-paid car that fell into a river in the Malakand area. Location: Malakand. Geography basis: source-supported location. Photograph date (not independently verified incident date): 2014-03-06. Accide</data>
+  <data key="d3">chunk-72e7e2aaaedd97c1941a9f44f868e9f8</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791545840</data>
+</node>
+<node id="Fog Crash">
+  <data key="d0">Fog Crash</data>
+  <data key="d1">event</data>
+  <data key="d2">Fog Crash is a fog-related road collision that occurred on the M2 Lahore-Islamabad Motorway near Ravi Toll Plaza in Lahore, Pakistan on 2008-12-29.</data>
+  <data key="d3">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478554</data>
+  <data key="d6"></data>
+</node>
+<node id="Ravi Toll Plaza">
+  <data key="d0">Ravi Toll Plaza</data>
+  <data key="d1">location</data>
+  <data key="d2">Ravi Toll Plaza is a toll plaza situated on the M2 Lahore-Islamabad Motorway near Lahore, Pakistan.</data>
+  <data key="d3">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478554</data>
+  <data key="d6"></data>
+</node>
+<node id="M2 Lahore-Islamabad Motorway">
+  <data key="d0">M2 Lahore-Islamabad Motorway</data>
+  <data key="d1">location</data>
+  <data key="d2">M2 Lahore-Islamabad Motorway is a major highway connecting Lahore and Islamabad, location of the fog crash.</data>
+  <data key="d3">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478554</data>
+  <data key="d6"></data>
+</node>
+<node id="Lahore, Pakistan">
+  <data key="d0">Lahore, Pakistan</data>
+  <data key="d1">location</data>
+  <data key="d2">Lahore, Pakistan is the city where the fog crash took place.</data>
+  <data key="d3">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478554</data>
+  <data key="d6"></data>
+</node>
+<node id="2008-12-29">
+  <data key="d0">2008-12-29</data>
+  <data key="d1">data</data>
+  <data key="d2">2008-12-29 is the date on which the fog crash occurred.</data>
+  <data key="d3">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478554</data>
+  <data key="d6"></data>
+</node>
+<node id="Wasim3s">
+  <data key="d0">Wasim3s</data>
+  <data key="d1">person</data>
+  <data key="d2">Wasim3s is the author credited for the photograph of the fog crash.</data>
+  <data key="d3">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478554</data>
+  <data key="d6"></data>
+</node>
+<node id="Pk-Lahore-M2-Fog-Crash-2008-12-29">
+  <data key="d0">Pk-Lahore-M2-Fog-Crash-2008-12-29</data>
+  <data key="d1">data</data>
+  <data key="d2">Pk-Lahore-M2-Fog-Crash-2008-12-29 is the record identifier assigned to the fog crash image.</data>
+  <data key="d3">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478554</data>
+  <data key="d6"></data>
+</node>
+<node id="Public Domain">
+  <data key="d0">Public Domain</data>
+  <data key="d1">concept</data>
+  <data key="d2">Public Domain is the license under which the fog crash photograph is released.</data>
+  <data key="d3">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478554</data>
+  <data key="d6"></data>
+</node>
+<node id="https://commons.wikimedia.org/wiki/File:Fog_Crash.jpg">
+  <data key="d0">https://commons.wikimedia.org/wiki/File:Fog_Crash.jpg</data>
+  <data key="d1">content</data>
+  <data key="d2">https://commons.wikimedia.org/wiki/File:Fog_Crash.jpg is the source URL for the fog crash image on Wikimedia Commons.</data>
+  <data key="d3">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478555</data>
+  <data key="d6"></data>
+</node>
+<node id="Wikimedia-Pakistan-Accident-Media">
+  <data key="d0">Wikimedia-Pakistan-Accident-Media</data>
+  <data key="d1">data</data>
+  <data key="d2">Wikimedia-Pakistan-Accident-Media is the source ID associated with the fog crash media record.</data>
+  <data key="d3">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478556</data>
+  <data key="d6"></data>
+</node>
+<node id="Fog-Related Road Collision">
+  <data key="d0">Fog-Related Road Collision</data>
+  <data key="d1">concept</data>
+  <data key="d2">Fog-Related Road Collision describes the type of accident where reduced visibility due to fog leads to a vehicle collision.</data>
+  <data key="d3">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478556</data>
+  <data key="d6"></data>
+</node>
+<node id="Bus">
+  <data key="d0">Bus</data>
+  <data key="d1">artifact</data>
+  <data key="d2">A bus that fell into a stream on the road to Gilgit, involved in a bus road accident.</data>
+  <data key="d3">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478556</data>
+  <data key="d6"></data>
+</node>
+<node id="Gilgit">
+  <data key="d0">Gilgit</data>
+  <data key="d1">location</data>
+  <data key="d2">Gilgit is a city in Pakistan where the bus accident occurred.</data>
+  <data key="d3">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478556</data>
+  <data key="d6"></data>
+</node>
+<node id="Pakistan">
+  <data key="d0">Pakistan</data>
+  <data key="d1">location</data>
+  <data key="d2">Pakistan is the country where Rawalpindi and the truck accident are situated.&lt;SEP&gt;Pakistan is the country encompassing Gilgit, the location of the accident.&lt;SEP&gt;Pakistan is the country where Rawalpindi is situated and where the accident occurred.&lt;SEP&gt;Pakistan is the country where Rawalpindi is located, mentioned in the accident description.&lt;SEP&gt;The country encompassing Malakand and the site of the accident.</data>
+  <data key="d3">chunk-65cf53008bde6670d297f584f36549dc&lt;SEP&gt;chunk-395f8d20f55adbf9b5ba11185f1d44ae&lt;SEP&gt;chunk-ead68e598ced832ac5b5b69ed782fdcb&lt;SEP&gt;chunk-d1fd8132469f86e26f9421c66a6be2ce&lt;SEP&gt;chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478556</data>
+  <data key="d6"></data>
+</node>
+<node id="Karakoram Highway">
+  <data key="d0">Karakoram Highway</data>
+  <data key="d1">location</data>
+  <data key="d2">Karakoram Highway is the road leading to Gilgit on which the bus fell into a stream.</data>
+  <data key="d3">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478556</data>
+  <data key="d6"></data>
+</node>
+<node id="2004-08-08">
+  <data key="d0">2004-08-08</data>
+  <data key="d1">data</data>
+  <data key="d2">The date on which the bus accident took place.</data>
+  <data key="d3">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478557</data>
+  <data key="d6"></data>
+</node>
+<node id="Bus Road Accident">
+  <data key="d0">Bus Road Accident</data>
+  <data key="d1">concept</data>
+  <data key="d2">A classification describing an accident involving a bus on a road.</data>
+  <data key="d3">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478557</data>
+  <data key="d6"></data>
+</node>
+<node id="pk-gilgit-bus-stream-2004-08-08">
+  <data key="d0">pk-gilgit-bus-stream-2004-08-08</data>
+  <data key="d1">data</data>
+  <data key="d2">The record identifier for the Gilgit bus stream accident.</data>
+  <data key="d3">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478557</data>
+  <data key="d6"></data>
+</node>
+<node id="Verified Record-Image Match">
+  <data key="d0">Verified Record-Image Match</data>
+  <data key="d1">data</data>
+  <data key="d2">Indicates that the image has been confirmed to match the accident record.&lt;SEP&gt;Verified record-image match indicates a true boolean value confirming the image matches the record.&lt;SEP&gt;Verified Record-Image Match indicates that the image has been confirmed to match the accident record (true).</data>
+  <data key="d3">chunk-65cf53008bde6670d297f584f36549dc&lt;SEP&gt;chunk-9880af1c605f88588755a4a2e1e6fda8&lt;SEP&gt;chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478557</data>
+  <data key="d6"></data>
+</node>
+<node id="Wikimedia Image Page">
+  <data key="d0">Wikimedia Image Page</data>
+  <data key="d1">content</data>
+  <data key="d2">The Wikimedia Commons web page that hosts the photograph of the bus accident.</data>
+  <data key="d3">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478557</data>
+  <data key="d6"></data>
+</node>
+<node id="CC BY-SA 3.0 License">
+  <data key="d0">CC BY-SA 3.0 License</data>
+  <data key="d1">concept</data>
+  <data key="d2">The Creative Commons license under which the image is released.</data>
+  <data key="d3">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478557</data>
+  <data key="d6"></data>
+</node>
+<node id="Anees Jillani">
+  <data key="d0">Anees Jillani</data>
+  <data key="d1">person</data>
+  <data key="d2">The author credited for the photograph of the bus accident.</data>
+  <data key="d3">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478558</data>
+  <data key="d6"></data>
+</node>
+<node id="Photograph">
+  <data key="d0">Photograph</data>
+  <data key="d1">artifact</data>
+  <data key="d2">A photograph showing a bus that fell into a stream on the road to Gilgit.</data>
+  <data key="d3">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478558</data>
+  <data key="d6"></data>
+</node>
+<node id="Source URL">
+  <data key="d0">Source URL</data>
+  <data key="d1">content</data>
+  <data key="d2">The web address https://commons.wikimedia.org/wiki/File:A_Bus_Accident_on_the_Karakoram_Highway_on_Way_to_Gilgit.jpg that hosts the image.</data>
+  <data key="d3">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478558</data>
+  <data key="d6"></data>
+</node>
+<node id="Source ID wikimedia-pakistan-accident-media">
+  <data key="d0">Source ID wikimedia-pakistan-accident-media</data>
+  <data key="d1">data</data>
+  <data key="d2">The source identifier for the accident media record.</data>
+  <data key="d3">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478559</data>
+  <data key="d6"></data>
+</node>
+<node id="Bus Accident Event">
+  <data key="d0">Bus Accident Event</data>
+  <data key="d1">event</data>
+  <data key="d2">The specific incident where a bus fell into a stream on the Karakoram Highway near Gilgit on 2004-08-08.</data>
+  <data key="d3">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478559</data>
+  <data key="d6"></data>
+</node>
+<node id="Jam Mudasir">
+  <data key="d0">Jam Mudasir</data>
+  <data key="d1">person</data>
+  <data key="d2">Jam Mudasir is the author credited for the photograph of the truck accident in Islamabad.&lt;SEP&gt;Jam Mudasir is credited as the author of the photograph of the truck accident.&lt;SEP&gt;Jam Mudasir is the author credited for the photograph of the truck accident.&lt;SEP&gt;Jam Mudasir is the author credited for the image of the truck accident.</data>
+  <data key="d3">chunk-9880af1c605f88588755a4a2e1e6fda8&lt;SEP&gt;chunk-395f8d20f55adbf9b5ba11185f1d44ae&lt;SEP&gt;chunk-ead68e598ced832ac5b5b69ed782fdcb&lt;SEP&gt;chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478560</data>
+  <data key="d6"></data>
+</node>
+<node id="Islamabad, Pakistan">
+  <data key="d0">Islamabad, Pakistan</data>
+  <data key="d1">location</data>
+  <data key="d2">Islamabad, Pakistan is the city and country where the truck accident photograph was taken.</data>
+  <data key="d3">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478560</data>
+  <data key="d6"></data>
+</node>
+<node id="Truck Accident in Islamabad">
+  <data key="d0">Truck Accident in Islamabad</data>
+  <data key="d1">event</data>
+  <data key="d2">Truck Accident in Islamabad refers to the specific truck accident captured in the photograph, dated 2011-06-22.</data>
+  <data key="d3">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478560</data>
+  <data key="d6"></data>
+</node>
+<node id="pk-islamabad-truck-accident-2011-06-22">
+  <data key="d0">pk-islamabad-truck-accident-2011-06-22</data>
+  <data key="d1">data</data>
+  <data key="d2">pk-islamabad-truck-accident-2011-06-22 is the record identifier associated with the truck accident image.</data>
+  <data key="d3">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478560</data>
+  <data key="d6"></data>
+</node>
+<node id="https://commons.wikimedia.org/wiki/File:Truck_Accident_-_panoramio.jpg">
+  <data key="d0">https://commons.wikimedia.org/wiki/File:Truck_Accident_-_panoramio.jpg</data>
+  <data key="d1">content</data>
+  <data key="d2">https://commons.wikimedia.org/wiki/File:Truck_Accident_-_panoramio.jpg is the online source page hosting the truck accident photograph.</data>
+  <data key="d3">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478560</data>
+  <data key="d6"></data>
+</node>
+<node id="CC BY 3.0">
+  <data key="d0">CC BY 3.0</data>
+  <data key="d1">concept</data>
+  <data key="d2">CC BY 3.0 is the Creative Commons license under which the photograph is released.&lt;SEP&gt;License under which the truck accident photograph is released.&lt;SEP&gt;CC BY 3.0 is the Creative Commons license under which the accident photograph is released.&lt;SEP&gt;CC BY 3.0 is the Creative Commons license under which the image of the accident is released.</data>
+  <data key="d3">chunk-9880af1c605f88588755a4a2e1e6fda8&lt;SEP&gt;chunk-395f8d20f55adbf9b5ba11185f1d44ae&lt;SEP&gt;chunk-ead68e598ced832ac5b5b69ed782fdcb&lt;SEP&gt;chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478560</data>
+  <data key="d6"></data>
+</node>
+<node id="2011-06-22">
+  <data key="d0">2011-06-22</data>
+  <data key="d1">data</data>
+  <data key="d2">2011-06-22 is the date on which the truck accident occurred and the photograph was taken.</data>
+  <data key="d3">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478561</data>
+  <data key="d6"></data>
+</node>
+<node id="Truck Accident Image">
+  <data key="d0">Truck Accident Image</data>
+  <data key="d1">artifact</data>
+  <data key="d2">Truck Accident Image is the photograph depicting the truck accident in Islamabad.&lt;SEP&gt;Truck Accident Image is the photograph hosted at https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio_(1).jpg that depicts the truck accident.</data>
+  <data key="d3">chunk-9880af1c605f88588755a4a2e1e6fda8&lt;SEP&gt;chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478561</data>
+  <data key="d6"></data>
+</node>
+<node id="wikimedia-pakistan-accident-media">
+  <data key="d0">wikimedia-pakistan-accident-media</data>
+  <data key="d1">data</data>
+  <data key="d2">wikimedia-pakistan-accident-media is the source ID referencing the accident media in Wikimedia.&lt;SEP&gt;wikimedia-pakistan-accident-media is the source identifier for the accident media.&lt;SEP&gt;Source ID used to reference the accident media in the wikimedia database.</data>
+  <data key="d3">chunk-9880af1c605f88588755a4a2e1e6fda8&lt;SEP&gt;chunk-ead68e598ced832ac5b5b69ed782fdcb&lt;SEP&gt;chunk-d1fd8132469f86e26f9421c66a6be2ce&lt;SEP&gt;chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478561</data>
+  <data key="d6"></data>
+</node>
+<node id="C:\Users\salik\OneDrive\Desktop\AI Project\data\raw\accidents\images\islamabad-truck-accident-2011.jpg">
+  <data key="d0">C:\Users\salik\OneDrive\Desktop\AI Project\data\raw\accidents\images\islamabad-truck-accident-2011.jpg</data>
+  <data key="d1">artifact</data>
+  <data key="d2">The file path points to the digital photograph of the truck accident in Islamabad stored locally.</data>
+  <data key="d3">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478561</data>
+  <data key="d6"></data>
+</node>
+<node id="Truck Accident (Accident Type)">
+  <data key="d0">Truck Accident (Accident Type)</data>
+  <data key="d1">concept</data>
+  <data key="d2">Truck Accident denotes the accident type classification mentioned in the caption.</data>
+  <data key="d3">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478562</data>
+  <data key="d6"></data>
+</node>
+<node id="Rawalpindi">
+  <data key="d0">Rawalpindi</data>
+  <data key="d1">location</data>
+  <data key="d2">Rawalpindi is a city in Pakistan mentioned as the location of the truck accident.&lt;SEP&gt;Rawalpindi is a city in Pakistan identified as the location of the truck accident.</data>
+  <data key="d3">chunk-395f8d20f55adbf9b5ba11185f1d44ae&lt;SEP&gt;chunk-ead68e598ced832ac5b5b69ed782fdcb&lt;SEP&gt;chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478562</data>
+  <data key="d6"></data>
+</node>
+<node id="Westridge">
+  <data key="d0">Westridge</data>
+  <data key="d1">location</data>
+  <data key="d2">Westridge is a locality within Rawalpindi identified as the site of the truck accident.&lt;SEP&gt;Westridge is a locality within Rawalpindi, Pakistan, identified as the site of the truck accident.</data>
+  <data key="d3">chunk-395f8d20f55adbf9b5ba11185f1d44ae&lt;SEP&gt;chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478563</data>
+  <data key="d6"></data>
+</node>
+<node id="Truck Accident">
+  <data key="d0">Truck Accident</data>
+  <data key="d1">event</data>
+  <data key="d2">A truck accident that occurred in Westridge, Rawalpindi on 2011-04-14.&lt;SEP&gt;Truck Accident refers to the vehicular collision that took place on 2011-04-14 in Westridge, Rawalpindi, Pakistan.&lt;SEP&gt;The truck accident is an event that occurred in Westridge, Rawalpindi on 2011-04-14, involving a truck.</data>
+  <data key="d3">chunk-395f8d20f55adbf9b5ba11185f1d44ae&lt;SEP&gt;chunk-ead68e598ced832ac5b5b69ed782fdcb&lt;SEP&gt;chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478563</data>
+  <data key="d6"></data>
+</node>
+<node id="2011-04-14">
+  <data key="d0">2011-04-14</data>
+  <data key="d1">data</data>
+  <data key="d2">The date on which the truck accident took place.&lt;SEP&gt;2011-04-14 is the date on which the truck accident occurred.</data>
+  <data key="d3">chunk-395f8d20f55adbf9b5ba11185f1d44ae&lt;SEP&gt;chunk-ead68e598ced832ac5b5b69ed782fdcb&lt;SEP&gt;chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478563</data>
+  <data key="d6"></data>
+</node>
+<node id="Pk-Rawalpindi-Westridge-Truck-2011-04-14">
+  <data key="d0">Pk-Rawalpindi-Westridge-Truck-2011-04-14</data>
+  <data key="d1">data</data>
+  <data key="d2">Record identifier for the truck accident image.</data>
+  <data key="d3">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478563</data>
+  <data key="d6"></data>
+</node>
+<node id="Commons Wikimedia File URL">
+  <data key="d0">Commons Wikimedia File URL</data>
+  <data key="d1">content</data>
+  <data key="d2">URL linking to the source file of the truck accident photograph.</data>
+  <data key="d3">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478564</data>
+  <data key="d6"></data>
+</node>
+<node id="Image File Path">
+  <data key="d0">Image File Path</data>
+  <data key="d1">artifact</data>
+  <data key="d2">Local file path of the truck accident image on the author's computer.</data>
+  <data key="d3">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478564</data>
+  <data key="d6"></data>
+</node>
+<node id="C:\Users\salik\OneDrive\Desktop\AI Project\data\raw\accidents\images\rawalpindi-westridge-truck-2011-01.jpg">
+  <data key="d0">C:\Users\salik\OneDrive\Desktop\AI Project\data\raw\accidents\images\rawalpindi-westridge-truck-2011-01.jpg</data>
+  <data key="d1">artifact</data>
+  <data key="d2">Local file path of the photograph showing the truck accident.</data>
+  <data key="d3">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478564</data>
+  <data key="d6"></data>
+</node>
+<node id="https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio.jpg">
+  <data key="d0">https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio.jpg</data>
+  <data key="d1">content</data>
+  <data key="d2">Web URL linking to the source image of the truck accident on Wikimedia Commons.</data>
+  <data key="d3">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478564</data>
+  <data key="d6"></data>
+</node>
+<node id="Wikimedia Pakistan Accident Media">
+  <data key="d0">Wikimedia Pakistan Accident Media</data>
+  <data key="d1">content</data>
+  <data key="d2">Source ID identifier for the truck accident media in Wikimedia.</data>
+  <data key="d3">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478564</data>
+  <data key="d6"></data>
+</node>
+<node id="Westridge, Rawalpindi">
+  <data key="d0">Westridge, Rawalpindi</data>
+  <data key="d1">location</data>
+  <data key="d2">Westridge, Rawalpindi is a specific area within Rawalpindi mentioned as the precise site of the truck accident.</data>
+  <data key="d3">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478564</data>
+  <data key="d6"></data>
+</node>
+<node id="pk-rawalpindi-westridge-truck-2011-04-14">
+  <data key="d0">pk-rawalpindi-westridge-truck-2011-04-14</data>
+  <data key="d1">data</data>
+  <data key="d2">pk-rawalpindi-westridge-truck-2011-04-14 is the record identifier documenting the truck accident.&lt;SEP&gt;pk-rawalpindi-westridge-truck-2011-04-14 is the record identifier associated with the truck accident.</data>
+  <data key="d3">chunk-ead68e598ced832ac5b5b69ed782fdcb&lt;SEP&gt;chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478564</data>
+  <data key="d6"></data>
+</node>
+<node id="Truck Accident Image Source">
+  <data key="d0">Truck Accident Image Source</data>
+  <data key="d1">content</data>
+  <data key="d2">Truck Accident Image Source is the Wikimedia Commons URL hosting the photograph of the truck accident.</data>
+  <data key="d3">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478565</data>
+  <data key="d6"></data>
+</node>
+<node id="rawalpindi-westridge-truck-2011-03.jpg">
+  <data key="d0">rawalpindi-westridge-truck-2011-03.jpg</data>
+  <data key="d1">artifact</data>
+  <data key="d2">rawalpindi-westridge-truck-2011-03.jpg is the image file depicting the truck accident.</data>
+  <data key="d3">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478565</data>
+  <data key="d6"></data>
+</node>
+<node id="https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio_(2).jpg">
+  <data key="d0">https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio_(2).jpg</data>
+  <data key="d1">content</data>
+  <data key="d2">https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio_(2).jpg is the source URL of the image.</data>
+  <data key="d3">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478565</data>
+  <data key="d6"></data>
+</node>
+<node id="Car">
+  <data key="d0">Car</data>
+  <data key="d1">artifact</data>
+  <data key="d2">A vehicle that fell into a river in Malakand, Pakistan as captured in the photograph.</data>
+  <data key="d3">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478565</data>
+  <data key="d6"></data>
+</node>
+<node id="River">
+  <data key="d0">River</data>
+  <data key="d1">naturalobject</data>
+  <data key="d2">The water body in Malakand, Pakistan into which the car fell.</data>
+  <data key="d3">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478566</data>
+  <data key="d6"></data>
+</node>
+<node id="Malakand">
+  <data key="d0">Malakand</data>
+  <data key="d1">location</data>
+  <data key="d2">A region in Pakistan where the car accident occurred.</data>
+  <data key="d3">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478566</data>
+  <data key="d6"></data>
+</node>
+<node id="March 6 2014">
+  <data key="d0">March 6 2014</data>
+  <data key="d1">data</data>
+  <data key="d2">The date on which the car fell into the river, recorded as 2014-03-06.</data>
+  <data key="d3">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478567</data>
+  <data key="d6"></data>
+</node>
+<node id="Car Left Roadway">
+  <data key="d0">Car Left Roadway</data>
+  <data key="d1">concept</data>
+  <data key="d2">Accident type indicating that the car left the roadway.</data>
+  <data key="d3">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478567</data>
+  <data key="d6"></data>
+</node>
+<node id="Non-Custom-Paid Car Photograph">
+  <data key="d0">Non-Custom-Paid Car Photograph</data>
+  <data key="d1">content</data>
+  <data key="d2">A source photograph titled as a non-custom-paid car that fell into the river in the Malakand area.</data>
+  <data key="d3">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478567</data>
+  <data key="d6"></data>
+</node>
+<node id="pk-malakand-car-river-2014-03-06">
+  <data key="d0">pk-malakand-car-river-2014-03-06</data>
+  <data key="d1">data</data>
+  <data key="d2">The record identifier for the car accident image, indicating the event date and location.</data>
+  <data key="d3">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478568</data>
+  <data key="d6"></data>
+</node>
+<node id="Record-Image Match True">
+  <data key="d0">Record-Image Match True</data>
+  <data key="d1">data</data>
+  <data key="d2">Verification status indicating that the record matches the image.</data>
+  <data key="d3">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478568</data>
+  <data key="d6"></data>
+</node>
+<node id="CC BY-SA 4.0">
+  <data key="d0">CC BY-SA 4.0</data>
+  <data key="d1">concept</data>
+  <data key="d2">The Creative Commons license under which the photograph is released.</data>
+  <data key="d3">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478568</data>
+  <data key="d6"></data>
+</node>
+<node id="Anaskhankhattak">
+  <data key="d0">Anaskhankhattak</data>
+  <data key="d1">person</data>
+  <data key="d2">The author credited for the source photograph.</data>
+  <data key="d3">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478568</data>
+  <data key="d6"></data>
+</node>
+<node id="C:\Users\salik\OneDrive\Desktop\AI Project\data\raw\accidents\images\malakand-car-river-2014.jpg">
+  <data key="d0">C:\Users\salik\OneDrive\Desktop\AI Project\data\raw\accidents\images\malakand-car-river-2014.jpg</data>
+  <data key="d1">data</data>
+  <data key="d2">The file path of the image showing the car in the river.</data>
+  <data key="d3">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d4">image_metadata.json</data>
+  <data key="d5">1791478568</data>
+  <data key="d6"></data>
+</node>
+<node id="ACCIDENT REPORT: pk-lahore-m2-fog-crash-2008-12-29">
+  <data key="d0">ACCIDENT REPORT: pk-lahore-m2-fog-crash-2008-12-29</data>
+  <data key="d1">AccidentReport</data>
+  <data key="d2">Photograph of a fog-related road crash on the M2 Lahore-Islamabad Motorway near Ravi Toll Plaza.</data>
+  <data key="d3">chunk-015b99fff8bed5b3861004d8c852e975</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<node id="ACCIDENT IMAGE: pk-acc-img-001">
+  <data key="d0">ACCIDENT IMAGE: pk-acc-img-001</data>
+  <data key="d1">AccidentImage</data>
+  <data key="d2">Photograph of a fog-related road crash on the M2 Lahore-Islamabad Motorway near Ravi Toll Plaza.; Public domain (dedicated by copyright holder)</data>
+  <data key="d3">chunk-015b99fff8bed5b3861004d8c852e975</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<node id="ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:Fog_Crash.jpg">
+  <data key="d0">ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:Fog_Crash.jpg</data>
+  <data key="d1">Source</data>
+  <data key="d2">https://commons.wikimedia.org/wiki/File:Fog_Crash.jpg</data>
+  <data key="d3">chunk-015b99fff8bed5b3861004d8c852e975</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<node id="ACCIDENT REPORT: pk-gilgit-bus-stream-2004-08-08">
+  <data key="d0">ACCIDENT REPORT: pk-gilgit-bus-stream-2004-08-08</data>
+  <data key="d1">AccidentReport</data>
+  <data key="d2">Photograph of a bus that fell into a stream while travelling toward Gilgit.</data>
+  <data key="d3">chunk-0b8e9500ee4790c6ce492b086c0b9cdc</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<node id="ACCIDENT IMAGE: pk-acc-img-002">
+  <data key="d0">ACCIDENT IMAGE: pk-acc-img-002</data>
+  <data key="d1">AccidentImage</data>
+  <data key="d2">Photograph of a bus that fell into a stream while travelling toward Gilgit.; CC BY-SA 3.0</data>
+  <data key="d3">chunk-0b8e9500ee4790c6ce492b086c0b9cdc</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<node id="ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:A_Bus_Accident_on_the_Karakoram_Highway_on_Way_to_Gilgit.jpg">
+  <data key="d0">ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:A_Bus_Accident_on_the_Karakoram_Highway_on_Way_to_Gilgit.jpg</data>
+  <data key="d1">Source</data>
+  <data key="d2">https://commons.wikimedia.org/wiki/File:A_Bus_Accident_on_the_Karakoram_Highway_on_Way_to_Gilgit.jpg</data>
+  <data key="d3">chunk-0b8e9500ee4790c6ce492b086c0b9cdc</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<node id="ACCIDENT REPORT: pk-islamabad-truck-accident-2011-06-22">
+  <data key="d0">ACCIDENT REPORT: pk-islamabad-truck-accident-2011-06-22</data>
+  <data key="d1">AccidentReport</data>
+  <data key="d2">Photograph titled and geotagged by its author as a truck accident in Islamabad.</data>
+  <data key="d3">chunk-8a10b91e740e603a0b0d95e0950b0f2f</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<node id="ACCIDENT IMAGE: pk-acc-img-003">
+  <data key="d0">ACCIDENT IMAGE: pk-acc-img-003</data>
+  <data key="d1">AccidentImage</data>
+  <data key="d2">Photograph titled and geotagged by its author as a truck accident in Islamabad.; CC BY 3.0</data>
+  <data key="d3">chunk-8a10b91e740e603a0b0d95e0950b0f2f</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<node id="ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:Truck_Accident_-_panoramio.jpg">
+  <data key="d0">ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:Truck_Accident_-_panoramio.jpg</data>
+  <data key="d1">Source</data>
+  <data key="d2">https://commons.wikimedia.org/wiki/File:Truck_Accident_-_panoramio.jpg</data>
+  <data key="d3">chunk-8a10b91e740e603a0b0d95e0950b0f2f</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<node id="ACCIDENT REPORT: pk-rawalpindi-westridge-truck-2011-04-14">
+  <data key="d0">ACCIDENT REPORT: pk-rawalpindi-westridge-truck-2011-04-14</data>
+  <data key="d1">AccidentReport</data>
+  <data key="d2">First of three source-associated photographs of the same truck accident in Westridge, Rawalpindi.</data>
+  <data key="d3">chunk-20f7d8c2282be9f4e3234946f2662b76</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<node id="ACCIDENT IMAGE: pk-acc-img-004">
+  <data key="d0">ACCIDENT IMAGE: pk-acc-img-004</data>
+  <data key="d1">AccidentImage</data>
+  <data key="d2">First of three source-associated photographs of the same truck accident in Westridge, Rawalpindi.; CC BY 3.0</data>
+  <data key="d3">chunk-5cb1ed115b3a02d844f82d8cb0bea34c</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<node id="ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio.jpg">
+  <data key="d0">ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio.jpg</data>
+  <data key="d1">Source</data>
+  <data key="d2">https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio.jpg</data>
+  <data key="d3">chunk-5cb1ed115b3a02d844f82d8cb0bea34c</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<node id="ACCIDENT IMAGE: pk-acc-img-005">
+  <data key="d0">ACCIDENT IMAGE: pk-acc-img-005</data>
+  <data key="d1">AccidentImage</data>
+  <data key="d2">Second source-associated photograph of the same truck accident in Westridge, Rawalpindi.; CC BY 3.0</data>
+  <data key="d3">chunk-f60fd4331cd1df66c0a01ea8dcf4e0a3</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<node id="ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio_(1).jpg">
+  <data key="d0">ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio_(1).jpg</data>
+  <data key="d1">Source</data>
+  <data key="d2">https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio_(1).jpg</data>
+  <data key="d3">chunk-f60fd4331cd1df66c0a01ea8dcf4e0a3</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<node id="ACCIDENT IMAGE: pk-acc-img-006">
+  <data key="d0">ACCIDENT IMAGE: pk-acc-img-006</data>
+  <data key="d1">AccidentImage</data>
+  <data key="d2">Third source-associated photograph of the same truck accident in Westridge, Rawalpindi.; CC BY 3.0</data>
+  <data key="d3">chunk-20f7d8c2282be9f4e3234946f2662b76</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<node id="ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio_(2).jpg">
+  <data key="d0">ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio_(2).jpg</data>
+  <data key="d1">Source</data>
+  <data key="d2">https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio_(2).jpg</data>
+  <data key="d3">chunk-20f7d8c2282be9f4e3234946f2662b76</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<node id="ACCIDENT REPORT: pk-malakand-car-river-2014-03-06">
+  <data key="d0">ACCIDENT REPORT: pk-malakand-car-river-2014-03-06</data>
+  <data key="d1">AccidentReport</data>
+  <data key="d2">Source photograph titled as a non-custom-paid car that fell into a river in the Malakand area.</data>
+  <data key="d3">chunk-e552588541ecfd9c06e3792da641332f</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<node id="ACCIDENT IMAGE: pk-acc-img-007">
+  <data key="d0">ACCIDENT IMAGE: pk-acc-img-007</data>
+  <data key="d1">AccidentImage</data>
+  <data key="d2">Source photograph titled as a non-custom-paid car that fell into a river in the Malakand area.; CC BY-SA 4.0</data>
+  <data key="d3">chunk-e552588541ecfd9c06e3792da641332f</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<node id="ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:NCP_Non-Custom_Paid_Car_fall_into_the_river.jpg">
+  <data key="d0">ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:NCP_Non-Custom_Paid_Car_fall_into_the_river.jpg</data>
+  <data key="d1">Source</data>
+  <data key="d2">https://commons.wikimedia.org/wiki/File:NCP_Non-Custom_Paid_Car_fall_into_the_river.jpg</data>
+  <data key="d3">chunk-e552588541ecfd9c06e3792da641332f</data>
+  <data key="d4">custom_kg</data>
+  <data key="d5">1791545823</data>
+</node>
+<edge source="verified_accident_image_2f9e582c00a5 (image)" target="Fog Crash">
+  <data key="d7">Entity Fog Crash belongs to verified_accident_image_2f9e582c00a5 (image)&lt;SEP&gt;Entity Fog Crash belongs to verified_accident_image_2f9e582c00a5 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478586</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_2f9e582c00a5 (image)" target="Ravi Toll Plaza">
+  <data key="d7">Entity Ravi Toll Plaza belongs to verified_accident_image_2f9e582c00a5 (image)&lt;SEP&gt;Entity Ravi Toll Plaza belongs to verified_accident_image_2f9e582c00a5 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478570</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_2f9e582c00a5 (image)" target="M2 Lahore-Islamabad Motorway">
+  <data key="d7">Entity M2 Lahore-Islamabad Motorway belongs to verified_accident_image_2f9e582c00a5 (image)&lt;SEP&gt;Entity M2 Lahore-Islamabad Motorway belongs to verified_accident_image_2f9e582c00a5 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478572</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_2f9e582c00a5 (image)" target="Lahore, Pakistan">
+  <data key="d7">Entity Lahore, Pakistan belongs to verified_accident_image_2f9e582c00a5 (image)&lt;SEP&gt;Entity Lahore, Pakistan belongs to verified_accident_image_2f9e582c00a5 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478573</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_2f9e582c00a5 (image)" target="2008-12-29">
+  <data key="d7">Entity 2008-12-29 belongs to verified_accident_image_2f9e582c00a5 (image)&lt;SEP&gt;Entity 2008-12-29 belongs to verified_accident_image_2f9e582c00a5 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478574</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_2f9e582c00a5 (image)" target="Wasim3s">
+  <data key="d7">Entity Wasim3s belongs to verified_accident_image_2f9e582c00a5 (image)&lt;SEP&gt;Entity Wasim3s belongs to verified_accident_image_2f9e582c00a5 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478575</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_2f9e582c00a5 (image)" target="Pk-Lahore-M2-Fog-Crash-2008-12-29">
+  <data key="d7">Entity Pk-Lahore-M2-Fog-Crash-2008-12-29 belongs to verified_accident_image_2f9e582c00a5 (image)&lt;SEP&gt;Entity Pk-Lahore-M2-Fog-Crash-2008-12-29 belongs to verified_accident_image_2f9e582c00a5 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478577</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_2f9e582c00a5 (image)" target="Public Domain">
+  <data key="d7">Entity Public Domain belongs to verified_accident_image_2f9e582c00a5 (image)&lt;SEP&gt;Entity Public Domain belongs to verified_accident_image_2f9e582c00a5 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478579</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_2f9e582c00a5 (image)" target="https://commons.wikimedia.org/wiki/File:Fog_Crash.jpg">
+  <data key="d7">Entity https://commons.wikimedia.org/wiki/File:Fog_Crash.jpg belongs to verified_accident_image_2f9e582c00a5 (image)&lt;SEP&gt;Entity https://commons.wikimedia.org/wiki/File:Fog_Crash.jpg belongs to verified_accident_image_2f9e582c00a5 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478580</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_2f9e582c00a5 (image)" target="Wikimedia-Pakistan-Accident-Media">
+  <data key="d7">Entity Wikimedia-Pakistan-Accident-Media belongs to verified_accident_image_2f9e582c00a5 (image)&lt;SEP&gt;Entity Wikimedia-Pakistan-Accident-Media belongs to verified_accident_image_2f9e582c00a5 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478582</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_2f9e582c00a5 (image)" target="Fog-Related Road Collision">
+  <data key="d7">Entity Fog-Related Road Collision belongs to verified_accident_image_2f9e582c00a5 (image)&lt;SEP&gt;Entity Fog-Related Road Collision belongs to verified_accident_image_2f9e582c00a5 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478584</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_f5280759c537 (image)" target="Bus">
+  <data key="d7">Entity Bus belongs to verified_accident_image_f5280759c537 (image)&lt;SEP&gt;Entity Bus belongs to verified_accident_image_f5280759c537 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478596</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_f5280759c537 (image)" target="Gilgit">
+  <data key="d7">Entity Gilgit belongs to verified_accident_image_f5280759c537 (image)&lt;SEP&gt;Entity Gilgit belongs to verified_accident_image_f5280759c537 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478585</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_f5280759c537 (image)" target="Pakistan">
+  <data key="d7">Entity Pakistan belongs to verified_accident_image_f5280759c537 (image)&lt;SEP&gt;Entity Pakistan belongs to verified_accident_image_f5280759c537 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478586</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_f5280759c537 (image)" target="Karakoram Highway">
+  <data key="d7">Entity Karakoram Highway belongs to verified_accident_image_f5280759c537 (image)&lt;SEP&gt;Entity Karakoram Highway belongs to verified_accident_image_f5280759c537 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478587</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_f5280759c537 (image)" target="2004-08-08">
+  <data key="d7">Entity 2004-08-08 belongs to verified_accident_image_f5280759c537 (image)&lt;SEP&gt;Entity 2004-08-08 belongs to verified_accident_image_f5280759c537 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478589</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_f5280759c537 (image)" target="Bus Road Accident">
+  <data key="d7">Entity Bus Road Accident belongs to verified_accident_image_f5280759c537 (image)&lt;SEP&gt;Entity Bus Road Accident belongs to verified_accident_image_f5280759c537 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478590</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_f5280759c537 (image)" target="pk-gilgit-bus-stream-2004-08-08">
+  <data key="d7">Entity pk-gilgit-bus-stream-2004-08-08 belongs to verified_accident_image_f5280759c537 (image)&lt;SEP&gt;Entity pk-gilgit-bus-stream-2004-08-08 belongs to verified_accident_image_f5280759c537 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478591</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_f5280759c537 (image)" target="Verified Record-Image Match">
+  <data key="d7">Entity Verified Record-Image Match belongs to verified_accident_image_f5280759c537 (image)&lt;SEP&gt;Entity Verified Record-Image Match belongs to verified_accident_image_f5280759c537 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478593</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_f5280759c537 (image)" target="Wikimedia Image Page">
+  <data key="d7">Entity Wikimedia Image Page belongs to verified_accident_image_f5280759c537 (image)&lt;SEP&gt;Entity Wikimedia Image Page belongs to verified_accident_image_f5280759c537 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478594</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_f5280759c537 (image)" target="CC BY-SA 3.0 License">
+  <data key="d7">Entity CC BY-SA 3.0 License belongs to verified_accident_image_f5280759c537 (image)&lt;SEP&gt;Entity CC BY-SA 3.0 License belongs to verified_accident_image_f5280759c537 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478597</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_f5280759c537 (image)" target="Anees Jillani">
+  <data key="d7">Entity Anees Jillani belongs to verified_accident_image_f5280759c537 (image)&lt;SEP&gt;Entity Anees Jillani belongs to verified_accident_image_f5280759c537 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478599</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_f5280759c537 (image)" target="Photograph">
+  <data key="d7">Entity Photograph belongs to verified_accident_image_f5280759c537 (image)&lt;SEP&gt;Entity Photograph belongs to verified_accident_image_f5280759c537 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478600</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_f5280759c537 (image)" target="Source URL">
+  <data key="d7">Entity Source URL belongs to verified_accident_image_f5280759c537 (image)&lt;SEP&gt;Entity Source URL belongs to verified_accident_image_f5280759c537 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478601</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_f5280759c537 (image)" target="Source ID wikimedia-pakistan-accident-media">
+  <data key="d7">Entity Source ID wikimedia-pakistan-accident-media belongs to verified_accident_image_f5280759c537 (image)&lt;SEP&gt;Entity Source ID wikimedia-pakistan-accident-media belongs to verified_accident_image_f5280759c537 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478602</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_f5280759c537 (image)" target="Bus Accident Event">
+  <data key="d7">Entity Bus Accident Event belongs to verified_accident_image_f5280759c537 (image)&lt;SEP&gt;Entity Bus Accident Event belongs to verified_accident_image_f5280759c537 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478604</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_cf8fa83c56e6 (image)" target="Jam Mudasir">
+  <data key="d7">Entity Jam Mudasir belongs to verified_accident_image_cf8fa83c56e6 (image)&lt;SEP&gt;Entity Jam Mudasir belongs to verified_accident_image_cf8fa83c56e6 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478602</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_cf8fa83c56e6 (image)" target="Islamabad, Pakistan">
+  <data key="d7">Entity Islamabad, Pakistan belongs to verified_accident_image_cf8fa83c56e6 (image)&lt;SEP&gt;Entity Islamabad, Pakistan belongs to verified_accident_image_cf8fa83c56e6 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478604</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_cf8fa83c56e6 (image)" target="Truck Accident in Islamabad">
+  <data key="d7">Entity Truck Accident in Islamabad belongs to verified_accident_image_cf8fa83c56e6 (image)&lt;SEP&gt;Entity Truck Accident in Islamabad belongs to verified_accident_image_cf8fa83c56e6 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478606</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_cf8fa83c56e6 (image)" target="pk-islamabad-truck-accident-2011-06-22">
+  <data key="d7">Entity pk-islamabad-truck-accident-2011-06-22 belongs to verified_accident_image_cf8fa83c56e6 (image)&lt;SEP&gt;Entity pk-islamabad-truck-accident-2011-06-22 belongs to verified_accident_image_cf8fa83c56e6 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478607</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_cf8fa83c56e6 (image)" target="https://commons.wikimedia.org/wiki/File:Truck_Accident_-_panoramio.jpg">
+  <data key="d7">Entity https://commons.wikimedia.org/wiki/File:Truck_Accident_-_panoramio.jpg belongs to verified_accident_image_cf8fa83c56e6 (image)&lt;SEP&gt;Entity https://commons.wikimedia.org/wiki/File:Truck_Accident_-_panoramio.jpg belongs to verified_accident_image_cf8fa83c56e6 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478608</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_cf8fa83c56e6 (image)" target="CC BY 3.0">
+  <data key="d7">Entity CC BY 3.0 belongs to verified_accident_image_cf8fa83c56e6 (image)&lt;SEP&gt;Entity CC BY 3.0 belongs to verified_accident_image_cf8fa83c56e6 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478610</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_cf8fa83c56e6 (image)" target="2011-06-22">
+  <data key="d7">Entity 2011-06-22 belongs to verified_accident_image_cf8fa83c56e6 (image)&lt;SEP&gt;Entity 2011-06-22 belongs to verified_accident_image_cf8fa83c56e6 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478611</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_cf8fa83c56e6 (image)" target="Truck Accident Image">
+  <data key="d7">Entity Truck Accident Image belongs to verified_accident_image_cf8fa83c56e6 (image)&lt;SEP&gt;Entity Truck Accident Image belongs to verified_accident_image_cf8fa83c56e6 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478613</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_cf8fa83c56e6 (image)" target="wikimedia-pakistan-accident-media">
+  <data key="d7">Entity wikimedia-pakistan-accident-media belongs to verified_accident_image_cf8fa83c56e6 (image)&lt;SEP&gt;Entity wikimedia-pakistan-accident-media belongs to verified_accident_image_cf8fa83c56e6 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478614</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_cf8fa83c56e6 (image)" target="C:\Users\salik\OneDrive\Desktop\AI Project\data\raw\accidents\images\islamabad-truck-accident-2011.jpg">
+  <data key="d7">Entity C:\Users\salik\OneDrive\Desktop\AI Project\data\raw\accidents\images\islamabad-truck-accident-2011.jpg belongs to verified_accident_image_cf8fa83c56e6 (image)&lt;SEP&gt;Entity C:\Users\salik\OneDrive\Desktop\AI Project\data\raw\accidents\images\islamabad-truck-accident-2011.jpg belongs to verified_accident_image_cf8fa83c56e6 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478616</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_cf8fa83c56e6 (image)" target="Truck Accident (Accident Type)">
+  <data key="d7">Entity Truck Accident (Accident Type) belongs to verified_accident_image_cf8fa83c56e6 (image)&lt;SEP&gt;Entity Truck Accident (Accident Type) belongs to verified_accident_image_cf8fa83c56e6 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478618</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_cf8fa83c56e6 (image)" target="Verified Record-Image Match">
+  <data key="d7">Entity Verified Record-Image Match belongs to verified_accident_image_cf8fa83c56e6 (image)&lt;SEP&gt;Entity Verified Record-Image Match belongs to verified_accident_image_cf8fa83c56e6 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478620</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_26b4f970de35 (image)" target="Rawalpindi">
+  <data key="d7">Entity Rawalpindi belongs to verified_accident_image_26b4f970de35 (image)&lt;SEP&gt;Entity Rawalpindi belongs to verified_accident_image_26b4f970de35 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478617</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_26b4f970de35 (image)" target="Pakistan">
+  <data key="d7">Entity Pakistan belongs to verified_accident_image_26b4f970de35 (image)&lt;SEP&gt;Entity Pakistan belongs to verified_accident_image_26b4f970de35 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478618</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_26b4f970de35 (image)" target="Westridge">
+  <data key="d7">Entity Westridge belongs to verified_accident_image_26b4f970de35 (image)&lt;SEP&gt;Entity Westridge belongs to verified_accident_image_26b4f970de35 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478619</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_26b4f970de35 (image)" target="Truck Accident">
+  <data key="d7">Entity Truck Accident belongs to verified_accident_image_26b4f970de35 (image)&lt;SEP&gt;Entity Truck Accident belongs to verified_accident_image_26b4f970de35 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478623</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_26b4f970de35 (image)" target="2011-04-14">
+  <data key="d7">Entity 2011-04-14 belongs to verified_accident_image_26b4f970de35 (image)&lt;SEP&gt;Entity 2011-04-14 belongs to verified_accident_image_26b4f970de35 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478621</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_26b4f970de35 (image)" target="Pk-Rawalpindi-Westridge-Truck-2011-04-14">
+  <data key="d7">Entity Pk-Rawalpindi-Westridge-Truck-2011-04-14 belongs to verified_accident_image_26b4f970de35 (image)&lt;SEP&gt;Entity Pk-Rawalpindi-Westridge-Truck-2011-04-14 belongs to verified_accident_image_26b4f970de35 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478624</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_26b4f970de35 (image)" target="Jam Mudasir">
+  <data key="d7">Entity Jam Mudasir belongs to verified_accident_image_26b4f970de35 (image)&lt;SEP&gt;Entity Jam Mudasir belongs to verified_accident_image_26b4f970de35 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478625</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_26b4f970de35 (image)" target="CC BY 3.0">
+  <data key="d7">Entity CC BY 3.0 belongs to verified_accident_image_26b4f970de35 (image)&lt;SEP&gt;Entity CC BY 3.0 belongs to verified_accident_image_26b4f970de35 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478626</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_26b4f970de35 (image)" target="Commons Wikimedia File URL">
+  <data key="d7">Entity Commons Wikimedia File URL belongs to verified_accident_image_26b4f970de35 (image)&lt;SEP&gt;Entity Commons Wikimedia File URL belongs to verified_accident_image_26b4f970de35 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478628</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_26b4f970de35 (image)" target="Image File Path">
+  <data key="d7">Entity Image File Path belongs to verified_accident_image_26b4f970de35 (image)&lt;SEP&gt;Entity Image File Path belongs to verified_accident_image_26b4f970de35 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478629</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_26b4f970de35 (image)" target="C:\Users\salik\OneDrive\Desktop\AI Project\data\raw\accidents\images\rawalpindi-westridge-truck-2011-01.jpg">
+  <data key="d7">Entity C:\Users\salik\OneDrive\Desktop\AI Project\data\raw\accidents\images\rawalpindi-westridge-truck-2011-01.jpg belongs to verified_accident_image_26b4f970de35 (image)&lt;SEP&gt;Entity C:\Users\salik\OneDrive\Desktop\AI Project\data\raw\accidents\images\rawalpindi-westridge-truck-2011-01.jpg belongs to verified_accident_image_26b4f970de35 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478630</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_26b4f970de35 (image)" target="https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio.jpg">
+  <data key="d7">Entity https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio.jpg belongs to verified_accident_image_26b4f970de35 (image)&lt;SEP&gt;Entity https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio.jpg belongs to verified_accident_image_26b4f970de35 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478633</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_26b4f970de35 (image)" target="Wikimedia Pakistan Accident Media">
+  <data key="d7">Entity Wikimedia Pakistan Accident Media belongs to verified_accident_image_26b4f970de35 (image)&lt;SEP&gt;Entity Wikimedia Pakistan Accident Media belongs to verified_accident_image_26b4f970de35 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478634</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_67fb2da4bcca (image)" target="Rawalpindi">
+  <data key="d7">Entity Rawalpindi belongs to verified_accident_image_67fb2da4bcca (image)&lt;SEP&gt;Entity Rawalpindi belongs to verified_accident_image_67fb2da4bcca (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478630</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_67fb2da4bcca (image)" target="Pakistan">
+  <data key="d7">Entity Pakistan belongs to verified_accident_image_67fb2da4bcca (image)&lt;SEP&gt;Entity Pakistan belongs to verified_accident_image_67fb2da4bcca (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478632</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_67fb2da4bcca (image)" target="Westridge, Rawalpindi">
+  <data key="d7">Entity Westridge, Rawalpindi belongs to verified_accident_image_67fb2da4bcca (image)&lt;SEP&gt;Entity Westridge, Rawalpindi belongs to verified_accident_image_67fb2da4bcca (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478633</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_67fb2da4bcca (image)" target="Truck Accident">
+  <data key="d7">Entity Truck Accident belongs to verified_accident_image_67fb2da4bcca (image)&lt;SEP&gt;Entity Truck Accident belongs to verified_accident_image_67fb2da4bcca (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478634</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_67fb2da4bcca (image)" target="2011-04-14">
+  <data key="d7">Entity 2011-04-14 belongs to verified_accident_image_67fb2da4bcca (image)&lt;SEP&gt;Entity 2011-04-14 belongs to verified_accident_image_67fb2da4bcca (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478635</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_67fb2da4bcca (image)" target="Jam Mudasir">
+  <data key="d7">Entity Jam Mudasir belongs to verified_accident_image_67fb2da4bcca (image)&lt;SEP&gt;Entity Jam Mudasir belongs to verified_accident_image_67fb2da4bcca (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478636</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_67fb2da4bcca (image)" target="CC BY 3.0">
+  <data key="d7">Entity CC BY 3.0 belongs to verified_accident_image_67fb2da4bcca (image)&lt;SEP&gt;Entity CC BY 3.0 belongs to verified_accident_image_67fb2da4bcca (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478637</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_67fb2da4bcca (image)" target="pk-rawalpindi-westridge-truck-2011-04-14">
+  <data key="d7">Entity pk-rawalpindi-westridge-truck-2011-04-14 belongs to verified_accident_image_67fb2da4bcca (image)&lt;SEP&gt;Entity pk-rawalpindi-westridge-truck-2011-04-14 belongs to verified_accident_image_67fb2da4bcca (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478638</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_67fb2da4bcca (image)" target="Truck Accident Image">
+  <data key="d7">Entity Truck Accident Image belongs to verified_accident_image_67fb2da4bcca (image)&lt;SEP&gt;Entity Truck Accident Image belongs to verified_accident_image_67fb2da4bcca (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478640</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_67fb2da4bcca (image)" target="Truck Accident Image Source">
+  <data key="d7">Entity Truck Accident Image Source belongs to verified_accident_image_67fb2da4bcca (image)&lt;SEP&gt;Entity Truck Accident Image Source belongs to verified_accident_image_67fb2da4bcca (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478641</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_67fb2da4bcca (image)" target="wikimedia-pakistan-accident-media">
+  <data key="d7">Entity wikimedia-pakistan-accident-media belongs to verified_accident_image_67fb2da4bcca (image)&lt;SEP&gt;Entity wikimedia-pakistan-accident-media belongs to verified_accident_image_67fb2da4bcca (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478642</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_b89135723051 (image)" target="Rawalpindi">
+  <data key="d7">Entity Rawalpindi belongs to verified_accident_image_b89135723051 (image)&lt;SEP&gt;Entity Rawalpindi belongs to verified_accident_image_b89135723051 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478638</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_b89135723051 (image)" target="Pakistan">
+  <data key="d7">Entity Pakistan belongs to verified_accident_image_b89135723051 (image)&lt;SEP&gt;Entity Pakistan belongs to verified_accident_image_b89135723051 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478639</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_b89135723051 (image)" target="Westridge">
+  <data key="d7">Entity Westridge belongs to verified_accident_image_b89135723051 (image)&lt;SEP&gt;Entity Westridge belongs to verified_accident_image_b89135723051 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478640</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_b89135723051 (image)" target="Truck Accident">
+  <data key="d7">Entity Truck Accident belongs to verified_accident_image_b89135723051 (image)&lt;SEP&gt;Entity Truck Accident belongs to verified_accident_image_b89135723051 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478642</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_b89135723051 (image)" target="2011-04-14">
+  <data key="d7">Entity 2011-04-14 belongs to verified_accident_image_b89135723051 (image)&lt;SEP&gt;Entity 2011-04-14 belongs to verified_accident_image_b89135723051 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478642</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_b89135723051 (image)" target="pk-rawalpindi-westridge-truck-2011-04-14">
+  <data key="d7">Entity pk-rawalpindi-westridge-truck-2011-04-14 belongs to verified_accident_image_b89135723051 (image)&lt;SEP&gt;Entity pk-rawalpindi-westridge-truck-2011-04-14 belongs to verified_accident_image_b89135723051 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478645</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_b89135723051 (image)" target="CC BY 3.0">
+  <data key="d7">Entity CC BY 3.0 belongs to verified_accident_image_b89135723051 (image)&lt;SEP&gt;Entity CC BY 3.0 belongs to verified_accident_image_b89135723051 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478643</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_b89135723051 (image)" target="Jam Mudasir">
+  <data key="d7">Entity Jam Mudasir belongs to verified_accident_image_b89135723051 (image)&lt;SEP&gt;Entity Jam Mudasir belongs to verified_accident_image_b89135723051 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478647</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_b89135723051 (image)" target="rawalpindi-westridge-truck-2011-03.jpg">
+  <data key="d7">Entity rawalpindi-westridge-truck-2011-03.jpg belongs to verified_accident_image_b89135723051 (image)&lt;SEP&gt;Entity rawalpindi-westridge-truck-2011-03.jpg belongs to verified_accident_image_b89135723051 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478648</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_b89135723051 (image)" target="https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio_(2).jpg">
+  <data key="d7">Entity https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio_(2).jpg belongs to verified_accident_image_b89135723051 (image)&lt;SEP&gt;Entity https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio_(2).jpg belongs to verified_accident_image_b89135723051 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478649</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_b89135723051 (image)" target="wikimedia-pakistan-accident-media">
+  <data key="d7">Entity wikimedia-pakistan-accident-media belongs to verified_accident_image_b89135723051 (image)&lt;SEP&gt;Entity wikimedia-pakistan-accident-media belongs to verified_accident_image_b89135723051 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478651</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_b89135723051 (image)" target="Verified Record-Image Match">
+  <data key="d7">Entity Verified Record-Image Match belongs to verified_accident_image_b89135723051 (image)&lt;SEP&gt;Entity Verified Record-Image Match belongs to verified_accident_image_b89135723051 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478653</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_e94234bb5a80 (image)" target="Car">
+  <data key="d7">Entity Car belongs to verified_accident_image_e94234bb5a80 (image)&lt;SEP&gt;Entity Car belongs to verified_accident_image_e94234bb5a80 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478650</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_e94234bb5a80 (image)" target="River">
+  <data key="d7">Entity River belongs to verified_accident_image_e94234bb5a80 (image)&lt;SEP&gt;Entity River belongs to verified_accident_image_e94234bb5a80 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478651</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_e94234bb5a80 (image)" target="Malakand">
+  <data key="d7">Entity Malakand belongs to verified_accident_image_e94234bb5a80 (image)&lt;SEP&gt;Entity Malakand belongs to verified_accident_image_e94234bb5a80 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478653</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_e94234bb5a80 (image)" target="Pakistan">
+  <data key="d7">Entity Pakistan belongs to verified_accident_image_e94234bb5a80 (image)&lt;SEP&gt;Entity Pakistan belongs to verified_accident_image_e94234bb5a80 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478654</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_e94234bb5a80 (image)" target="March 6 2014">
+  <data key="d7">Entity March 6 2014 belongs to verified_accident_image_e94234bb5a80 (image)&lt;SEP&gt;Entity March 6 2014 belongs to verified_accident_image_e94234bb5a80 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478654</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_e94234bb5a80 (image)" target="Car Left Roadway">
+  <data key="d7">Entity Car Left Roadway belongs to verified_accident_image_e94234bb5a80 (image)&lt;SEP&gt;Entity Car Left Roadway belongs to verified_accident_image_e94234bb5a80 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478655</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_e94234bb5a80 (image)" target="Non-Custom-Paid Car Photograph">
+  <data key="d7">Entity Non-Custom-Paid Car Photograph belongs to verified_accident_image_e94234bb5a80 (image)&lt;SEP&gt;Entity Non-Custom-Paid Car Photograph belongs to verified_accident_image_e94234bb5a80 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478657</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_e94234bb5a80 (image)" target="pk-malakand-car-river-2014-03-06">
+  <data key="d7">Entity pk-malakand-car-river-2014-03-06 belongs to verified_accident_image_e94234bb5a80 (image)&lt;SEP&gt;Entity pk-malakand-car-river-2014-03-06 belongs to verified_accident_image_e94234bb5a80 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478656</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_e94234bb5a80 (image)" target="Record-Image Match True">
+  <data key="d7">Entity Record-Image Match True belongs to verified_accident_image_e94234bb5a80 (image)&lt;SEP&gt;Entity Record-Image Match True belongs to verified_accident_image_e94234bb5a80 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478658</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_e94234bb5a80 (image)" target="CC BY-SA 4.0">
+  <data key="d7">Entity CC BY-SA 4.0 belongs to verified_accident_image_e94234bb5a80 (image)&lt;SEP&gt;Entity CC BY-SA 4.0 belongs to verified_accident_image_e94234bb5a80 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478659</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_e94234bb5a80 (image)" target="Anaskhankhattak">
+  <data key="d7">Entity Anaskhankhattak belongs to verified_accident_image_e94234bb5a80 (image)&lt;SEP&gt;Entity Anaskhankhattak belongs to verified_accident_image_e94234bb5a80 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478661</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_e94234bb5a80 (image)" target="wikimedia-pakistan-accident-media">
+  <data key="d7">Entity wikimedia-pakistan-accident-media belongs to verified_accident_image_e94234bb5a80 (image)&lt;SEP&gt;Entity wikimedia-pakistan-accident-media belongs to verified_accident_image_e94234bb5a80 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478663</data>
+  <data key="d13"></data>
+</edge>
+<edge source="verified_accident_image_e94234bb5a80 (image)" target="C:\Users\salik\OneDrive\Desktop\AI Project\data\raw\accidents\images\malakand-car-river-2014.jpg">
+  <data key="d7">Entity C:\Users\salik\OneDrive\Desktop\AI Project\data\raw\accidents\images\malakand-car-river-2014.jpg belongs to verified_accident_image_e94234bb5a80 (image)&lt;SEP&gt;Entity C:\Users\salik\OneDrive\Desktop\AI Project\data\raw\accidents\images\malakand-car-river-2014.jpg belongs to verified_accident_image_e94234bb5a80 (image)</data>
+  <data key="d8">belongs_to,contained_in,part_of</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d10">20.0</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478664</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Fog Crash" target="Fog-Related Road Collision">
+  <data key="d10">1.0</data>
+  <data key="d7">Fog Crash is classified as a fog-related road collision.</data>
+  <data key="d8">accident type,classification</data>
+  <data key="d9">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478569</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Fog Crash" target="Pk-Lahore-M2-Fog-Crash-2008-12-29">
+  <data key="d10">1.0</data>
+  <data key="d7">The fog crash is recorded under the identifier pk-lahore-m2-fog-crash-2008-12-29.</data>
+  <data key="d8">metadata,record identifier</data>
+  <data key="d9">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478571</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Fog Crash" target="Public Domain">
+  <data key="d10">1.0</data>
+  <data key="d7">The image of the fog crash is released under a public domain license.</data>
+  <data key="d8">license,usage rights</data>
+  <data key="d9">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478573</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Fog Crash" target="https://commons.wikimedia.org/wiki/File:Fog_Crash.jpg">
+  <data key="d10">1.0</data>
+  <data key="d7">The fog crash image is sourced from the Wikimedia Commons URL.</data>
+  <data key="d8">reference,source</data>
+  <data key="d9">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478573</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Fog Crash" target="Wasim3s">
+  <data key="d10">1.0</data>
+  <data key="d7">The photograph of the fog crash was taken by Wasim3s.</data>
+  <data key="d8">author,creator</data>
+  <data key="d9">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478577</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Pk-Lahore-M2-Fog-Crash-2008-12-29" target="Wikimedia-Pakistan-Accident-Media">
+  <data key="d10">1.0</data>
+  <data key="d7">The record identifier is linked to the source ID wikimedia-pakistan-accident-media.</data>
+  <data key="d8">metadata,source ID</data>
+  <data key="d9">chunk-5f424587456bac66e0ba358f3bdecc06</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478570</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Bus" target="Gilgit">
+  <data key="d10">1.0</data>
+  <data key="d7">The bus fell into a stream at the location of Gilgit.</data>
+  <data key="d8">incident location</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478578</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Bus" target="Karakoram Highway">
+  <data key="d10">1.0</data>
+  <data key="d7">The bus accident occurred on the Karakoram Highway leading to Gilgit.</data>
+  <data key="d8">incident road</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478578</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Bus" target="2004-08-08">
+  <data key="d10">1.0</data>
+  <data key="d7">The bus accident took place on 2004-08-08.</data>
+  <data key="d8">date</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478579</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Bus" target="Bus Road Accident">
+  <data key="d10">1.0</data>
+  <data key="d7">The incident involving the bus is classified as a bus road accident.</data>
+  <data key="d8">accident type</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478580</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Bus" target="Wikimedia Image Page">
+  <data key="d10">1.0</data>
+  <data key="d7">The Wikimedia page hosts a photograph that depicts the bus that fell into a stream.</data>
+  <data key="d8">depicts</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478582</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Bus" target="pk-gilgit-bus-stream-2004-08-08">
+  <data key="d10">1.0</data>
+  <data key="d7">The record identifier pk-gilgit-bus-stream-2004-08-08</data>
+  <data key="d8">record identification</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478583</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Bus" target="Photograph">
+  <data key="d10">1.0</data>
+  <data key="d7">The photograph depicts the bus that fell into a stream.</data>
+  <data key="d8">depicts</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478586</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Bus" target="Bus Accident Event">
+  <data key="d10">1.0</data>
+  <data key="d7">The bus accident event involves the bus.</data>
+  <data key="d8">involves</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478587</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Pakistan" target="Rawalpindi">
+  <data key="d10">3.0</data>
+  <data key="d7">Rawalpindi is a city in Pakistan.</data>
+  <data key="d8">city,country,geographic,location</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae&lt;SEP&gt;chunk-ead68e598ced832ac5b5b69ed782fdcb&lt;SEP&gt;chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478612</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Pakistan" target="Malakand">
+  <data key="d10">1.0</data>
+  <data key="d7">Malakand is a region in Pakistan.</data>
+  <data key="d8">location</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478646</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Verified Record-Image Match" target="Truck Accident Image">
+  <data key="d10">1.0</data>
+  <data key="d7">The Truck Accident Image is confirmed to match its record, as indicated by a true verification flag.</data>
+  <data key="d8">metadata,verification</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478605</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Wikimedia Image Page" target="Anees Jillani">
+  <data key="d10">1.0</data>
+  <data key="d7">Anees Jillani is credited as the author of the image on the Wikimedia page.</data>
+  <data key="d8">authorship</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478580</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Wikimedia Image Page" target="CC BY-SA 3.0 License">
+  <data key="d10">1.0</data>
+  <data key="d7">The image on the Wikimedia page is released under the CC BY-SA 3.0 License.</data>
+  <data key="d8">license</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478581</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Wikimedia Image Page" target="Source ID wikimedia-pakistan-accident-media">
+  <data key="d10">1.0</data>
+  <data key="d7">The source ID identifies the Wikimedia image record.</data>
+  <data key="d8">metadata</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478584</data>
+  <data key="d13"></data>
+</edge>
+<edge source="CC BY-SA 3.0 License" target="Photograph">
+  <data key="d10">1.0</data>
+  <data key="d7">The photograph is released under the CC BY-SA 3.0 license.</data>
+  <data key="d8">license</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478582</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Anees Jillani" target="Photograph">
+  <data key="d10">1.0</data>
+  <data key="d7">Anees Jillani is credited as the author of the photograph.</data>
+  <data key="d8">authorship</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478584</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Photograph" target="Source URL">
+  <data key="d10">1.0</data>
+  <data key="d7">The photograph is hosted at the given Wikimedia Commons URL.</data>
+  <data key="d8">hosted at</data>
+  <data key="d9">chunk-65cf53008bde6670d297f584f36549dc</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478585</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Jam Mudasir" target="Truck Accident Image">
+  <data key="d10">2.0</data>
+  <data key="d7">Jam Mudasir is credited as the author of the Truck Accident Image.&lt;SEP&gt;Jam Mudasir is credited as the author of the accident photograph.</data>
+  <data key="d8">author,authorship,credit,photography</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8&lt;SEP&gt;chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478596</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Jam Mudasir" target="Image File Path">
+  <data key="d10">1.0</data>
+  <data key="d7">Jam Mudasir is credited as the author of the image file.</data>
+  <data key="d8">author,creation</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478613</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Jam Mudasir" target="CC BY 3.0">
+  <data key="d10">1.0</data>
+  <data key="d7">The photograph by Jam Mudasir is released under the CC BY 3.0 license.</data>
+  <data key="d8">attribution,license</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478614</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Jam Mudasir" target="rawalpindi-westridge-truck-2011-03.jpg">
+  <data key="d10">1.0</data>
+  <data key="d7">Jam Mudasir is credited as the author of the image file.</data>
+  <data key="d8">author,creator</data>
+  <data key="d9">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478637</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Islamabad, Pakistan" target="Truck Accident in Islamabad">
+  <data key="d10">1.0</data>
+  <data key="d7">The Truck Accident in Islamabad occurred in Islamabad, Pakistan.</data>
+  <data key="d8">location,occurrence</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478598</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Truck Accident in Islamabad" target="Truck Accident Image">
+  <data key="d10">1.0</data>
+  <data key="d7">The Truck Accident Image depicts the Truck Accident in Islamabad event.</data>
+  <data key="d8">depicts,documentation</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478597</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Truck Accident in Islamabad" target="2011-06-22">
+  <data key="d10">1.0</data>
+  <data key="d7">The Truck Accident in Islamabad took place on 2011-06-22.</data>
+  <data key="d8">date,occurrence</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478599</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Truck Accident in Islamabad" target="Truck Accident (Accident Type)">
+  <data key="d10">1.0</data>
+  <data key="d7">The event Truck Accident in Islamabad is categorized as a truck accident type.</data>
+  <data key="d8">classification,type</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478607</data>
+  <data key="d13"></data>
+</edge>
+<edge source="pk-islamabad-truck-accident-2011-06-22" target="Truck Accident Image">
+  <data key="d10">1.0</data>
+  <data key="d7">The record identifier pk-islamabad-truck-accident-2011-06-22 is linked to the Truck Accident Image.</data>
+  <data key="d8">metadata,record identifier</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478599</data>
+  <data key="d13"></data>
+</edge>
+<edge source="https://commons.wikimedia.org/wiki/File:Truck_Accident_-_panoramio.jpg" target="wikimedia-pakistan-accident-media">
+  <data key="d10">1.0</data>
+  <data key="d7">The source page is identified by the source ID wikimedia-pakistan-accident-media.</data>
+  <data key="d8">catalog,source ID</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478600</data>
+  <data key="d13"></data>
+</edge>
+<edge source="https://commons.wikimedia.org/wiki/File:Truck_Accident_-_panoramio.jpg" target="Truck Accident Image">
+  <data key="d10">1.0</data>
+  <data key="d7">The Truck Accident Image is hosted at the provided URL.</data>
+  <data key="d8">hosting,source</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478601</data>
+  <data key="d13"></data>
+</edge>
+<edge source="CC BY 3.0" target="Truck Accident Image">
+  <data key="d10">2.0</data>
+  <data key="d7">The Truck Accident Image is released under the CC BY 3.0 license.&lt;SEP&gt;The accident photograph is released under the CC BY 3.0 license.</data>
+  <data key="d8">copyright,license,usage rights</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8&lt;SEP&gt;chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478600</data>
+  <data key="d13"></data>
+</edge>
+<edge source="CC BY 3.0" target="rawalpindi-westridge-truck-2011-03.jpg">
+  <data key="d10">1.0</data>
+  <data key="d7">The image file is released under the CC BY 3.0 Creative Commons license.</data>
+  <data key="d8">attribution,license</data>
+  <data key="d9">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478639</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Truck Accident Image" target="C:\Users\salik\OneDrive\Desktop\AI Project\data\raw\accidents\images\islamabad-truck-accident-2011.jpg">
+  <data key="d10">1.0</data>
+  <data key="d7">The Truck Accident Image is stored at the specified local file path.</data>
+  <data key="d8">file location,storage</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478602</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Truck Accident Image" target="Truck Accident (Accident Type)">
+  <data key="d10">1.0</data>
+  <data key="d7">The Truck Accident Image represents an incident of the truck accident type.</data>
+  <data key="d8">classification,type</data>
+  <data key="d9">chunk-9880af1c605f88588755a4a2e1e6fda8</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478604</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Truck Accident Image" target="pk-rawalpindi-westridge-truck-2011-04-14">
+  <data key="d10">1.0</data>
+  <data key="d7">The image has been verified to correspond to the accident record.</data>
+  <data key="d8">match,verification</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478628</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Truck Accident Image" target="Truck Accident">
+  <data key="d10">1.0</data>
+  <data key="d7">The photograph shows the scene of the truck accident.</data>
+  <data key="d8">depiction,illustration</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478629</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Truck Accident Image" target="Truck Accident Image Source">
+  <data key="d10">1.0</data>
+  <data key="d7">The photograph is hosted at the Truck Accident Image Source URL.</data>
+  <data key="d8">location,source</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478630</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Truck Accident Image" target="wikimedia-pakistan-accident-media">
+  <data key="d10">1.0</data>
+  <data key="d7">The image is associated with the source ID wikimedia-pakistan-accident-media.</data>
+  <data key="d8">metadata,source identifier</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478632</data>
+  <data key="d13"></data>
+</edge>
+<edge source="wikimedia-pakistan-accident-media" target="Truck Accident">
+  <data key="d10">1.0</data>
+  <data key="d7">The truck accident record references the source ID wikimedia-pakistan-accident-media.</data>
+  <data key="d8">documentation,source identifier</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478630</data>
+  <data key="d13"></data>
+</edge>
+<edge source="wikimedia-pakistan-accident-media" target="rawalpindi-westridge-truck-2011-03.jpg">
+  <data key="d10">1.0</data>
+  <data key="d7">The image file is associated with the source identifier wikimedia-pakistan-accident-media.</data>
+  <data key="d8">metadata,source identifier</data>
+  <data key="d9">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478638</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Rawalpindi" target="Westridge">
+  <data key="d10">2.0</data>
+  <data key="d7">Westridge is a part of Rawalpindi.&lt;SEP&gt;Westridge is a locality within Rawalpindi.</data>
+  <data key="d8">locality,location,subregion</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae&lt;SEP&gt;chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478611</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Rawalpindi" target="Westridge, Rawalpindi">
+  <data key="d10">1.0</data>
+  <data key="d7">Westridge, Rawalpindi is situated within the city of Rawalpindi.</data>
+  <data key="d8">containment,sublocation</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478626</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Westridge" target="Truck Accident">
+  <data key="d10">2.0</data>
+  <data key="d7">The truck accident took place in the locality of Westridge.&lt;SEP&gt;The truck accident occurred in Westridge.</data>
+  <data key="d8">event site,location,occurrence</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae&lt;SEP&gt;chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478610</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Truck Accident" target="Image File Path">
+  <data key="d10">1.0</data>
+  <data key="d7">The image file located at the given path depicts the truck accident.</data>
+  <data key="d8">depicts,documentation</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478612</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Truck Accident" target="Commons Wikimedia File URL">
+  <data key="d10">1.0</data>
+  <data key="d7">The Wikimedia URL links to the source image of the truck accident.</data>
+  <data key="d8">documentation,source</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478612</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Truck Accident" target="2011-04-14">
+  <data key="d10">3.0</data>
+  <data key="d7">The truck accident occurred on 2011-04-14.&lt;SEP&gt;The truck accident took place on 2011-04-14.</data>
+  <data key="d8">date,occurrence,occurrence date,timing</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae&lt;SEP&gt;chunk-ead68e598ced832ac5b5b69ed782fdcb&lt;SEP&gt;chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478614</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Truck Accident" target="Pk-Rawalpindi-Westridge-Truck-2011-04-14">
+  <data key="d10">1.0</data>
+  <data key="d7">The record identifier corresponds to the truck accident.</data>
+  <data key="d8">identification,record</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478615</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Truck Accident" target="C:\Users\salik\OneDrive\Desktop\AI Project\data\raw\accidents\images\rawalpindi-westridge-truck-2011-01.jpg">
+  <data key="d10">1.0</data>
+  <data key="d7">The image file at the given local path depicts the truck accident.</data>
+  <data key="d8">depicts,documentation</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478616</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Truck Accident" target="https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio.jpg">
+  <data key="d10">1.0</data>
+  <data key="d7">The Wikimedia URL provides the source image of the truck accident.</data>
+  <data key="d8">documentation,source</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478617</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Truck Accident" target="Westridge, Rawalpindi">
+  <data key="d10">1.0</data>
+  <data key="d7">The truck accident took place in the Westridge area of Rawalpindi.</data>
+  <data key="d8">location,site</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478625</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Truck Accident" target="pk-rawalpindi-westridge-truck-2011-04-14">
+  <data key="d10">2.0</data>
+  <data key="d7">The record identifier pk-rawalpindi-westridge-truck-2011-04-14 documents the truck accident.&lt;SEP&gt;The accident is documented under the record identifier pk-rawalpindi-westridge-truck-2011-04-14.</data>
+  <data key="d8">documentation,record,record identifier</data>
+  <data key="d9">chunk-ead68e598ced832ac5b5b69ed782fdcb&lt;SEP&gt;chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478626</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Truck Accident" target="rawalpindi-westridge-truck-2011-03.jpg">
+  <data key="d10">1.0</data>
+  <data key="d7">The image file depicts the truck accident.</data>
+  <data key="d8">depicts,visual representation</data>
+  <data key="d9">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478635</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Pk-Rawalpindi-Westridge-Truck-2011-04-14" target="Image File Path">
+  <data key="d10">1.0</data>
+  <data key="d7">The image file path is associated with the record identifier pk-rawalpindi-westridge-truck-2011-04-14.</data>
+  <data key="d8">association,metadata</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478616</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Pk-Rawalpindi-Westridge-Truck-2011-04-14" target="Wikimedia Pakistan Accident Media">
+  <data key="d10">1.0</data>
+  <data key="d7">The source ID is associated with the record identifier for the truck accident.</data>
+  <data key="d8">identifier,record</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478617</data>
+  <data key="d13"></data>
+</edge>
+<edge source="https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio.jpg" target="Wikimedia Pakistan Accident Media">
+  <data key="d10">1.0</data>
+  <data key="d7">The source ID wikimedia-pakistan-accident-media identifies the Wikimedia image file.</data>
+  <data key="d8">identifier,source</data>
+  <data key="d9">chunk-395f8d20f55adbf9b5ba11185f1d44ae</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478616</data>
+  <data key="d13"></data>
+</edge>
+<edge source="pk-rawalpindi-westridge-truck-2011-04-14" target="rawalpindi-westridge-truck-2011-03.jpg">
+  <data key="d10">1.0</data>
+  <data key="d7">The image file has a verified match with the record identifier pk-rawalpindi-westridge-truck-2011-04-14.</data>
+  <data key="d8">record match,verification</data>
+  <data key="d9">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478640</data>
+  <data key="d13"></data>
+</edge>
+<edge source="rawalpindi-westridge-truck-2011-03.jpg" target="https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio_(2).jpg">
+  <data key="d10">1.0</data>
+  <data key="d7">The image file is hosted at the given URL.</data>
+  <data key="d8">hosting,source</data>
+  <data key="d9">chunk-d1fd8132469f86e26f9421c66a6be2ce</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478636</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Car" target="River">
+  <data key="d10">1.0</data>
+  <data key="d7">The car fell into the river in Malakand.</data>
+  <data key="d8">accident,location</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478644</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Car" target="Malakand">
+  <data key="d10">1.0</data>
+  <data key="d7">The car accident occurred in the Malakand region.</data>
+  <data key="d8">accident,location</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478644</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Car" target="Non-Custom-Paid Car Photograph">
+  <data key="d10">1.0</data>
+  <data key="d7">The photograph depicts the car that fell into the river.</data>
+  <data key="d8">depiction,image</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478646</data>
+  <data key="d13"></data>
+</edge>
+<edge source="River" target="Malakand">
+  <data key="d10">1.0</data>
+  <data key="d7">The river is situated within Malakand, Pakistan.</data>
+  <data key="d8">location</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478645</data>
+  <data key="d13"></data>
+</edge>
+<edge source="River" target="Non-Custom-Paid Car Photograph">
+  <data key="d10">1.0</data>
+  <data key="d7">The photograph shows the river where the car fell.</data>
+  <data key="d8">depiction,image</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478648</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Non-Custom-Paid Car Photograph" target="Anaskhankhattak">
+  <data key="d10">1.0</data>
+  <data key="d7">Anaskhankhattak is credited as the author of the photograph.</data>
+  <data key="d8">author,creation</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478649</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Non-Custom-Paid Car Photograph" target="CC BY-SA 4.0">
+  <data key="d10">1.0</data>
+  <data key="d7">The photograph is released under the CC BY-SA 4.0 license.</data>
+  <data key="d8">license,usage</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478650</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Non-Custom-Paid Car Photograph" target="pk-malakand-car-river-2014-03-06">
+  <data key="d10">1.0</data>
+  <data key="d7">The record identifier references the specific photograph of the car accident.</data>
+  <data key="d8">identifier,record</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478651</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Non-Custom-Paid Car Photograph" target="C:\Users\salik\OneDrive\Desktop\AI Project\data\raw\accidents\images\malakand-car-river-2014.jpg">
+  <data key="d10">1.0</data>
+  <data key="d7">The file path points to the stored photograph of the car accident.</data>
+  <data key="d8">file path,storage</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478652</data>
+  <data key="d13"></data>
+</edge>
+<edge source="pk-malakand-car-river-2014-03-06" target="Record-Image Match True">
+  <data key="d10">1.0</data>
+  <data key="d7">The record-image match verification is true for this incident.</data>
+  <data key="d8">status,verification</data>
+  <data key="d9">chunk-06a1258b57b1e9cf60da6ce3f1f16977</data>
+  <data key="d11">image_metadata.json</data>
+  <data key="d12">1791478649</data>
+  <data key="d13"></data>
+</edge>
+<edge source="ACCIDENT REPORT: pk-lahore-m2-fog-crash-2008-12-29" target="ACCIDENT IMAGE: pk-acc-img-001">
+  <data key="d10">1.0</data>
+  <data key="d7">Source description explicitly associates this photograph with this accident record.</data>
+  <data key="d8">verified photograph, accident report</data>
+  <data key="d9">chunk-015b99fff8bed5b3861004d8c852e975</data>
+  <data key="d11">custom_kg</data>
+  <data key="d12">1791545823</data>
+</edge>
+<edge source="ACCIDENT IMAGE: pk-acc-img-001" target="ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:Fog_Crash.jpg">
+  <data key="d10">1.0</data>
+  <data key="d7">Original photograph source and per-file rights: Public domain (dedicated by copyright holder)</data>
+  <data key="d8">provenance, license, original source</data>
+  <data key="d9">chunk-015b99fff8bed5b3861004d8c852e975</data>
+  <data key="d11">custom_kg</data>
+  <data key="d12">1791545823</data>
+</edge>
+<edge source="ACCIDENT REPORT: pk-gilgit-bus-stream-2004-08-08" target="ACCIDENT IMAGE: pk-acc-img-002">
+  <data key="d10">1.0</data>
+  <data key="d7">Source description explicitly associates this photograph with this accident record.</data>
+  <data key="d8">verified photograph, accident report</data>
+  <data key="d9">chunk-0b8e9500ee4790c6ce492b086c0b9cdc</data>
+  <data key="d11">custom_kg</data>
+  <data key="d12">1791545823</data>
+</edge>
+<edge source="ACCIDENT IMAGE: pk-acc-img-002" target="ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:A_Bus_Accident_on_the_Karakoram_Highway_on_Way_to_Gilgit.jpg">
+  <data key="d10">1.0</data>
+  <data key="d7">Original photograph source and per-file rights: CC BY-SA 3.0</data>
+  <data key="d8">provenance, license, original source</data>
+  <data key="d9">chunk-0b8e9500ee4790c6ce492b086c0b9cdc</data>
+  <data key="d11">custom_kg</data>
+  <data key="d12">1791545823</data>
+</edge>
+<edge source="ACCIDENT REPORT: pk-islamabad-truck-accident-2011-06-22" target="ACCIDENT IMAGE: pk-acc-img-003">
+  <data key="d10">1.0</data>
+  <data key="d7">Source description explicitly associates this photograph with this accident record.</data>
+  <data key="d8">verified photograph, accident report</data>
+  <data key="d9">chunk-8a10b91e740e603a0b0d95e0950b0f2f</data>
+  <data key="d11">custom_kg</data>
+  <data key="d12">1791545823</data>
+</edge>
+<edge source="ACCIDENT IMAGE: pk-acc-img-003" target="ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:Truck_Accident_-_panoramio.jpg">
+  <data key="d10">1.0</data>
+  <data key="d7">Original photograph source and per-file rights: CC BY 3.0</data>
+  <data key="d8">provenance, license, original source</data>
+  <data key="d9">chunk-8a10b91e740e603a0b0d95e0950b0f2f</data>
+  <data key="d11">custom_kg</data>
+  <data key="d12">1791545823</data>
+</edge>
+<edge source="ACCIDENT REPORT: pk-rawalpindi-westridge-truck-2011-04-14" target="ACCIDENT IMAGE: pk-acc-img-004">
+  <data key="d10">1.0</data>
+  <data key="d7">Source description explicitly associates this photograph with this accident record.</data>
+  <data key="d8">verified photograph, accident report</data>
+  <data key="d9">chunk-5cb1ed115b3a02d844f82d8cb0bea34c</data>
+  <data key="d11">custom_kg</data>
+  <data key="d12">1791545823</data>
+</edge>
+<edge source="ACCIDENT REPORT: pk-rawalpindi-westridge-truck-2011-04-14" target="ACCIDENT IMAGE: pk-acc-img-005">
+  <data key="d10">1.0</data>
+  <data key="d7">Source description explicitly associates this photograph with this accident record.</data>
+  <data key="d8">verified photograph, accident report</data>
+  <data key="d9">chunk-f60fd4331cd1df66c0a01ea8dcf4e0a3</data>
+  <data key="d11">custom_kg</data>
+  <data key="d12">1791545823</data>
+</edge>
+<edge source="ACCIDENT REPORT: pk-rawalpindi-westridge-truck-2011-04-14" target="ACCIDENT IMAGE: pk-acc-img-006">
+  <data key="d10">1.0</data>
+  <data key="d7">Source description explicitly associates this photograph with this accident record.</data>
+  <data key="d8">verified photograph, accident report</data>
+  <data key="d9">chunk-20f7d8c2282be9f4e3234946f2662b76</data>
+  <data key="d11">custom_kg</data>
+  <data key="d12">1791545823</data>
+</edge>
+<edge source="ACCIDENT IMAGE: pk-acc-img-004" target="ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio.jpg">
+  <data key="d10">1.0</data>
+  <data key="d7">Original photograph source and per-file rights: CC BY 3.0</data>
+  <data key="d8">provenance, license, original source</data>
+  <data key="d9">chunk-5cb1ed115b3a02d844f82d8cb0bea34c</data>
+  <data key="d11">custom_kg</data>
+  <data key="d12">1791545823</data>
+</edge>
+<edge source="ACCIDENT IMAGE: pk-acc-img-005" target="ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio_(1).jpg">
+  <data key="d10">1.0</data>
+  <data key="d7">Original photograph source and per-file rights: CC BY 3.0</data>
+  <data key="d8">provenance, license, original source</data>
+  <data key="d9">chunk-f60fd4331cd1df66c0a01ea8dcf4e0a3</data>
+  <data key="d11">custom_kg</data>
+  <data key="d12">1791545823</data>
+</edge>
+<edge source="ACCIDENT IMAGE: pk-acc-img-006" target="ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:Truck_accident_in_westridge_Rawalpindi_-_panoramio_(2).jpg">
+  <data key="d10">1.0</data>
+  <data key="d7">Original photograph source and per-file rights: CC BY 3.0</data>
+  <data key="d8">provenance, license, original source</data>
+  <data key="d9">chunk-20f7d8c2282be9f4e3234946f2662b76</data>
+  <data key="d11">custom_kg</data>
+  <data key="d12">1791545823</data>
+</edge>
+<edge source="ACCIDENT REPORT: pk-malakand-car-river-2014-03-06" target="ACCIDENT IMAGE: pk-acc-img-007">
+  <data key="d10">1.0</data>
+  <data key="d7">Source description explicitly associates this photograph with this accident record.</data>
+  <data key="d8">verified photograph, accident report</data>
+  <data key="d9">chunk-e552588541ecfd9c06e3792da641332f</data>
+  <data key="d11">custom_kg</data>
+  <data key="d12">1791545823</data>
+</edge>
+<edge source="ACCIDENT IMAGE: pk-acc-img-007" target="ACCIDENT SOURCE: https://commons.wikimedia.org/wiki/File:NCP_Non-Custom_Paid_Car_fall_into_the_river.jpg">
+  <data key="d10">1.0</data>
+  <data key="d7">Original photograph source and per-file rights: CC BY-SA 4.0</data>
+  <data key="d8">provenance, license, original source</data>
+  <data key="d9">chunk-e552588541ecfd9c06e3792da641332f</data>
+  <data key="d11">custom_kg</data>
+  <data key="d12">1791545823</data>
+</edge>
+</graph></graphml>

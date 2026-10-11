@@ -1,0 +1,63 @@
+{
+  "models": [
+    {
+      "filename": "vehicle_detector.pt",
+      "name": "Ultralytics YOLO11s COCO",
+      "source": "https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s.pt",
+      "version": "v8.3.0 assets",
+      "license": "AGPL-3.0; enterprise licensing available from Ultralytics",
+      "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+      "classes": [
+        "person",
+        "bicycle",
+        "car",
+        "motorcycle",
+        "bus",
+        "truck"
+      ],
+      "limitations": "COCO general detector, not calibrated for Punjab surveillance"
+    },
+    {
+      "filename": "helmet_detector.pt",
+      "name": "AutonomousUI motorcycle helmet YOLOv8n",
+      "source": "https://raw.githubusercontent.com/AutonomousUI/traffic-helmet-detection/2b58c02c91395daa9add86fdad311dc37fd39eed/weights/best.pt",
+      "version": "2b58c02c91395daa9add86fdad311dc37fd39eed",
+      "license": "Publisher repository MIT; underlying Ultralytics implementation AGPL-3.0",
+      "sha256": "4836dca38e3aff04cb2056262838a47a72531a178ab016052f99492bba029ce4",
+      "classes": [
+        "with helmet",
+        "without helmet",
+        "rider",
+        "number plate"
+      ],
+      "limitations": "Trained on Kaggle aneesarom/rider-with-helmet-without-helmet-number-plate; author metrics are not an independent Pakistan evaluation; hats and occlusion can confuse the model"
+    },
+    {
+      "filename": "plate_detector.onnx",
+      "name": "open-image-models YOLOv9 tiny 640 license plates end-to-end",
+      "source": "https://github.com/ankandrew/open-image-models/releases/download/assets/yolo-v9-t-640-license-plates-end2end.onnx",
+      "version": "assets release, SHA256 pinned",
+      "license": "Publisher open-image-models MIT; YOLOv9 architecture provenance https://github.com/WongKinYiu/yolov9 (GPL-3.0)",
+      "sha256": "c3c1026ca7d0585dd88084d68182dd897113712fa734ae1557ca70174440c076",
+      "classes": [
+        "license plate"
+      ],
+      "limitations": "Localization only; no orientation or mounting-area classes. No Pakistan-specific accuracy claim; native YOLOv9 .pt is not Ultralytics-compatible"
+    },
+    {
+      "filename": "rider_pose.pt",
+      "name": "Ultralytics YOLO11n pose COCO",
+      "source": "https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-pose.pt",
+      "version": "v8.3.0 assets",
+      "license": "AGPL-3.0; enterprise licensing available from Ultralytics",
+      "sha256": "869e83fcdffdc7371fa4e34cd8e51c838cc729571d1635e5141e3075e9319dc0",
+      "classes": [
+        "person"
+      ],
+      "limitations": "Seated pose supports association; cannot establish vehicle movement"
+    }
+  ],
+  "traffic_sign_model": null,
+  "traffic_sign_limitation": "No verified, downloadable model suitable for Pakistan sign classes was provisioned; catalogue remains available.",
+  "seatbelt_model": null
+}
