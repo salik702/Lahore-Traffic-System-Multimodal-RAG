@@ -7,6 +7,7 @@ import { api } from "@/lib/api";
 import type { VisionResult } from "@/lib/vision";
 import { PageIntro } from "@/components/ui";
 import { VisionResults } from "@/components/vision-results";
+import { InfiniteTypewriter } from "./infinite-typewriter";
 
 export function VisualSearchView() {
   const [file,setFile] = useState<File | null>(null);
@@ -63,7 +64,10 @@ export function VisualSearchView() {
     } finally { window.clearTimeout(timer); if (generation.current === id) setLoading(false); }
   }
   return <div>
-    <PageIntro kicker="Computer vision · Evidence first" title="AI Traffic Violation Detection" description="Inspect each vehicle independently. Local models assess motorcycle riders and visible registration plates; supported findings are matched to verified jurisdiction-specific records."/>
+    <PageIntro
+      kicker="Computer vision · Evidence first"
+      title={<InfiniteTypewriter texts={["AI Traffic Violation Detection", "Automated Evidence Analysis", "Intelligent Road Inspection"]} />}
+      description="Inspect each vehicle independently. Local models assess motorcycle riders and visible registration plates; supported findings are matched to verified jurisdiction-specific records."/>
     <div className="grid items-start gap-5 lg:grid-cols-[320px_minmax(0,1fr)]">
       <section className="surface rounded-xl p-5">
         <div className="label">1 · Upload a road photograph</div>

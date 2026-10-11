@@ -20,9 +20,9 @@ export default function HomePage() {
   function navigate(next:Section){setSection(next);history.replaceState(null,"",next==="home"?window.location.pathname:`#${next}`);window.scrollTo({top:0,behavior:"smooth"});}
   function ask(query:string){setAssistantQuery(query);navigate("assistant");}
   function remember(query:string){setRecent(items=>[{query,at:Date.now()},...items.filter(item=>item.query.toLowerCase()!==query.toLowerCase())].slice(0,8));}
-  return <AppShell section={section} onNavigate={navigate}><AnimatePresence mode="wait"><motion.div key={section} initial={{opacity:0,y:6}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-4}} transition={{duration:.16}}>
-    {section==="home"&&<HomeView stats={stats} recent={recent} onNavigate={navigate} onAsk={ask} onClearRecent={()=>setRecent([])}/>} 
-    {section==="assistant"&&<AssistantView initialQuery={assistantQuery} onSearched={remember}/>} 
+  return <AppShell section={section} onNavigate={navigate}><AnimatePresence mode="wait"><motion.div key={section} initial={{opacity:0, scale:0.98, filter:"blur(4px)"}} animate={{opacity:1, scale:1, filter:"blur(0px)"}} exit={{opacity:0, scale:1.02, filter:"blur(4px)"}} transition={{duration:0.4, ease:[0.16, 1, 0.3, 1]}}>
+    {section==="home"&&<HomeView stats={stats} recent={recent} onNavigate={navigate} onAsk={ask} onClearRecent={()=>setRecent([])}/>}
+    {section==="assistant"&&<AssistantView initialQuery={assistantQuery} onSearched={remember}/>}
     {section==="fines"&&<FinesView/>}{section==="signs"&&<SignsView/>}
     {section==="safety"&&<SafetyView onAsk={ask}/>} {section==="visual"&&<VisualSearchView/>}
     {section==="accidents"&&<AccidentsView onAsk={ask}/>} {section==="sources"&&<SourcesView/>}

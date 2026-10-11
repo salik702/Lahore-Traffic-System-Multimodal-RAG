@@ -2,7 +2,7 @@
 
 import { AlertTriangle, LoaderCircle, Search } from "lucide-react";
 
-export function PageIntro({ kicker, title, description, action }: { kicker: string; title: string; description: string; action?: React.ReactNode }) {
+export function PageIntro({ kicker, title, description, action }: { kicker: string; title: React.ReactNode; description: string; action?: React.ReactNode }) {
   return <div className="mb-7 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
     <div className="max-w-3xl"><div className="label text-[var(--brand)]">{kicker}</div><h1 className="mt-2 text-3xl font-extrabold tracking-[-.045em] md:text-[2.55rem] md:leading-[1.05]">{title}</h1><p className="mt-3 max-w-2xl text-sm leading-6 text-[var(--muted)] md:text-[15px]">{description}</p></div>
     {action && <div className="shrink-0">{action}</div>}
