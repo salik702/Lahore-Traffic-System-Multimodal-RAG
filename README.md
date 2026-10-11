@@ -214,4 +214,14 @@ This project is open-source and provided "as-is" for research and public safety 
 ### Built with obsession by **Salik Ahmad** 🤖
 [Website](https://salikahmad.vercel.app/) • [LinkedIn](https://www.linkedin.com/in/salik-ahmad-programmer/) • [GitHub](https://github.com/SalikAhmad702)
 
+<br/>
+
+<a href="https://salikahmad.vercel.app/">
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=16&duration=4000&pause=1000&color=818CF8&center=true&vCenter=true&width=700&lines=AI%2FML+Engineer;Traffic+Intelligence+Specialist;Multimodal+RAG+Architect;Copyright+©+2026+Salik+Ahmad." alt="Footer Typing" />
+</a>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=shark&color=0:0f0c29,50:302b63,100:24243e&height=140&section=footer" width="100%"/>
+
 </div>
