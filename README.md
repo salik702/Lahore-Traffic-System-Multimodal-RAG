@@ -1,7 +1,12 @@
 <div align="center">
 
-# 🚦 Lahore Traffic Intelligence AI
-### Multimodal RAG & Vision-Language Intelligence System
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=220&section=header&text=LAHORE%20TRAFFIC%20AI&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Multimodal%20RAG%20Intelligence%20System%20%E2%80%A2%20Vision%20%2B%20Text%20%2B%20Knowledge%20Graphs&descAlignY=55&descSize=18&descColor=93c5fd" width="100%"/>
+
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=2600&pause=700&color=818CF8&center=true&vCenter=true&repeat=true&width=800&height=60&lines=Intelligent%20Traffic%20Analysis;Vision-Language%20RAG%20Pipeline;Accident%20Report%20Intelligence;Knowledge-Graph%20Grounded%20Insights" alt="Typing SVG" />
+</a>
+
+<br/>
 
 [![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.116+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
