@@ -15,9 +15,21 @@
 [![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-00FFFF?style=for-the-badge&logo=ultralytics&logoColor=black)](https://ultralytics.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
+<br/>
+
 **A production-grade AI system bridging the gap between raw traffic sensor data, accident reports, and actionable urban intelligence.**
 
-[Explore the Architecture](#-system-architecture) • [Installation Guide](#-installation-and-setup) • [Core Features](#-core-features)
+<br/>
+
+<a href="#-system-architecture">
+  <img src="https://img.shields.io/badge/🏗️-Explore%20Architecture-818CF8?style=for-the-badge&logo=mermaid&logoColor=white" />
+</a>
+<a href="#-installation-and-setup">
+  <img src="https://img.shields.io/badge/⚙️-Installation%20Guide-009688?style=for-the-badge&logo=ubuntu&logoColor=white" />
+</a>
+<a href="#-core-features">
+  <img src="https://img.shields.io/badge/🚀-Core%20Features-F55036?style=for-the-badge&logo=rocket&logoColor=white" />
+</a>
 
 </div>
 
