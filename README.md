@@ -212,7 +212,18 @@ This project is open-source and provided "as-is" for research and public safety 
 <div align="center">
 
 ### Built with obsession by **Salik Ahmad** 🤖
-[Website](https://salikahmad.vercel.app/) • [LinkedIn](https://www.linkedin.com/in/salik-ahmad-programmer/) • [GitHub](https://github.com/SalikAhmad702)
+
+<p>
+  <a href="https://salikahmad.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Website-salikahmad.vercel.app-818CF8?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0d0d0d" alt="Website" />
+  </a>
+  <a href="https://www.linkedin.com/in/salik-ahmad-programmer/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Salik%20Ahmad-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d0d0d" alt="LinkedIn" />
+  </a>
+  <a href="https://github.com/SalikAhmad702" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-SalikAhmad702-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0d0d0d" alt="GitHub" />
+  </a>
+</p>
 
 <br/>
 
