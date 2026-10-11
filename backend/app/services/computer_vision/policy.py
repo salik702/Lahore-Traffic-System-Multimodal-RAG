@@ -12,7 +12,7 @@ DEFAULTS = {
                          "bus": .40, "truck": .40, "bicycle": .40,
                          "stop sign": .45, "traffic light": .45},
     "helmet_positive": .60, "helmet_negative": .75,
-    "ocr_threshold": .85, "vehicle_image_size": 960,
+    "ocr_threshold": .30, "vehicle_image_size": 960,
     "max_motorcycle_crops": 8, "max_plate_crops": 12,
     "max_pose_refinements": 4, "max_head_refinements": 4,
 }

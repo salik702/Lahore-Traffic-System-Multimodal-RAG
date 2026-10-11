@@ -75,7 +75,21 @@ def detect_plates(image,vehicles,helmet_boxes):
     # Bound OCR work, keep localization distinct from recognition confidence.
     for index,box in enumerate(sorted(boxes,key=lambda b:b["confidence"],reverse=True)):
         if box.get('vehicle_id') and index<policy()['max_plate_crops']:
-            box.update(recognize_plate(image,box))
+            # Add padding to the bbox to avoid cutting off characters
+            bbox = box['bbox']
+            w = bbox[2] - bbox[0]
+            h = bbox[3] - bbox[1]
+            pad_w, pad_h = w * 0.05, h * 0.05
+            padded_bbox = [
+                max(0, bbox[0] - pad_w),
+                max(0, bbox[1] - pad_h),
+                bbox[2] + pad_w,
+                bbox[3] + pad_h
+            ]
+            # Use the padded bbox for OCR
+            temp_box = box.copy()
+            temp_box['bbox'] = padded_bbox
+            box.update(recognize_plate(image,temp_box))
             crop=crop_region(image,box['bbox'])
             if crop.size:box['crop_url']=image_url(crop,max_side=520)
         else:

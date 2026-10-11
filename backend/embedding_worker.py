@@ -40,32 +40,10 @@ load_project_env()
 
 def embed(texts):
     global _local_model
-    if OUTPUT_DIMENSIONALITY == 384:
-        if _local_model is None:
-            from sentence_transformers import SentenceTransformer
-            _local_model = SentenceTransformer(LOCAL_MODEL, device="cpu", local_files_only=True)
-        return _local_model.encode(texts, batch_size=64, normalize_embeddings=True).tolist()
-    api_key = os.environ.get("GEMINI_API_KEY", "")
-    if not api_key:
-        raise RuntimeError("GEMINI_API_KEY is required for Gemini embeddings")
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:batchEmbedContents?key={api_key}"
-    payload = {"requests": [{
-        "model": f"models/{MODEL}",
-        "content": {"parts": [{"text": text}]},
-        "taskType": "RETRIEVAL_DOCUMENT",
-        "outputDimensionality": OUTPUT_DIMENSIONALITY,
-    } for text in texts]}
-    request = urllib.request.Request(url, data=json.dumps(payload).encode(), headers={"Content-Type": "application/json"}, method="POST")
-    with urllib.request.urlopen(request, timeout=180) as response:
-        result = json.loads(response.read())
-    vectors = []
-    for item in result.get("embeddings", []):
-        values = item.get("values", [])
-        norm = sum(value * value for value in values) ** 0.5
-        vectors.append([value / norm for value in values] if norm else values)
-    if len(vectors) != len(texts):
-        raise RuntimeError("Gemini returned an incomplete embedding batch")
-    return vectors
+    if _local_model is None:
+        from sentence_transformers import SentenceTransformer
+        _local_model = SentenceTransformer(LOCAL_MODEL, device="cpu", local_files_only=True)
+    return _local_model.encode(texts, batch_size=64, normalize_embeddings=True).tolist()
 
 
 class Handler(BaseHTTPRequestHandler):
