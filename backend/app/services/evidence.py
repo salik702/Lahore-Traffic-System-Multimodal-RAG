@@ -37,11 +37,15 @@ def evidence_kind(item: dict) -> str:
         return "fine"
     if item.get("modality") == "image":
         return "sign"
+    if item.get("id", "").startswith("twin-"):
+        return "simulation_evidence"
     return "rule"
 
 
 def eligible(item: dict, intent: str, query: str = "") -> bool:
     kind = evidence_kind(item)
+    if intent == "SIMULATION_INTELLIGENCE":
+        return kind in {"simulation_evidence", "rule", "guidance"}
     if intent in {"ACCIDENT_GUIDANCE", "EMERGENCY_GUIDANCE"}:
         return kind == "guidance" and item.get("metadata", {}).get("topic") in {"accident", "emergency", "scene_safety"} or kind == "rule" and item.get("metadata", {}).get("category") == "Accidents"
     if intent == "ACCIDENT_STATISTICS":

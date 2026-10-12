@@ -34,6 +34,15 @@ frontend/frontend.log
 tmp/
 output/
 
+# Digital Twin: portable SUMO binaries and large OSM caches
+tools/sumo/
+tools/cache/
+data/simulation/**/*.osm.xml
+data/simulation/**/*.net.xml
+data/simulation/**/*.sumocfg
+backend/storage/rl_models/*.pt
+!backend/storage/rl_models/.gitkeep
+
 # IDE and OS files
 .vscode/
 .idea/

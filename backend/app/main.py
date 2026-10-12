@@ -10,11 +10,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from app.api.routes import router
+from app.api.simulation import router as simulation_router
 from app.core.config import get_settings
 from app.rag.engine import RAGAnythingEngine, local_embed
 from app.services.chat import ChatService
 from app.services.database import ConversationStore
 from app.services.repository import KnowledgeRepository
+from app.simulation.manager import TwinManager
 
 
 settings = get_settings()
@@ -30,6 +32,7 @@ async def lifespan(app: FastAPI):
     worker = None if semantic_worker_running else subprocess.Popen([settings.semantic_python_executable, str(settings.project_root / "backend" / "embedding_worker.py")], cwd=settings.project_root / "backend", env=worker_env, creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0)
     repository = KnowledgeRepository(settings)
     store = ConversationStore(settings.database_path)
+    twin = TwinManager(settings)
     rag = RAGAnythingEngine(settings)
     await rag.initialize()
     if rag.ready:
@@ -49,8 +52,10 @@ async def lifespan(app: FastAPI):
     app.state.repository = repository
     app.state.store = store
     app.state.rag = rag
-    app.state.chat = ChatService(settings, repository, rag, store)
+    app.state.twin = twin
+    app.state.chat = ChatService(settings, repository, rag, store, twin)
     yield
+    await twin.pause()
     if worker and worker.poll() is None:
         worker.terminate()
 
@@ -69,6 +74,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.include_router(router, prefix=settings.api_prefix)
+app.include_router(simulation_router, prefix=settings.api_prefix)
 app.mount("/media/signs", StaticFiles(directory=settings.data_dir / "raw" / "traffic_signs"), name="signs")
 app.mount("/media/images", StaticFiles(directory=settings.data_dir / "raw" / "images"), name="images")
 app.mount("/media/accidents", StaticFiles(directory=settings.data_dir / "raw" / "accidents" / "images"), name="accident-images")

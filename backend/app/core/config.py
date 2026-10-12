@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     rag_enabled: bool = True
     rag_parser: str = "mineru"
     rag_query_mode: str = "hybrid"
-    backend_cors_origins: str = "http://localhost:3000,http://127.0.0.1:3000"
+    backend_cors_origins: str = "http://localhost:3000,http://127.0.0.1:3000,http://localhost:3001,http://127.0.0.1:3001"
     max_upload_mb: int = 8
     semantic_worker_url: str = "http://127.0.0.1:8765"
     semantic_python: str = "python"

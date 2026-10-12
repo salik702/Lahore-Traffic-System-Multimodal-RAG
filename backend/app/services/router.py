@@ -7,7 +7,7 @@ from typing import Any, Callable
 from app.core.config import Settings
 
 logger = logging.getLogger(__name__)
-INTENTS = {"TRAFFIC_FINE", "TRAFFIC_SIGN", "TRAFFIC_RULE", "ROAD_SAFETY", "ACCIDENT_INFORMATION", "ACCIDENT_GUIDANCE", "EMERGENCY_GUIDANCE", "ACCIDENT_STATISTICS", "ACCIDENT_IMAGE_REQUEST", "DOCUMENT_SEARCH", "OUT_OF_DOMAIN", "VISUAL_SEARCH", "GENERAL_CONVERSATION", "GENERAL_KNOWLEDGE"}
+INTENTS = {"TRAFFIC_FINE", "TRAFFIC_SIGN", "TRAFFIC_RULE", "ROAD_SAFETY", "ACCIDENT_INFORMATION", "ACCIDENT_GUIDANCE", "EMERGENCY_GUIDANCE", "ACCIDENT_STATISTICS", "ACCIDENT_IMAGE_REQUEST", "DOCUMENT_SEARCH", "OUT_OF_DOMAIN", "VISUAL_SEARCH", "GENERAL_CONVERSATION", "GENERAL_KNOWLEDGE", "SIMULATION_INTELLIGENCE"}
 GENERAL_INTENTS = {"GENERAL_KNOWLEDGE", "GENERAL_CONVERSATION", "OUT_OF_DOMAIN"}
 PROTOTYPES = {
     "ACCIDENT_GUIDANCE": "What should a driver do following a collision? Stop, help people and follow accident procedures.",
@@ -20,6 +20,7 @@ PROTOTYPES = {
     "TRAFFIC_RULE": "Driving licence, vehicle documents, police stopping drivers and traffic laws.",
     "ROAD_SAFETY": "Advice for safe driving and preventing road injuries.",
     "GENERAL_KNOWLEDGE": "Explain how cars and machines work, science, history, mathematics, cooking, programming, or general knowledge.",
+    "SIMULATION_INTELLIGENCE": "Explain why this intersection is congested, simulation queue lengths, AI controller performance, scenarios, and traffic control strategies.",
 }
 
 
@@ -58,6 +59,8 @@ def detect_intent(query: str, has_image: bool = False) -> str:
         if re.search(r"\b(after|following|should|do|help|steps?|procedures?|happens?|handle|respond)\b", q) and not re.search(r"\b(show|find|list|records?|dataset|occurred|happened in)\b", q):
             return "ACCIDENT_GUIDANCE"
         return "ACCIDENT_INFORMATION"
+    if re.search(r"\b(simulat\w*|digital twin|kalma|ai controller|fixed-time|reinforcement learning|scenario|bottlenecks?|queues?|throughput|waiting time|travel time|closing this road|closed road|longest queue|congested|congestion|traffic strategy|what-if|near-miss)\b", q):
+        return "SIMULATION_INTELLIGENCE"
     if re.search(r"\b(fines?|penalt\w*|challan)\b", q):
         return "TRAFFIC_FINE"
     if re.search(r"\b(signs?|symbols?|signals?|red light|traffic light)\b", q):

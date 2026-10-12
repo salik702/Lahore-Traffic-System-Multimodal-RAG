@@ -56,8 +56,8 @@ and structured examples when requested; do not include hidden reasoning in the a
 
 
 class ChatService:
-    def __init__(self, settings: Settings, repository: KnowledgeRepository, rag: RAGAnythingEngine, store: ConversationStore):
-        self.settings, self.repository, self.rag, self.store = settings, repository, rag, store
+    def __init__(self, settings: Settings, repository: KnowledgeRepository, rag: RAGAnythingEngine, store: ConversationStore, twin: Any | None = None):
+        self.settings, self.repository, self.rag, self.store, self.twin = settings, repository, rag, store, twin
         self._retrieval_cache = OrderedDict()
 
     def _rag_evidence(self, payload: Any, intent: str, query: str) -> list[dict]:
@@ -122,7 +122,26 @@ class ChatService:
                         if safe_url(article.get("url")):
                             candidates.append({"id": f"news-{index}", "title": article.get("title", "News report"), "text": f"News-index headline: {article.get('title', 'Traffic report')}. Index discovery time: {article.get('seendate', 'unknown')}; this is not a verified incident date. Follow the publisher link to verify the report.", "source_id": "gdelt-news-index", "score": 0.7, "modality": "text", "metadata": {"kind": "accident", "source_url": article["url"], "live": True}})
                 return select_evidence(candidates, intent, query, self.repository.source_map, top_k), False, None
-            if intent in {"ACCIDENT_IMAGE_REQUEST", "ACCIDENT_INFORMATION"}:
+            if intent == "SIMULATION_INTELLIGENCE":
+                candidates = []
+                if self.twin:
+                    candidates.append({
+                        "id": "twin-simulation-live",
+                        "title": "Lahore Traffic Digital Twin — Live Simulation Observations",
+                        "text": self.twin.get_simulation_context_for_rag(),
+                        "source_id": "lahore-digital-twin-2026",
+                        "score": 0.99,
+                        "modality": "text",
+                        "metadata": {
+                            "kind": "simulation_evidence",
+                            "citation_number": 1,
+                            "source_url": "https://www.openstreetmap.org/copyright",
+                            "provenance": "simulated",
+                        },
+                    })
+                rules = await asyncio.to_thread(self.repository.search, query, top_k, intent="TRAFFIC_RULE")
+                candidates.extend(rules)
+            elif intent in {"ACCIDENT_IMAGE_REQUEST", "ACCIDENT_INFORMATION"}:
                 hits = []
                 if self.rag.ready:
                     try:
@@ -270,7 +289,25 @@ class ChatService:
                 answer += "\n\nThis is a catalogue example. Follow the speed limit actually posted on your road."
             if any(item.get("modality") == "image" for item in evidence) and not images:
                 answer += "\n\nThe matching source image is currently unavailable."
-            return answer
+        if intent == "SIMULATION_INTELLIGENCE":
+            if self.twin:
+                snap = self.twin.get_snapshot()
+                m = snap["metrics"]
+                area = self.twin.network.get("area", "Kalma Chowk, Lahore")
+                ans = (
+                    f"**Lahore Traffic Digital Twin Simulation Report** ({area}):\n\n"
+                    f"- **Current Control Strategy**: `{snap.get('controller_mode')}` mode under scenario `{snap.get('scenario')}` (Demand scale: {snap.get('demand_scale')}×)\n"
+                    f"- **Congestion State**: **{m.get('congestion_level', 'moderate').upper()}**\n"
+                    f"- **Waiting & Travel Times**: Average waiting time is **{m.get('average_waiting_time')} seconds**, with average travel time of **{m.get('average_travel_time')} seconds**\n"
+                    f"- **Queue Lengths**: Average queue of **{m.get('average_queue_length')} vehicles**, peak queue reached **{m.get('max_queue_length')} vehicles**\n"
+                    f"- **Network Throughput**: **{m.get('throughput_per_hour')} vehicles/hour** ({m.get('vehicles_completed')} trips completed, {m.get('total_vehicles')} currently on road)\n"
+                    f"- **Accident-Risk & Conflict Events**: **{m.get('risk_events')} simulated conflict/braking indicators** (Simulated collisions: {m.get('simulated_collisions')})\n\n"
+                )
+                rules_cited = [cited(item) for item in evidence if item.get("id") != "twin-simulation-live"]
+                if rules_cited:
+                    ans += "Relevant Traffic Rules & Regulatory Guidance:\n\n" + "\n\n".join(rules_cited)
+                return ans
+            return "The Digital Twin simulation engine is currently initializing."
         # Legal/sign fallback uses human curated summaries, never raw index serializations.
         return "\n\n".join(cited(item) for item in evidence)
 

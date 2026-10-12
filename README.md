@@ -174,6 +174,68 @@ npm run dev
 
 ---
 
+## Lahore Traffic Digital Twin
+
+The Digital Twin is available from the **Digital Twin** section of the existing Next.js application. It uses a cached OpenStreetMap extract around Kalma Chowk and stores simulation experiments in the existing SQLite database. Simulation observations are kept separate from reported road incidents.
+
+### Architecture and current engine status
+
+```mermaid
+flowchart LR
+  OSM[OpenStreetMap Kalma Chowk extract] --> Import[OSM parser and SUMO netconvert]
+  Import --> Network[Cached road graph and SUMO network]
+  Network --> Engine[Native OSM microscopic engine]
+  Engine --> API[FastAPI controls, snapshots, metrics, experiments]
+  API --> UI[Next.js Leaflet Digital Twin]
+  API --> RAG[Traffic assistant simulation context]
+  Engine --> DQN[Per-intersection DQN / max-pressure baseline]
+  Engine --> SQLite[Simulation-only experiment history]
+```
+
+The current live dashboard engine is explicitly reported as **Native OSM microsimulation**. SUMO 1.27.1, `netconvert`, and TraCI are supported and the generated network is validated by SUMO; a TraCI smoke run successfully inserted and moved a vehicle. The dashboard's lifecycle and live snapshots still use the project's native microscopic engine. This distinction avoids presenting SUMO availability as proof that the live dashboard is currently driven by TraCI.
+
+The native engine models cars, motorcycles, buses, and a generic other vehicle class with configurable headway, acceleration, deceleration, and speed. Its traffic demand and peak mix are scenario parameters, not measured Lahore counts. Signal agents use fixed-time or max-pressure control until a DQN checkpoint is trained. DQN training uses per-junction queue, waiting-time, occupancy, phase, elapsed-time, and neighboring-pressure observations; exploratory actions are safety-interlocked by minimum/maximum green and yellow clearance. Its reward penalizes incremental waiting, queues, signal switches, and new simulated collisions, and rewards throughput. A newly trained checkpoint is not evidence of improved performance: use paired comparisons with the same seed and inspect measured results.
+
+### Windows setup and operation
+
+From PowerShell at the repository root:
+
+```powershell
+cd backend
+uv sync
+uv run python scripts/import_lahore_network.py
+uv run uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+```
+
+In a second PowerShell window:
+
+```powershell
+cd frontend
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000` and choose **Digital Twin**. SUMO is detected through `SUMO_HOME`, `backend` settings, `tools/sumo`, common Windows install folders, or `PATH`. The import command reuses the cached extract; pass `--force-download` to refresh it. If SUMO is not installed, install a compatible Eclipse SUMO Windows release and set `SUMO_HOME` to its installation directory before running the import command. The import script fails explicitly if SUMO or `netconvert` is missing and runs SUMO against the generated network to validate it.
+
+Run backend checks with `uv run pytest -q` from `backend`; run the frontend production build with `npm run build` from `frontend`.
+
+The simulation API is mounted under `/api/v1/simulation`: `/status`, `/network`, `/snapshot`, `/metrics`, `/control`, `/config`, `/scenarios`, `/experiment/scenario`, `/experiment/compare`, `/experiments`, `/training/start`, `/training/status`, `/risks`, `/context`, and `/ws`. The chat assistant includes live simulation context for simulation-intelligence questions and can add retrieved traffic evidence. Simulation findings are labeled as simulated; they are not real-world traffic observations or crash reports.
+
+Experiments compare fixed-time control with a trained RL model when present, otherwise with the max-pressure AI baseline. Results include the actual treatment controller and are persisted with the scenario, demand, duration, seed, metrics, and comparison. Scenarios include peak and motorcycle-heavy demand, road closure, blocked lane, capacity reduction, demand increase, signal failure, and longer fixed greens. Risk indicators are experimental kinematic measures (following TTC and braking) and simulated collisions; they are not crash predictions or reported accidents.
+
+### Network data and licensing
+
+The extract is requested from the OpenStreetMap API for a bounded box around Kalma Chowk (approximately 31.4990–31.5080 N, 74.3260–74.3370 E), cached under `data/simulation/kalma_chowk/`, and converted to SUMO plain XML with `netconvert`. Data contributors are credited by OpenStreetMap under the [Open Database License (ODbL)](https://www.openstreetmap.org/copyright). Road names, lane counts, speeds, and signal tags can be incomplete; parser defaults are estimates where tags are absent. No downloaded map layout is invented. If network acquisition is unavailable at first run, the application falls back to a labeled synthetic four-arm demonstration network, which is not a real Kalma Chowk layout.
+
+### Limitations
+
+- The current live UI uses the native OSM engine; SUMO network conversion and standalone TraCI operation are verified, but live manager integration with TraCI remains unfinished.
+- Demand profiles are scenario inputs and are not calibrated to field counts. Simulation results do not establish real-world signal effectiveness.
+- The DQN is a small CPU-compatible research implementation, not a pretrained or field-validated controller. Training is reproducible and resumable, but performance must be demonstrated by recorded paired runs.
+- Collision-risk thresholds are kinematic indicators with simplified following behavior. They must not be interpreted as actual accidents or validated safety predictions.
+- OSM geometry is licensed ODbL and remains subject to contributor attribution and share-alike terms.
+
+
 ## 📁 Project Directory Structure
 
 ```text

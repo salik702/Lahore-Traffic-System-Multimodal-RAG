@@ -1,0 +1,39 @@
+{
+  "trained": true,
+  "episodes": 5,
+  "steps": 120,
+  "seed": 42,
+  "path": "C:\\Users\\salik\\OneDrive\\Desktop\\Lahore Traffic System Multimodal RAG\\data\\simulation\\kalma_chowk\\rl_model.pt",
+  "history": [
+    {
+      "episode": 0,
+      "reward": -1107.0,
+      "wait": 5.0,
+      "throughput": 1
+    },
+    {
+      "episode": 1,
+      "reward": -976.73,
+      "wait": 2.5,
+      "throughput": 1
+    },
+    {
+      "episode": 2,
+      "reward": -1279.4,
+      "wait": 0.0,
+      "throughput": 3
+    },
+    {
+      "episode": 3,
+      "reward": -1168.08,
+      "wait": 0.25,
+      "throughput": 2
+    },
+    {
+      "episode": 4,
+      "reward": -1258.6,
+      "wait": 12.22,
+      "throughput": 0
+    }
+  ]
+}
