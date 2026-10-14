@@ -11,6 +11,7 @@
 [![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.116+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![Gemini](https://img.shields.io/badge/Gemini-4285F4?style=for-the-badge&logo=googlegemini&logoColor=white)](https://ai.google.dev/)
 [![Groq](https://img.shields.io/badge/Groq-LPU-F55036?style=for-the-badge&logo=groq&logoColor=white)](https://groq.com/)
 [![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-00FFFF?style=for-the-badge&logo=ultralytics&logoColor=black)](https://ultralytics.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -52,7 +53,7 @@ The system transforms unstructured data—including accident PDFs, traffic sign 
 ### 🧠 Intelligence Engine
 - **Hybrid RAG-Anything**: A dual-retrieval strategy combining **Naive Vector Search** (semantic chunks) with **Graph-based Retrieval** (relational entities).
 - **Knowledge Graph Integration**: Automatic extraction of entities and relationships, exportable via **GraphML** for structural analysis in tools like Gephi.
-- **Groq-Accelerated Inference**: Leveraging LPU technology for ultra-low latency LLM responses, ensuring real-time query performance.
+- **Split LLM Routing**: **Gemini** drives bulk corpus ingestion — PDF entity extraction and figure understanding — because Groq's free-tier token quota is far too small to index the PDF corpus. **Groq** (LPU) remains on the live chat and sign-vision paths for ultra-low latency responses.
 - **Strict Grounding**: A rigorous evidence-boundary system that prevents model hallucination by strictly adhering to sourced accident reports and official regulations.
 
 ### 🛠️ Evidence & Legal Pipeline
@@ -76,7 +77,7 @@ flowchart TD
     subgraph Pipeline [Multimodal Ingestion Pipeline]
         B[Ingestion Engine] --> C1[YOLOv8 / RapidOCR]
         B --> C2[CLIP Embeddings]
-        B --> C3[LightRAG Parser]
+        B --> C3[LightRAG Parser + Gemini Extraction]
         C1 & C2 & C3 --> D[Multimodal Vector Store]
         D --> E[Knowledge Graph]
     end
@@ -86,7 +87,7 @@ flowchart TD
         E --> G
         D --> G
         G --> H[Contextual Prompt]
-        H --> I[Groq LLM]
+        H --> I[Groq LLM live chat]
         I --> J[Grounded Intelligence Insight]
     end
 
@@ -104,7 +105,7 @@ flowchart TD
 | **Frontend** | `Next.js 16`, `React 19`, `Tailwind CSS 4` | High-performance, motion-enhanced monitoring dashboard |
 | **Backend** | `FastAPI`, `Pydantic` | Asynchronous API orchestration and state management |
 | **RAG Framework** | `RAG-Anything`, `LightRAG` | Multimodal retrieval and Graph-based knowledge management |
-| **LLM Engine** | `Groq` (LPU) | Ultra-fast inference for grounded text generation |
+| **LLM Engine** | `Gemini` (ingestion), `Groq` (LPU) | Corpus extraction and figure vision; low-latency grounded chat generation |
 | **Vision** | `YOLOv8`, `ONNX Runtime` | Real-time object detection and violation analysis |
 | **OCR** | `RapidOCR` | Text extraction from plates and signage |
 | **Embeddings** | `Sentence-Transformers` | Local semantic vectorization (`all-MiniLM-L6-v2`) |
@@ -136,13 +137,26 @@ pip install -r pyproject.toml
 ```
 
 **Environment Configuration**
-Create a `.env` file in the `backend/` directory:
+Create a `.env` file in the repository root (`backend/app/core/config.py` loads it via `../.env` when the backend runs from `backend/`). Both providers are needed, because they serve different paths:
+
 ```env
+# Bulk PDF ingestion + figure vision -> Gemini
+GEMINI_API_KEY=your_gemini_api_key_here
+GEMINI_MODEL=gemini-3.8-flash
+GEMINI_VISION_MODEL=gemini-3.8-flash
+RAG_LLM_PROVIDER=gemini
+
+# Live chat assistant + road-sign vision -> Groq
 GROQ_API_KEY=your_groq_api_key_here
-RAG_ENABLED=True
+GROQ_MODEL=openai/gpt-oss-120b
+GROQ_VISION_MODEL=llama-3.2-11b-vision-preview
+
+RAG_ENABLED=true
 RAG_QUERY_MODE=hybrid
 BACKEND_CORS_ORIGINS=http://localhost:3000
 ```
+
+> `RAG_LLM_PROVIDER` defaults to `groq` in `backend/app/core/config.py`, so a fresh clone without it set will index the corpus on Groq and fail its token ceiling. Set it to `gemini` as shown above. See [`.env.example`](.env.example) for the full set of options.
 
 ### 💻 Frontend Setup
 ```bash
@@ -285,8 +299,8 @@ The run checksums `backend/rag_storage/`, restores it if the run cannot finish, 
 Three environment problems used to make this impossible, and each is now handled explicitly:
 
 - **Parser.** RAG-Anything 1.4.1 invokes MinerU through the legacy `mineru -p <pdf> -o <dir>` command line. MinerU 4.x ships a different, subcommand-based CLI that rejects those flags and needs a separately started local server, so every parse failed with exit code 2. `backend/app/rag/pdf_parser.py` implements the same content-list contract on PyMuPDF — layout-aware text, ruled tables, in-flow figures — and OCRs image-only pages with the bundled offline RapidOCR models. That recovers real content from the scanned NHMP sign handbook, whose 44 pages previously yielded 770 characters in total. The engine probes the MinerU CLI once and falls back automatically, recording the reason in the manifest. Set `RAG_PARSER=pymupdf` to skip the probe.
-- **Extraction model.** Groq’s `openai/gpt-oss` models return reasoning in a `reasoning` field that LightRAG never reads, so a completion spent entirely on reasoning arrived as empty content. The engine pins `reasoning_effort=low` and retries.
-- **Provider limits.** This Groq organization is capped at 8,000 tokens per minute, and an uncapped completion allowance counts against that budget, so large extraction requests were rejected with HTTP 413 before any output. `RAG_LLM_MAX_COMPLETION_TOKENS` and `RAG_CHUNK_TOKEN_SIZE` bound every request to fit the ceiling, and `RAG_LLM_MAX_ASYNC` keeps extraction sequential. The configured `GROQ_VISION_MODEL` is decommissioned and this account has no vision-capable model at all, so figures are indexed from their source caption only — no visual analysis is invented, and figure entities are named after their source file rather than mislabelled as verified photographs.
+- **Extraction model.** Groq’s `openai/gpt-oss` models return reasoning in a `reasoning` field that LightRAG never reads, so a completion spent entirely on reasoning arrived as empty content. The engine pins `reasoning_effort=low` and retries. Those reasoning models are still used on the live chat path, so both guards remain active there.
+- **Provider limits.** This Groq organization is capped at 8,000 tokens per minute, and an uncapped completion allowance counts against that budget, so large extraction requests were rejected with HTTP 413 before any output. That ceiling is a property of the Groq free tier, and it is the reason bulk extraction moved to **Gemini** via `RAG_LLM_PROVIDER=gemini`. `endpoints()` in `backend/app/rag/engine.py` resolves the extraction and vision endpoints separately for exactly this reason: each path can name a provider whose quota can carry it. `RAG_LLM_MAX_COMPLETION_TOKENS`, `RAG_CHUNK_TOKEN_SIZE`, and `RAG_LLM_MAX_ASYNC` remain in place as the Groq-path guards, and `scripts/ingest_rag_documents.py` raises them when the provider is not Groq. Vision previously had no reachable Groq model at all — the configured one was decommissioned — so figures were indexed from their source caption only. Figure vision now belongs to `GEMINI_VISION_MODEL`. Whenever no usable vision model is reachable the indexer still falls back to caption-only text: no visual analysis is invented, and figure entities are named after their source file rather than mislabelled as verified photographs.
 
 ---
 
