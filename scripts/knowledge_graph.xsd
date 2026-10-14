@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="SourceStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="processed"/>
+      <xs:enumeration value="partially_processed"/>
+      <xs:enumeration value="failed"/>
+      <xs:enumeration value="unprocessed"/>
+      <xs:enumeration value="unavailable"/>
+      <xs:enumeration value="migrated"/>
+      <xs:enumeration value="duplicate"/>
+      <xs:enumeration value="empty"/>
+      <xs:enumeration value="reviewed"/>
+      <xs:enumeration value="excluded"/>
+      <xs:enumeration value="derived"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="DataType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="string"/>
+      <xs:enumeration value="integer"/>
+      <xs:enumeration value="decimal"/>
+      <xs:enumeration value="boolean"/>
+      <xs:enumeration value="json"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="MetadataType">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string"/>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="paperReference">
+        <xs:complexType>
+          <xs:attribute name="path" type="xs:string" use="required"/>
+          <xs:attribute name="title" type="xs:string" use="required"/>
+          <xs:attribute name="arxiv" type="xs:string" use="required"/>
+          <xs:attribute name="pagesReviewed" type="xs:nonNegativeInteger" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="methodology" type="xs:string"/>
+      <xs:element name="implementationProfile" type="xs:string"/>
+      <xs:element name="limitations">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="limitation" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="schemaVersion" type="xs:string" use="required"/>
+    <xs:attribute name="generatedAtUtc" type="xs:dateTime" use="required"/>
+    <xs:attribute name="generatorVersion" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="SourceType">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string"/>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="processingNote" type="xs:string"/>
+      <xs:element name="error" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+    <xs:attribute name="kind" type="xs:string" use="required"/>
+    <xs:attribute name="status" type="SourceStatus" use="required"/>
+    <xs:attribute name="path" type="xs:string"/>
+    <xs:attribute name="externalId" type="xs:string"/>
+    <xs:attribute name="mediaType" type="xs:string"/>
+    <xs:attribute name="sha256" type="xs:string"/>
+    <xs:attribute name="sizeBytes" type="xs:nonNegativeInteger"/>
+    <xs:attribute name="itemsDiscovered" type="xs:nonNegativeInteger"/>
+    <xs:attribute name="itemsProcessed" type="xs:nonNegativeInteger"/>
+    <xs:attribute name="entityRef" type="xs:string"/>
+    <xs:attribute name="available" type="xs:boolean" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="AttributeType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="dataType" type="DataType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="ReferenceType">
+    <xs:attribute name="sourceRef" type="xs:string" use="required"/>
+    <xs:attribute name="sourceId" type="xs:string"/>
+    <xs:attribute name="location" type="xs:string"/>
+    <xs:attribute name="method" type="xs:string"/>
+    <xs:attribute name="state" type="xs:string"/>
+    <xs:attribute name="chunkRef" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="EntityType">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="attributes">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="attribute" type="AttributeType" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="aliases">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="alias" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="provenance">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="reference" type="ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="multimodal">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="asset" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attribute name="sourceRef" type="xs:string" use="required"/>
+                <xs:attribute name="path" type="xs:string" use="required"/>
+                <xs:attribute name="modality" type="xs:string" use="required"/>
+                <xs:attribute name="page" type="xs:nonNegativeInteger"/>
+                <xs:attribute name="caption" type="xs:string"/>
+                <xs:attribute name="license" type="xs:string"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+    <xs:attribute name="canonical" type="xs:boolean" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="RelationshipType">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="attributes">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="attribute" type="AttributeType" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="provenance">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="reference" type="ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+    <xs:attribute name="source" type="xs:string" use="required"/>
+    <xs:attribute name="target" type="xs:string" use="required"/>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+    <xs:attribute name="label" type="xs:string" use="required"/>
+    <xs:attribute name="direction" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="ConflictType">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="assertion" minOccurs="2" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="sourceRef" type="xs:string" use="required"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+    <xs:attribute name="subjectEntityRef" type="xs:string" use="required"/>
+    <xs:attribute name="field" type="xs:string" use="required"/>
+    <xs:attribute name="status" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:element name="knowledgeGraph">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="metadata" type="MetadataType"/>
+        <xs:element name="sources">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="source" type="SourceType" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="entities">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="entity" type="EntityType" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="relationships">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="relationship" type="RelationshipType" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="conflicts">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="conflict" type="ConflictType" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+    <xs:key name="sourceIds">
+      <xs:selector xpath="sources/source"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:key name="entityIds">
+      <xs:selector xpath="entities/entity"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:key name="relationshipIds">
+      <xs:selector xpath="relationships/relationship"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:key name="conflictIds">
+      <xs:selector xpath="conflicts/conflict"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:keyref name="sourceEntityRef" refer="entityIds">
+      <xs:selector xpath="sources/source"/>
+      <xs:field xpath="@entityRef"/>
+    </xs:keyref>
+    <xs:keyref name="relationshipSourceRef" refer="entityIds">
+      <xs:selector xpath="relationships/relationship"/>
+      <xs:field xpath="@source"/>
+    </xs:keyref>
+    <xs:keyref name="relationshipTargetRef" refer="entityIds">
+      <xs:selector xpath="relationships/relationship"/>
+      <xs:field xpath="@target"/>
+    </xs:keyref>
+    <xs:keyref name="entityProvenanceRef" refer="sourceIds">
+      <xs:selector xpath="entities/entity/provenance/reference"/>
+      <xs:field xpath="@sourceRef"/>
+    </xs:keyref>
+    <xs:keyref name="relationshipProvenanceRef" refer="sourceIds">
+      <xs:selector xpath="relationships/relationship/provenance/reference"/>
+      <xs:field xpath="@sourceRef"/>
+    </xs:keyref>
+    <xs:keyref name="multimodalSourceRef" refer="sourceIds">
+      <xs:selector xpath="entities/entity/multimodal/asset"/>
+      <xs:field xpath="@sourceRef"/>
+    </xs:keyref>
+    <xs:keyref name="conflictSubjectRef" refer="entityIds">
+      <xs:selector xpath="conflicts/conflict"/>
+      <xs:field xpath="@subjectEntityRef"/>
+    </xs:keyref>
+    <xs:keyref name="conflictAssertionRef" refer="sourceIds">
+      <xs:selector xpath="conflicts/conflict/assertion"/>
+      <xs:field xpath="@sourceRef"/>
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

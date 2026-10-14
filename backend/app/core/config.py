@@ -10,11 +10,33 @@ class Settings(BaseSettings):
     api_prefix: str = "/api/v1"
     groq_api_key: str = ""
     groq_model: str = "openai/gpt-oss-20b"
+    # The RAG extraction/vision path can run on a different provider from the chat
+    # path. Groq's free tier allows only 8k tokens per minute and 200k per day,
+    # which is far below the cost of extracting the PDF corpus; Gemini's quota is
+    # large enough to finish it.
+    rag_llm_provider: str = "groq"
+    gemini_api_key: str = ""
+    gemini_model: str = "gemini-3.8-flash"
+    gemini_vision_model: str = "gemini-3.8-flash"
+    gemini_base_url: str = "https://generativelanguage.googleapis.com/v1beta/openai/"
     rag_extraction_model: str = "openai/gpt-oss-120b"
     groq_vision_model: str = "qwen/qwen3.8-27b"
     rag_enabled: bool = True
     rag_parser: str = "mineru"
     rag_query_mode: str = "hybrid"
+    # Groq reasoning models can spend a whole completion budget reasoning and return
+    # empty content. Asking for low effort keeps the JSON extraction on the output side.
+    rag_llm_reasoning_effort: str = "low"
+    rag_llm_max_retries: int = 3
+    # Groq charges an uncapped completion allowance against its per-minute token
+    # limit, so these bounds keep each request inside that ceiling. Gemini has a
+    # large context and quota and does not need them tightened; scripts/ingest_
+    # rag_documents.py raises them when RAG_LLM_PROVIDER is not groq.
+    rag_llm_max_completion_tokens: int = 1600
+    rag_chunk_token_size: int = 900
+    # Extraction requests are large enough that several in flight exhaust Groq's
+    # per-minute budget, so bulk loading is sequential by default.
+    rag_llm_max_async: int = 1
     backend_cors_origins: str = "http://localhost:3000,http://127.0.0.1:3000,http://localhost:3001,http://127.0.0.1:3001"
     max_upload_mb: int = 8
     semantic_worker_url: str = "http://127.0.0.1:8765"

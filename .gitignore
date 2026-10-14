@@ -5,6 +5,7 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 backend/rag_storage/
+backend/rag_document_ingestion_backup_*/
 backend/storage/uploads/*
 !backend/storage/uploads/.gitkeep
 frontend/node_modules/
@@ -33,6 +34,9 @@ backend/test-results.log
 frontend/frontend.log
 tmp/
 output/
+
+# Knowledge graph: generated artifacts (XML exceeds GitHub 100MB limit)
+graphs/knowledge_graph/knowledge_graph.xml
 
 # Digital Twin: portable SUMO binaries and large OSM caches
 tools/sumo/

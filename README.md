@@ -254,8 +254,39 @@ Lahore-Traffic-AI/
 │   └── components/        # UI Components (Tailwind/Motion)
 ├── scripts/               # Data Acquisition & Eval Tools
 ├── data/                  # Raw & Processed Datasets
-└── graphs/                # Exported .graphml Visualizations
+└── graphs/                # Canonical source-traceable graph corpus and visualization
+    └── knowledge_graph/   # XML corpus and PNG graph image
 ```
+
+### Knowledge graph corpus
+
+The canonical project graph is in [`graphs/knowledge_graph/`](graphs/knowledge_graph/). It is generated from the project’s structured traffic data, normalized accident records, OpenStreetMap simulation network, persisted RAG chunks, PDF page text, the migrated legacy LightRAG snapshot, and the current LightRAG graph.
+
+The corpus follows RAG-Anything’s broad ideas of representing entities and relationships with source provenance and retaining multimodal references. The PNG is generated from the XML and summarizes the full corpus by entity type so the connections remain readable; the XML retains the individual records. The exact entity, relationship and chunk counts are written into the XML `<metadata>` block and into the ingestion manifest, so the artefacts always state what was actually persisted.
+
+Regenerate the XML and its single PNG graph image from the repository root. XML validation uses the schema at `scripts/knowledge_graph.xsd`:
+
+```powershell
+backend/.venv/Scripts/python.exe scripts/build_knowledge_graph.py
+```
+
+The build is local and deterministic with respect to source data. It makes no model or network calls. The `graphs/knowledge_graph/` directory contains only `knowledge_graph.xml` and `knowledge_graph_visualization.png`.
+
+### PDF ingestion
+
+The four traffic PDFs are parsed and indexed into LightRAG by:
+
+```powershell
+backend/.venv/Scripts/python.exe scripts/ingest_rag_documents.py
+```
+
+The run checksums `backend/rag_storage/`, restores it if the run cannot finish, and writes every per-document outcome to `data/processed/metadata/rag_document_ingestion.json`. A document counts as ingested only when LightRAG’s own `doc_status` records it as processed — `process_document_complete` returns normally even when extraction fails, so its return value is never treated as proof.
+
+Three environment problems used to make this impossible, and each is now handled explicitly:
+
+- **Parser.** RAG-Anything 1.4.1 invokes MinerU through the legacy `mineru -p <pdf> -o <dir>` command line. MinerU 4.x ships a different, subcommand-based CLI that rejects those flags and needs a separately started local server, so every parse failed with exit code 2. `backend/app/rag/pdf_parser.py` implements the same content-list contract on PyMuPDF — layout-aware text, ruled tables, in-flow figures — and OCRs image-only pages with the bundled offline RapidOCR models. That recovers real content from the scanned NHMP sign handbook, whose 44 pages previously yielded 770 characters in total. The engine probes the MinerU CLI once and falls back automatically, recording the reason in the manifest. Set `RAG_PARSER=pymupdf` to skip the probe.
+- **Extraction model.** Groq’s `openai/gpt-oss` models return reasoning in a `reasoning` field that LightRAG never reads, so a completion spent entirely on reasoning arrived as empty content. The engine pins `reasoning_effort=low` and retries.
+- **Provider limits.** This Groq organization is capped at 8,000 tokens per minute, and an uncapped completion allowance counts against that budget, so large extraction requests were rejected with HTTP 413 before any output. `RAG_LLM_MAX_COMPLETION_TOKENS` and `RAG_CHUNK_TOKEN_SIZE` bound every request to fit the ceiling, and `RAG_LLM_MAX_ASYNC` keeps extraction sequential. The configured `GROQ_VISION_MODEL` is decommissioned and this account has no vision-capable model at all, so figures are indexed from their source caption only — no visual analysis is invented, and figure entities are named after their source file rather than mislabelled as verified photographs.
 
 ---
 
