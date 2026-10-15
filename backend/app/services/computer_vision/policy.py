@@ -12,7 +12,7 @@ DEFAULTS = {
                          "bus": .40, "truck": .40, "bicycle": .40,
                          "stop sign": .45, "traffic light": .45},
     "helmet_positive": .60, "helmet_negative": .75,
-    "ocr_threshold": .30, "vehicle_image_size": 960,
+    "ocr_threshold": .30, "ocr_min_confidence": .90, "vehicle_image_size": 960,
     "max_motorcycle_crops": 8, "max_plate_crops": 12,
     "max_pose_refinements": 4, "max_head_refinements": 4,
 }
@@ -35,7 +35,7 @@ def policy():
             else:
                 result[key] = value
     probabilities = [*result["class_thresholds"].values(), result["helmet_positive"],
-                     result["helmet_negative"], result["ocr_threshold"]]
+                     result["helmet_negative"], result["ocr_threshold"], result["ocr_min_confidence"]]
     if any(not isinstance(v, (float, int)) or not .01 <= v <= 1 for v in probabilities):
         raise RuntimeError("Confidence thresholds must be within [0.01, 1]")
     for key, limit in (("max_motorcycle_crops", 32), ("max_plate_crops", 32), ("vehicle_image_size", 1280),

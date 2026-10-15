@@ -289,6 +289,7 @@ class ChatService:
                 answer += "\n\nThis is a catalogue example. Follow the speed limit actually posted on your road."
             if any(item.get("modality") == "image" for item in evidence) and not images:
                 answer += "\n\nThe matching source image is currently unavailable."
+            return answer
         if intent == "SIMULATION_INTELLIGENCE":
             if self.twin:
                 snap = self.twin.get_snapshot()

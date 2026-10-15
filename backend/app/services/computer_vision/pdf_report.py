@@ -81,21 +81,15 @@ def build_report(result,vehicle_id=None):
 
     selected=next(iter(result['vehicle_results']),None)
     plate=(selected.get('plate') or {}) if selected else {}
-    # Use confirmed OCR text, or fall back to a detailed status reason if unreadable
-    plate_text=None
-    if plate.get('status') == 'recognized':
-        plate_text = plate.get('text')
-    elif plate.get('text'):
-        plate_text = plate.get('text')
-    else:
-        plate_text = plate.get('reason') if plate.get('reason') else 'Number plate not readable.'
+    # Use only confirmed OCR text, never partial candidates or manual guesses.
+    plate_text=plate.get('text') if plate.get('status')=='recognized' else None
 
     vehicle_name=selected['vehicle_type'].title() if selected else 'No vehicle detected'
     story=[p('LAHORE TRAFFIC INTELLIGENCE','SmallLTI'),
            p('AI TRAFFIC VIOLATION ANALYSIS REPORT','TitleLTI'),
            table([['Date and time',local_analysis_time(result.get('analyzed_at'))],
                   ['Vehicle',vehicle_name],
-                  ['Number plate',plate_text],
+                  ['Number plate',plate_text or ('Number plate not readable.' if selected else 'Unavailable')],
                   ['Jurisdiction',result['jurisdiction']]], [120,WIDTH-120],False),Spacer(1,8),
            KeepTogether([picture(result['original_image_url']),Spacer(1,5),
                          p('Original uploaded image - selected rider / vehicle, without YOLO annotations.','SmallLTI')]),
