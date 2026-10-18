@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-
+from app.simulation.rl import DQNPolicy
 
 @dataclass
 class SignalAgent:
@@ -30,7 +30,7 @@ class SignalAgent:
             return "yellow"
         return "green"
 
-    def tick_safety(self, dt: float, desired_phase: int, phase_scale: float = 1.0) -> None:
+    def tick_safety(self, dt: float, desired_phase: int, phase_scale: float = 1.0, queues: dict[str, int] | None = None) -> None:
         if self.failed:
             self.elapsed += dt
             return
@@ -50,8 +50,17 @@ class SignalAgent:
             return
         self.elapsed += dt
         target = desired_phase % len(self.phases)
+
+        # Actuated Control: If queues for current phase are empty and we passed min_green, switch early
+        actuated_switch = False
+        if queues is not None and self.elapsed >= min_green:
+            current_green_edges = self.phases[self.phase]["green"]
+            if sum(queues.get(eid, 0) for eid in current_green_edges) == 0:
+                actuated_switch = True
+
         must_switch = self.elapsed >= max_green
-        may_switch = self.elapsed >= min_green and target != self.phase
+        may_switch = (self.elapsed >= min_green and target != self.phase) or actuated_switch
+
         if must_switch or may_switch:
             self.in_yellow = True
             self.yellow_elapsed = 0.0
@@ -81,7 +90,7 @@ def max_pressure_action(agent: SignalAgent, queues: dict[str, int], neighbor_pre
 class ControllerBank:
     mode: str
     agents: dict[str, SignalAgent] = field(default_factory=dict)
-    policy: object | None = None
+    policy: DQNPolicy | None = None
     last_actions: dict[str, int] = field(default_factory=dict)
 
     def step(self, dt: float, queues: dict[str, int], observations: dict[str, list[float]], neighbor_queues: dict[str, float], phase_scale: float) -> dict[str, int]:
@@ -94,7 +103,7 @@ class ControllerBank:
                 action = self.policy.act(observations[jid], len(agent.phases), greedy=False, epsilon=getattr(self.policy, "epsilon", 0.0))
             else:
                 action = max_pressure_action(agent, queues, neighbor_queues.get(jid, 0.0))
-            agent.tick_safety(dt, action, phase_scale)
+            agent.tick_safety(dt, action, phase_scale, queues=queues)
             actions[jid] = agent.phase
             selected_actions[jid] = action
         self.last_actions = selected_actions

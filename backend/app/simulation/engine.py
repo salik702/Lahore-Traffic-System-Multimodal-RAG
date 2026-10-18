@@ -65,6 +65,7 @@ class Engine:
     speed_factor: dict = field(default_factory=dict)
     routes: list[list[str]] = field(default_factory=list)
     _vid: int = 0
+    temporary_blockages: dict[str, float] = field(default_factory=dict) # edge_id -> expiration_time
 
     def __post_init__(self) -> None:
         self.reset(self.seed, self.controller_mode, self.scenario_name, self.demand_scale)
@@ -173,6 +174,26 @@ class Engine:
                     heapq.heappush(heap, (ncost, nxt, path + [nxt]))
         return None
 
+    def _idm_accel(self, veh: Vehicle, leader_pos: float, leader_speed: float, speed_cap: float) -> float:
+        """Calculate acceleration using the Intelligent Driver Model (IDM)."""
+        spec = VEHICLE_TYPES[veh.kind]
+        v = veh.speed
+        delta_v = v - leader_speed
+
+        # s_star: desired gap
+        # s_0: minimum gap
+        # T: desired time headway
+        s_0 = spec["gap"] + 2.0
+        T = 1.5
+        gap = leader_pos - veh.pos - spec["length"]
+
+        s_star = s_0 + max(0.0, (v * T) + (v * delta_v / (2 * math.sqrt(spec["accel"] * spec["decel"]))))
+
+        # acceleration = a * [1 - (v/v0)^4 - (s*/s)^2]
+        v0 = min(spec["max_speed"], speed_cap)
+        accel = spec["accel"] * (1 - (v / max(0.1, v0))**4 - (s_star / max(0.1, gap))**2)
+        return max(-spec["decel"], min(spec["accel"], accel))
+
     def _spawn_rate(self) -> float:
         return BASE_SPAWN_PER_HOUR * self.demand_scale / 3600.0
 
@@ -189,6 +210,10 @@ class Engine:
     def _spawn(self) -> None:
         if not self.routes:
             return
+
+        # 2. OD-based Spawning (Placeholder for real matrix)
+        # Instead of fully random, we weight routes by source/sink importance
+        # This is a simplified version of an OD Matrix
         route = self.rng.choice(self.routes)
         kind = self._choose_type()
         edge_id = route[0]
@@ -252,8 +277,8 @@ class Engine:
         obs = {}
         for jid, agent in self.bank.agents.items():
             incoming = self.network["junctions"][jid]["incoming"]
-            q = [queues.get(eid, 0) for eid in incoming[:4]]
-            q += [0] * (4 - len(q))
+            q = [float(queues.get(eid, 0)) for eid in incoming[:4]]
+            q += [0.0] * (4 - len(q))
             waiting = []
             for eid in incoming[:4]:
                 waiting.append(sum(self.vehicles[vid].wait for vid in self.on_edge[eid] if self.vehicles[vid].speed < 1.0) / max(1, len(self.on_edge[eid])))
@@ -264,10 +289,25 @@ class Engine:
 
     def step(self) -> float:
         dt = self.dt
-        self.spawn_accum += self._spawn_rate() * dt
+        # 3. Temporal Demand Profile (Rush Hour)
+        # Simulate a 24h cycle scaled to sim time.
+        # Peak demand at T=8 (morning) and T=17 (evening)
+        hour_of_day = (self.time / 3600.0) % 24.0
+        rush_factor = 1.0 + 0.8 * (math.exp(-(hour_of_day - 8)**2 / 2) + math.exp(-(hour_of_day - 17)**2 / 2))
+        effective_demand = self.demand_scale * rush_factor
+
+        self.spawn_accum += (BASE_SPAWN_PER_HOUR * effective_demand / 3600.0) * dt
         while self.spawn_accum >= 1:
             self._spawn()
             self.spawn_accum -= 1
+
+        # 1. Update Temporary Blockages
+        expired = [eid for eid, exp in self.temporary_blockages.items() if self.time >= exp]
+        for eid in expired:
+            del self.temporary_blockages[eid]
+
+        current_closed = self.closed | set(self.temporary_blockages.keys())
+
         queues = self.queues()
         obs = self.observations()
         neighbor = self._neighbor_pressure()
@@ -302,12 +342,10 @@ class Engine:
                     stop_gap = length - 2.0 - veh.pos
                     if stop_gap < 18:
                         desired = min(desired, max(0.0, stop_gap / 2.5))
-                if gap < spec["gap"] + 8:
-                    desired = min(desired, max(0.0, leader_speed * 0.9, gap * 0.6))
-                accel = spec["accel"] if desired > veh.speed else -spec["decel"]
-                if gap < spec["gap"] + 1.5:
-                    accel = -spec["decel"]
-                veh.accel = max(-spec["decel"], min(spec["accel"], accel))
+
+                # Use IDM for acceleration instead of binary shift
+                veh.accel = self._idm_accel(veh, leader_pos, leader_speed, speed_cap)
+
                 veh.speed = max(0.0, min(desired, veh.speed + veh.accel * dt))
                 if lanes <= 1 and rank > 8:
                     veh.speed *= 0.85
@@ -324,6 +362,8 @@ class Engine:
                         self.collisions += 1
                         veh.speed = 0.0
                         veh.pos = min(veh.pos, leader_pos - spec["length"] - 0.5)
+                        # BLOCK THE EDGE for 60 seconds
+                        self.temporary_blockages[eid] = self.time + 60.0
                     if len(self.risk_events) > 400:
                         self.risk_events = self.risk_events[-400:]
                 leader_pos = veh.pos
@@ -345,14 +385,17 @@ class Engine:
                     del self.vehicles[vid]
                     continue
                 nxt = veh.route[veh.index + 1]
-                if nxt in self.closed:
-                    alternatives = [item for item in self.adjacency[eid] if item not in self.closed]
-                    if not alternatives:
+                if nxt in current_closed:
+                    # DYNAMIC REROUTING: Recalculate path to original goal
+                    goal_node = self.edges[veh.route[-1]]["to"]
+                    new_path = self._shortest(eid, goal_node)
+                    if new_path:
+                        veh.route = veh.route[:veh.index + 1] + new_path[1:]
+                        nxt = veh.route[veh.index + 1]
+                    else:
                         self.stranded += 1
                         del self.vehicles[vid]
                         continue
-                    nxt = alternatives[0]
-                    veh.route = veh.route[: veh.index + 1] + [nxt]
                 wait_for_green = eid in self.junction_of and eid not in green
                 if wait_for_green and overflow < 4:
                     veh.pos = self.edges[eid]["length"] - 0.4

@@ -32,6 +32,7 @@ class DQNPolicy:
     def __init__(self, path: Path | None = None):
         self.available = False
         self.net = None
+        self.target_net = None  # Renamed for clarity
         self.n_actions = N_ACTIONS
         try:
             import torch
@@ -40,18 +41,20 @@ class DQNPolicy:
             return
         self.torch = torch
         self.nn = nn
+
+        # Improved Architecture: Added a layer and increased hidden size for better capacity
         self.net = nn.Sequential(
-            nn.Linear(OBS_SIZE, 64), nn.ReLU(),
-            nn.Linear(64, 64), nn.ReLU(),
-            nn.Linear(64, N_ACTIONS),
+            nn.Linear(OBS_SIZE, 128), nn.ReLU(),
+            nn.Linear(128, 128), nn.ReLU(),
+            nn.Linear(128, N_ACTIONS),
         )
-        self.target = nn.Sequential(
-            nn.Linear(OBS_SIZE, 64), nn.ReLU(),
-            nn.Linear(64, 64), nn.ReLU(),
-            nn.Linear(64, N_ACTIONS),
+        self.target_net = nn.Sequential(
+            nn.Linear(OBS_SIZE, 128), nn.ReLU(),
+            nn.Linear(128, 128), nn.ReLU(),
+            nn.Linear(128, N_ACTIONS),
         )
-        self.target.load_state_dict(self.net.state_dict())
-        self.opt = torch.optim.Adam(self.net.parameters(), lr=1e-3)
+        self.target_net.load_state_dict(self.net.state_dict())
+        self.opt = torch.optim.Adam(self.net.parameters(), lr=5e-4) # Slightly lower LR for stability
         self.available = True
         self.path = path
         if path and Path(path).is_file():
@@ -62,7 +65,7 @@ class DQNPolicy:
             return
         state = self.torch.load(path, map_location="cpu", weights_only=True)
         self.net.load_state_dict(state)
-        self.target.load_state_dict(state)
+        self.target_net.load_state_dict(state)
 
     def save(self, path: Path) -> None:
         if not self.available:
@@ -100,7 +103,7 @@ class DQNPolicy:
         done = self.torch.tensor(dones, dtype=self.torch.float32)
         q = self.net(device_obs).gather(1, acts).squeeze(1)
         with self.torch.no_grad():
-            target = rew + gamma * (1 - done) * self.target(nxt).max(1).values
+            target = rew + gamma * (1 - done) * self.target_net(nxt).max(1).values
         loss = self.nn.functional.smooth_l1_loss(q, target)
         self.opt.zero_grad()
         loss.backward()
@@ -109,7 +112,7 @@ class DQNPolicy:
 
     def sync_target(self) -> None:
         if self.available:
-            self.target.load_state_dict(self.net.state_dict())
+            self.target_net.load_state_dict(self.net.state_dict())
 
 
 def train_policy(make_engine, episodes: int, steps: int, save_path: Path, seed: int = 7, resume: bool = True, on_episode=None) -> dict:

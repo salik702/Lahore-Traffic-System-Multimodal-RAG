@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { SimulationNetwork, SimulationRiskEvent, SimulationSignal, SimulationVehicle } from "@/lib/models";
-import { AlertTriangle, Car, Eye, Layers, Maximize2, ShieldAlert } from "lucide-react";
+import { AlertTriangle, Car, Eye, Layers, LocateFixed, Maximize2, ShieldAlert } from "lucide-react";
 
 interface SimulationMapProps {
   network: SimulationNetwork | null;
@@ -37,6 +37,9 @@ export function SimulationMap({
   const roadLayersRef = useRef<Array<{ id: string; casing: any; line: any; edge: SimulationNetwork["edges"][number]; isClosed: boolean }>>([]);
   const roadStyleKeyRef = useRef<Map<string, string>>(new Map());
   const vehicleMarkersRef = useRef<Map<string, any>>(new Map());
+  const vehicleAnimationRef = useRef<Map<string, number>>(new Map());
+  const vehicleTrailsRef = useRef<Map<string, { layer: any; points: [number, number][] }>>(new Map());
+  const lastFollowAtRef = useRef(0);
   const signalMarkersRef = useRef<Map<string, any>>(new Map());
   const riskMarkersRef = useRef<any[]>([]);
 
@@ -44,6 +47,10 @@ export function SimulationMap({
   const [showSignals, setShowSignals] = useState(true);
   const [showRisks, setShowRisks] = useState(true);
   const [showCongestion, setShowCongestion] = useState(true);
+  const [showTrails, setShowTrails] = useState(false);
+  const [followFleet, setFollowFleet] = useState(false);
+  const [motionSpeed, setMotionSpeed] = useState(1);
+  const [vehicleType, setVehicleType] = useState<"all" | SimulationVehicle["type"]>("all");
   const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
   const closedEdgeKey = closedEdges.join("|");
 
@@ -84,6 +91,8 @@ export function SimulationMap({
     return () => {
       isMounted = false;
       if (mapInstanceRef.current) {
+        vehicleAnimationRef.current.forEach((frame) => cancelAnimationFrame(frame));
+        vehicleAnimationRef.current.clear();
         mapInstanceRef.current.remove();
         mapInstanceRef.current = null;
       }
@@ -241,21 +250,32 @@ export function SimulationMap({
       if (!showVehicles) {
         vehicleMarkersRef.current.forEach((m) => m.remove());
         vehicleMarkersRef.current.clear();
+        vehicleTrailsRef.current.forEach(({ layer }) => layer.remove());
+        vehicleTrailsRef.current.clear();
+        vehicleAnimationRef.current.forEach((frame) => cancelAnimationFrame(frame));
+        vehicleAnimationRef.current.clear();
         return;
       }
 
-      const activeIds = new Set(vehicles.map((v) => v.id));
+      const visibleVehicles = vehicleType === "all" ? vehicles : vehicles.filter((vehicle) => vehicle.type === vehicleType);
+      const activeIds = new Set(visibleVehicles.map((v) => v.id));
 
       // Remove stale vehicle markers
       vehicleMarkersRef.current.forEach((marker, id) => {
         if (!activeIds.has(id)) {
           marker.remove();
           vehicleMarkersRef.current.delete(id);
+          const frame = vehicleAnimationRef.current.get(id);
+          if (frame) cancelAnimationFrame(frame);
+          vehicleAnimationRef.current.delete(id);
+          const trail = vehicleTrailsRef.current.get(id);
+          trail?.layer.remove();
+          vehicleTrailsRef.current.delete(id);
         }
       });
 
       // Update or add vehicle markers
-      vehicles.forEach((veh) => {
+      visibleVehicles.forEach((veh) => {
         const fill = veh.type === "motorcycle" ? "#34d399" : veh.type === "bus" ? "#f59e0b" : veh.type === "other" ? "#a78bfa" : "#38bdf8";
         const body = veh.type === "motorcycle"
           ? `<svg viewBox="0 0 20 36" width="15" height="27" aria-hidden="true"><circle cx="10" cy="5" r="3" fill="#17202b"/><circle cx="10" cy="31" r="3" fill="#17202b"/><path d="M10 4 6 12l2 5-2 7 4 7 4-7-2-7 2-5z" fill="${fill}" stroke="#e2e8f0" stroke-width="1.4"/><path d="m8 12 4 0m-4 11 4 0" stroke="#ecfeff" stroke-width="2"/></svg>`
@@ -263,7 +283,15 @@ export function SimulationMap({
           ? `<svg viewBox="0 0 26 46" width="19" height="34" aria-hidden="true"><path d="M5 2h16a3 3 0 0 1 3 3v36a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3" fill="${fill}" stroke="#f8fafc" stroke-width="1.5"/><rect x="5" y="7" width="16" height="11" rx="2" fill="#dff6ff"/><rect x="5" y="21" width="16" height="12" rx="2" fill="#dff6ff"/><path d="M5 38h3m10 0h3" stroke="#17202b" stroke-width="3"/></svg>`
           : `<svg viewBox="0 0 26 42" width="17" height="29" aria-hidden="true"><path d="M9 2h8l4 5 2 8v12l-3 9H6l-3-9V15l2-8z" fill="${fill}" stroke="#f8fafc" stroke-width="1.5"/><path d="M8 8h10l2 7H6zm-1 11h12v7H7z" fill="#dff6ff"/><path d="M5 12H3m20 0h-2M5 31h3m10 0h3" stroke="#17202b" stroke-width="2.4"/><path d="M8 34h10" stroke="#fef3c7" stroke-width="2"/></svg>`;
         const waitPing = veh.waiting ? '<span data-waiting class="absolute -right-1 -top-1 h-2 w-2 rounded-full border border-white bg-rose-500"></span>' : "";
-        const iconHtml = `<div class="relative grid place-items-center" data-vehicle-body style="transform:rotate(${veh.heading}deg);transition:transform 180ms linear">${body}${waitPing}</div>`;
+        const iconHtml = `
+          <div class="relative flex items-center justify-center transition-transform duration-300 ease-linear" style="transform:rotate(${veh.heading}deg)">
+            ${body}
+            ${waitPing}
+            ${veh.waiting ? `
+              <div class="absolute -inset-2 rounded-full bg-rose-500/20 animate-ping"></div>
+            ` : ""}
+          </div>
+        `;
 
         const icon = L.divIcon({
           html: iconHtml,
@@ -275,12 +303,33 @@ export function SimulationMap({
         const existing = vehicleMarkersRef.current.get(veh.id);
         if (existing) {
           const markerNode = existing.getElement?.();
-          const bodyNode = markerNode?.querySelector("[data-vehicle-body]") as HTMLElement | null;
+          const bodyNode = markerNode?.querySelector(".relative") as HTMLElement | null;
           if (bodyNode) bodyNode.style.transform = `rotate(${veh.heading}deg)`;
           const waitingNode = markerNode?.querySelector("[data-waiting]");
           if (veh.waiting && !waitingNode) existing.setIcon(icon);
           if (!veh.waiting && waitingNode) existing.setIcon(icon);
-          existing.setLatLng([veh.lat, veh.lon]);
+          const start = existing.getLatLng();
+          const target: [number, number] = [veh.lat, veh.lon];
+          const priorFrame = vehicleAnimationRef.current.get(veh.id);
+          if (priorFrame) cancelAnimationFrame(priorFrame);
+          const distance = map.distance(start, target);
+          if (distance < 0.8) {
+            existing.setLatLng(target);
+          } else {
+            const startedAt = performance.now();
+            const duration = Math.min(900, Math.max(100, distance / Math.max(veh.speed, 1) * 1000 / motionSpeed));
+            const animatePosition = (now: number) => {
+              const progress = Math.min(1, (now - startedAt) / duration);
+              const eased = progress * progress * (3 - 2 * progress);
+              existing.setLatLng([
+                start.lat + (target[0] - start.lat) * eased,
+                start.lng + (target[1] - start.lng) * eased,
+              ]);
+              if (progress < 1) vehicleAnimationRef.current.set(veh.id, requestAnimationFrame(animatePosition));
+              else vehicleAnimationRef.current.delete(veh.id);
+            };
+            vehicleAnimationRef.current.set(veh.id, requestAnimationFrame(animatePosition));
+          }
         } else {
           const marker = L.marker([veh.lat, veh.lon], { icon }).addTo(map);
           marker.bindTooltip(`<b>${veh.id}</b> (${veh.type.toUpperCase()})<br/>Speed: ${(veh.speed * 3.6).toFixed(1)} km/h<br/>Status: ${veh.waiting ? "Queued / Waiting" : "Moving"}`, {
@@ -288,9 +337,42 @@ export function SimulationMap({
           });
           vehicleMarkersRef.current.set(veh.id, marker);
         }
+
+        if (showTrails) {
+          const trailState = vehicleTrailsRef.current.get(veh.id);
+          const point: [number, number] = [veh.lat, veh.lon];
+          if (trailState) {
+            const last = trailState.points[trailState.points.length - 1];
+            if (!last || map.distance(last, point) > 1) trailState.points.push(point);
+            if (trailState.points.length > 8) trailState.points.shift();
+            trailState.layer.setLatLngs(trailState.points);
+          } else {
+            const trail = L.polyline([point], { color: fill, weight: 2, opacity: 0.62, interactive: false }).addTo(map);
+            vehicleTrailsRef.current.set(veh.id, { layer: trail, points: [point] });
+          }
+        }
       });
+
+      if (!showTrails) {
+        vehicleTrailsRef.current.forEach(({ layer }) => layer.remove());
+        vehicleTrailsRef.current.clear();
+      }
     });
-  }, [vehicles, showVehicles]);
+  }, [vehicles, showVehicles, showTrails, motionSpeed, vehicleType]);
+
+  // Pan toward the fleet centroid at most once per 1.2 seconds to keep camera motion smooth.
+  useEffect(() => {
+    const map = mapInstanceRef.current;
+    if (!followFleet || !map || !showVehicles || vehicles.length === 0) return;
+    const now = performance.now();
+    if (now - lastFollowAtRef.current < 1200) return;
+    lastFollowAtRef.current = now;
+    const center: [number, number] = [
+      vehicles.reduce((sum, vehicle) => sum + vehicle.lat, 0) / vehicles.length,
+      vehicles.reduce((sum, vehicle) => sum + vehicle.lon, 0) / vehicles.length,
+    ];
+    if (map.distance(map.getCenter(), center) > 45) map.panTo(center, { animate: true, duration: 0.8 });
+  }, [vehicles, followFleet, showVehicles]);
 
   // Update Risk Event Markers
   useEffect(() => {
@@ -430,6 +512,18 @@ export function SimulationMap({
 
         <button
           type="button"
+          onClick={() => setShowTrails((trails) => !trails)}
+          className={`focus-ring rounded-md px-2 py-1 text-[11px] font-bold transition flex items-center gap-1 ${
+            showTrails ? "bg-cyan-600 text-white shadow-sm" : "text-[var(--muted)] hover:text-[var(--ink)]"
+          }`}
+          aria-pressed={showTrails}
+          title="Show recent vehicle movement trails"
+        >
+          <Eye size={12} /> Trails
+        </button>
+
+        <button
+          type="button"
           onClick={resetView}
           className="focus-ring p-1 rounded-md text-[var(--muted)] hover:text-[var(--ink)] hover:bg-[var(--surface-2)] transition"
           title="Recenter Map View"
@@ -465,6 +559,31 @@ export function SimulationMap({
         <span className="flex items-center gap-1">
           <span className="h-2 w-2 rounded-full bg-cyan-300"></span> Selected road
         </span>
+      </div>
+
+      <div className="absolute bottom-14 right-3 z-10 flex flex-wrap items-center justify-end gap-2 rounded-lg border border-[var(--line)] bg-[var(--surface)]/90 p-2 shadow-lg backdrop-blur-md sm:bottom-3">
+        <label className="flex items-center gap-1.5 text-[10px] font-bold text-[var(--muted)]">
+          Vehicles
+          <select value={vehicleType} onChange={(event) => setVehicleType(event.target.value as typeof vehicleType)} className="rounded-md border border-[var(--line)] bg-[var(--surface)] px-1.5 py-1 text-[10px] text-[var(--ink)]">
+            <option value="all">All</option>
+            <option value="car">Cars</option>
+            <option value="motorcycle">Motorcycles</option>
+            <option value="bus">Buses</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+        <label className="flex items-center gap-1.5 text-[10px] font-bold text-[var(--muted)]">
+          Motion
+          <select value={motionSpeed} onChange={(event) => setMotionSpeed(Number(event.target.value))} className="rounded-md border border-[var(--line)] bg-[var(--surface)] px-1.5 py-1 text-[10px] text-[var(--ink)]">
+            <option value={0.5}>0.5×</option>
+            <option value={1}>1×</option>
+            <option value={1.5}>1.5×</option>
+            <option value={2}>2×</option>
+          </select>
+        </label>
+        <button type="button" onClick={() => setFollowFleet((following) => !following)} aria-pressed={followFleet} className={`focus-ring flex items-center gap-1 rounded-md px-2 py-1 text-[10px] font-bold transition ${followFleet ? "bg-cyan-600 text-white" : "text-[var(--muted)] hover:bg-[var(--surface-2)] hover:text-[var(--ink)]"}`} title="Keep the camera centered on the vehicle fleet">
+          <LocateFixed size={12} /> {followFleet ? "Following" : "Follow fleet"}
+        </button>
       </div>
     </div>
   );
