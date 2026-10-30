@@ -1,0 +1,288 @@
+[
+  {
+    "question": "What does the law say about effective driving licence required?",
+    "ground_truth_answer": "A person must not drive a motor vehicle in a public place without an effective licence authorising that class of vehicle.",
+    "relevant_document_ids": [
+      "chunk-450fba53c3665bdef9a6ac878045937b"
+    ],
+    "relevance_labels": {
+      "chunk-450fba53c3665bdef9a6ac878045937b": 3
+    },
+    "source_documents": [
+      "punjab-mvo-1965"
+    ],
+    "difficulty": "easy",
+    "category": "rule",
+    "verified": true
+  },
+  {
+    "question": "What does the law say about minimum driving ages?",
+    "ground_truth_answer": "The ordinance states age thresholds by vehicle and employment category. Consult the cited section because later amendments may affect current eligibility.",
+    "relevant_document_ids": [
+      "chunk-26529c95bc8495452493482130bed24b"
+    ],
+    "relevance_labels": {
+      "chunk-26529c95bc8495452493482130bed24b": 3
+    },
+    "source_documents": [
+      "punjab-mvo-1965"
+    ],
+    "difficulty": "easy",
+    "category": "rule",
+    "verified": true
+  },
+  {
+    "question": "What does the law say about obey traffic signs and signals?",
+    "ground_truth_answer": "Drivers must follow mandatory traffic signs, driving regulations, electrical traffic signals and directions from police regulating traffic.",
+    "relevant_document_ids": [
+      "chunk-6652acf266e54fb59019fba7968d1be4"
+    ],
+    "relevance_labels": {
+      "chunk-6652acf266e54fb59019fba7968d1be4": 3
+    },
+    "source_documents": [
+      "punjab-mvo-1965"
+    ],
+    "difficulty": "easy",
+    "category": "rule",
+    "verified": true
+  },
+  {
+    "question": "What does the law say about do not leave a vehicle dangerously positioned?",
+    "ground_truth_answer": "A vehicle or trailer must not be left at rest where its position or condition causes or is likely to cause danger, obstruction or undue inconvenience.",
+    "relevant_document_ids": [
+      "chunk-6ce5e7b7288a39d0ed1716195e0f661f"
+    ],
+    "relevance_labels": {
+      "chunk-6ce5e7b7288a39d0ed1716195e0f661f": 3
+    },
+    "source_documents": [
+      "punjab-mvo-1965"
+    ],
+    "difficulty": "easy",
+    "category": "rule",
+    "verified": true
+  },
+  {
+    "question": "What does the law say about keep the driver unobstructed?",
+    "ground_truth_answer": "A driver must not allow a person or object to stand or sit where it hampers control of the vehicle.",
+    "relevant_document_ids": [
+      "chunk-38a25bf6c0f4e516c54c677e42bc2142"
+    ],
+    "relevance_labels": {
+      "chunk-38a25bf6c0f4e516c54c677e42bc2142": 3
+    },
+    "source_documents": [
+      "punjab-mvo-1965"
+    ],
+    "difficulty": "easy",
+    "category": "rule",
+    "verified": true
+  },
+  {
+    "question": "What is the penalty for exceeding prescribed speed limit?",
+    "ground_truth_answer": "The penalty is PKR 5000 for motorcars.",
+    "relevant_document_ids": [
+      "chunk-2257f284e0e84aaa324176e4f000ebc5"
+    ],
+    "relevance_labels": {
+      "chunk-2257f284e0e84aaa324176e4f000ebc5": 3
+    },
+    "source_documents": [
+      "punjab-fines-2026"
+    ],
+    "difficulty": "easy",
+    "category": "fine",
+    "verified": true
+  },
+  {
+    "question": "What is the penalty for carrying passengers in a public service vehicle exceeding permissible limit?",
+    "ground_truth_answer": "The penalty is PKR 5000 for motorcars.",
+    "relevant_document_ids": [
+      "chunk-097732d3bf01bf1d6b04ef93fe43167b"
+    ],
+    "relevance_labels": {
+      "chunk-097732d3bf01bf1d6b04ef93fe43167b": 3
+    },
+    "source_documents": [
+      "punjab-fines-2026"
+    ],
+    "difficulty": "easy",
+    "category": "fine",
+    "verified": true
+  },
+  {
+    "question": "What is the penalty for violation of traffic signals (electronic/manual)?",
+    "ground_truth_answer": "The penalty is PKR 5000 for motorcars.",
+    "relevant_document_ids": [
+      "chunk-7599dc9c24657835ba3532251c94922c"
+    ],
+    "relevance_labels": {
+      "chunk-7599dc9c24657835ba3532251c94922c": 3
+    },
+    "source_documents": [
+      "punjab-fines-2026"
+    ],
+    "difficulty": "easy",
+    "category": "fine",
+    "verified": true
+  },
+  {
+    "question": "What is the penalty for overloading a goods vehicle?",
+    "ground_truth_answer": "The penalty is PKR 5000 for motorcars.",
+    "relevant_document_ids": [
+      "chunk-0b08c1a98f1dae0291eb7797f7680cfd"
+    ],
+    "relevance_labels": {
+      "chunk-0b08c1a98f1dae0291eb7797f7680cfd": 3
+    },
+    "source_documents": [
+      "punjab-fines-2026"
+    ],
+    "difficulty": "easy",
+    "category": "fine",
+    "verified": true
+  },
+  {
+    "question": "What is the penalty for driving a motor vehicle at night without proper lights?",
+    "ground_truth_answer": "The penalty is PKR 3000 for motorcars.",
+    "relevant_document_ids": [
+      "chunk-facb8d470585bba7f9ebf3836325736d"
+    ],
+    "relevance_labels": {
+      "chunk-facb8d470585bba7f9ebf3836325736d": 3
+    },
+    "source_documents": [
+      "punjab-fines-2026"
+    ],
+    "difficulty": "easy",
+    "category": "fine",
+    "verified": true
+  },
+  {
+    "question": "What is the meaning of the 'Turn to the left' traffic sign?",
+    "ground_truth_answer": "Proceed in the direction indicated: left.",
+    "relevant_document_ids": [
+      "chunk-19c97c668a3229aa3024d340f50ad4e8"
+    ],
+    "relevance_labels": {
+      "chunk-19c97c668a3229aa3024d340f50ad4e8": 3
+    },
+    "source_documents": [
+      "nhmp-road-safety-syllabus"
+    ],
+    "difficulty": "medium",
+    "category": "sign",
+    "verified": true
+  },
+  {
+    "question": "What is the meaning of the 'Go straight ahead' traffic sign?",
+    "ground_truth_answer": "Proceed straight ahead.",
+    "relevant_document_ids": [
+      "chunk-9ec27866c34438fbba045ab1db04771c"
+    ],
+    "relevance_labels": {
+      "chunk-9ec27866c34438fbba045ab1db04771c": 3
+    },
+    "source_documents": [
+      "nhmp-road-safety-syllabus"
+    ],
+    "difficulty": "medium",
+    "category": "sign",
+    "verified": true
+  },
+  {
+    "question": "What is the meaning of the 'Turn to the right' traffic sign?",
+    "ground_truth_answer": "Proceed in the direction indicated: right.",
+    "relevant_document_ids": [
+      "chunk-47b698b49da1e18b2ddfc7fec06d465a"
+    ],
+    "relevance_labels": {
+      "chunk-47b698b49da1e18b2ddfc7fec06d465a": 3
+    },
+    "source_documents": [
+      "nhmp-road-safety-syllabus"
+    ],
+    "difficulty": "medium",
+    "category": "sign",
+    "verified": true
+  },
+  {
+    "question": "What is the meaning of the 'Go straight or left' traffic sign?",
+    "ground_truth_answer": "Only straight-ahead or left movements are permitted.",
+    "relevant_document_ids": [
+      "chunk-009df0aa97e1bc8e9937665ad4bb8d4a"
+    ],
+    "relevance_labels": {
+      "chunk-009df0aa97e1bc8e9937665ad4bb8d4a": 3
+    },
+    "source_documents": [
+      "nhmp-road-safety-syllabus"
+    ],
+    "difficulty": "medium",
+    "category": "sign",
+    "verified": true
+  },
+  {
+    "question": "What is the meaning of the 'Keep to the right' traffic sign?",
+    "ground_truth_answer": "Pass or keep to the right of the obstruction or divider.",
+    "relevant_document_ids": [
+      "chunk-57e774329caa8de841432e727bd2e9df"
+    ],
+    "relevance_labels": {
+      "chunk-57e774329caa8de841432e727bd2e9df": 3
+    },
+    "source_documents": [
+      "nhmp-road-safety-syllabus"
+    ],
+    "difficulty": "medium",
+    "category": "sign",
+    "verified": true
+  },
+  {
+    "question": "What are the rules and penalties for driving without a license in Punjab?",
+    "ground_truth_answer": "According to Section 3 of the MVO 1965, an effective license is required. The penalty for driving without a license is PKR 5,000 for motorcars.",
+    "relevant_document_ids": [
+      "chunk-450fba53c3665bdef9a6ac878045937b",
+      "chunk-e23d3b56e08b0779c659a90b7a2d67f7"
+    ],
+    "relevance_labels": {
+      "chunk-450fba53c3665bdef9a6ac878045937b": 3,
+      "chunk-e23d3b56e08b0779c659a90b7a2d67f7": 3
+    },
+    "source_documents": [
+      "punjab-mvo-1965",
+      "punjab-fines-2026"
+    ],
+    "difficulty": "complex",
+    "category": "multi-doc",
+    "verified": true
+  },
+  {
+    "question": "What should I do after a road accident and who should I call for medical help in Punjab?",
+    "ground_truth_answer": "You should stop and assist (Section 92/94). For medical help in Punjab, call Rescue 1122.",
+    "relevant_document_ids": [
+      "chunk-2ca180a072bfee5e02fb2a9dfbbaa1a0"
+    ],
+    "relevance_labels": {
+      "chunk-2ca180a072bfee5e02fb2a9dfbbaa1a0": 3
+    },
+    "source_documents": [
+      "punjab-mvo-1965",
+      "rescue1122-emergency"
+    ],
+    "difficulty": "complex",
+    "category": "multi-doc",
+    "verified": true
+  },
+  {
+    "question": "What is the best restaurant in Gulberg, Lahore?",
+    "ground_truth_answer": "I do not have information about specific restaurant recommendations in Gulberg.",
+    "relevant_document_ids": [],
+    "relevance_labels": {},
+    "source_documents": [],
+    "difficulty": "medium",
+    "category": "out-of-domain",
+    "verified": true
+  }
+]

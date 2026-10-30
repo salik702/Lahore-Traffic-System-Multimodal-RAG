@@ -3,9 +3,7 @@ import json
 import logging
 import os
 import threading
-import urllib.request
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-
 MODEL = "gemini-embedding-001"
 from pathlib import Path
 import re
@@ -18,6 +16,7 @@ if _vector_path.is_file():
         OUTPUT_DIMENSIONALITY = int(_match[1])
 LOCAL_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 _local_model = None
+_model_error: str | None = None
 ENCODE_LOCK = threading.Lock()
 
 
@@ -38,12 +37,34 @@ def load_project_env():
 load_project_env()
 
 
-def embed(texts):
-    global _local_model
+def embed(texts: list[str]) -> list[list[float]]:
+    global _local_model, _model_error
+    if not texts:
+        return []
     if _local_model is None:
-        from sentence_transformers import SentenceTransformer
-        _local_model = SentenceTransformer(LOCAL_MODEL, device="cpu", local_files_only=True)
-    return _local_model.encode(texts, batch_size=64, normalize_embeddings=True).tolist()
+        try:
+            from sentence_transformers import SentenceTransformer
+
+            _local_model = SentenceTransformer(LOCAL_MODEL, device="cpu", local_files_only=True)
+            dimension = _local_model.get_embedding_dimension()
+            if dimension != OUTPUT_DIMENSIONALITY:
+                raise ValueError(
+                    f"Model dimension {dimension} does not match index dimension {OUTPUT_DIMENSIONALITY}"
+                )
+            _model_error = None
+            logging.getLogger(__name__).info(
+                "Loaded embedding model %s with dimension %d", LOCAL_MODEL, dimension
+            )
+        except Exception as exc:
+            _model_error = f"{type(exc).__name__}: {exc}"
+            raise RuntimeError(f"Failed to load local embedding model: {_model_error}") from exc
+    vectors = _local_model.encode(texts, batch_size=64, normalize_embeddings=True)
+    if vectors.shape != (len(texts), OUTPUT_DIMENSIONALITY):
+        raise ValueError(
+            f"Embedding model returned shape {vectors.shape}; expected "
+            f"({len(texts)}, {OUTPUT_DIMENSIONALITY})"
+        )
+    return vectors.tolist()
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -62,14 +83,15 @@ class Handler(BaseHTTPRequestHandler):
                 vectors = embed(texts)
             body = json.dumps({"embeddings": vectors}).encode()
             self.send_response(200)
-        except Exception:
+        except Exception as exc:
             logging.getLogger(__name__).exception("Embedding request failed")
-            body = json.dumps({"error": "Embedding provider unavailable; check worker logs and cached model"}).encode()
+            msg = str(exc) or "Embedding provider unavailable"
+            body = json.dumps({"error": msg}).encode()
             self.send_response(503)
         self.send_header("Content-Type", "application/json"); self.send_header("Content-Length", str(len(body))); self.end_headers(); self.wfile.write(body)
 
-    def log_message(self, *_):
-        return
+    def log_message(self, format: str, *args: object) -> None:
+        del format, args
 
 
 if __name__ == "__main__":
