@@ -47,6 +47,9 @@ data/simulation/**/*.sumocfg
 backend/storage/rl_models/*.pt
 !backend/storage/rl_models/.gitkeep
 
+# LinkedIn showcase (video + assets)
+linkedin-showcase/
+
 # IDE and OS files
 .vscode/
 .idea/
